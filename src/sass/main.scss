@@ -1,0 +1,18 @@
+@import '_base';
+
+.sezione {
+  color: red;
+
+  &__al {
+    color: blue;
+  }
+}
+
+h1 {
+  font-size: 19px;
+  color: rebeccapurple;
+}
+
+p {
+  color: red;
+}
