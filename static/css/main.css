@@ -389,17 +389,18 @@ td,
 th {
   padding: 0; }
 
-h2 {
-  color: green; }
-
-.sezione {
-  color: red; }
-  .sezione__al {
-    color: blue; }
-
 h1 {
-  font-size: 19px;
-  color: rebeccapurple; }
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-top: 0.9375em;
+  margin-bottom: 0.3125em; }
+  @media (min-width: 576px) {
+    h1 {
+      font-size: 4rem; } }
 
-p {
-  color: red; }
+.wrapper > div {
+  background: #eee;
+  padding: 1rem; }
+
+.wrapper > div:nth-child(odd) {
+  background-color: #ddd; }

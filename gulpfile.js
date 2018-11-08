@@ -28,11 +28,6 @@ const browserSyncTask = cb => {
   cb();
 };
 
-const htmlTask = cb => {
-  browserSync.reload();
-  cb();
-};
-
 const html = () =>
   src('./src/views/*.pug')
     .pipe(
@@ -68,7 +63,7 @@ const style = () => {
 };
 
 watch('./src/sass/*.scss', series(cleanCSS, style));
-watch('./src/views/index.pug', series(cleanHTML, html));
+watch('./src/views/*.pug', series(cleanHTML, html));
 
 // watch('./index.html', series(clean, htmlTask));
 // watch('./index.html', htmlTask);

@@ -1,18 +1,16 @@
 @import '_base';
+@import '_mixins';
+@import '_tipography';
 
-.sezione {
-  color: red;
-
-  &__al {
-    color: blue;
-  }
+.wrapper {
+  //display: flex;
 }
 
-h1 {
-  font-size: 19px;
-  color: rebeccapurple;
+.wrapper>div {
+  background: #eee;
+  padding: 1rem;
 }
 
-p {
-  color: red;
+.wrapper>div:nth-child(odd) {
+  background-color: #ddd;
 }
