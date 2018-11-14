@@ -46,6 +46,8 @@ const prodhtml = () =>
     )
     .pipe(dest('./dist'));
 
+const prodjs = () => src('./js/index.js').pipe(dest('./dist/js/'));
+
 const cleanCSS = cb => {
   del(['./css/']);
   cb();
@@ -53,6 +55,11 @@ const cleanCSS = cb => {
 
 const prodcleanCSS = cb => {
   del(['./dist/css/']);
+  cb();
+};
+
+const prodcleanJS = cb => {
+  del(['./dist/js/']);
   cb();
 };
 
@@ -101,8 +108,9 @@ exports.dev = parallel(watchFiles, browserSyncTask);
 
 exports.build = parallel(
   series(prodcleanHTML, prodhtml),
-  series(prodcleanCSS, prodstyle)
+  series(prodcleanCSS, prodstyle),
+  series(prodcleanJS, prodjs)
 );
 
 exports.prova = series(prodcleanHTML, prodhtml);
-exports.prova2 = prodcleanHTML;
+exports.prova2 = prodjs;
