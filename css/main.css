@@ -456,6 +456,9 @@ body {
   .primary-navigation > ul ul {
     margin: 0; }
 
+.dropdown-menu {
+  display: none; }
+
 .application-form {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -9,6 +9,7 @@
 # production
 /dist
 
+./*.html
 # misc
 .DS_Store
 .env.local

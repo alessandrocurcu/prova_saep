@@ -97,7 +97,7 @@ const watchFiles = () => {
   watch('./js/*.js', series(cleanHTML, html));
 };
 
-exports.dev = watchFiles;
+exports.dev = parallel(watchFiles, browserSyncTask);
 
 exports.build = parallel(
   series(prodcleanHTML, prodhtml),
