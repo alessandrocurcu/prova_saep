@@ -38,6 +38,15 @@ const html = () =>
     .pipe(dest('./'))
     .pipe(browserSync.stream());
 
+const prodhtml = () =>
+  src('./src/views/*.pug')
+    .pipe(
+      pug({
+        pretty: true,
+      })
+    )
+    .pipe(dest('./dist'));
+
 const cleanCSS = cb => {
   del(['./static/css/']);
   cb();
@@ -62,6 +71,17 @@ const style = () => {
     .pipe(browserSync.stream());
 };
 
+const prodstyle = () =>
+  src('./src/sass/main.scss')
+    .pipe(sass({ importer: moduleImporter() }))
+    .pipe(
+      autoprefixer({
+        browsers: ['last 6 versions'],
+      })
+    )
+    .pipe(beautify())
+    .pipe(dest('./dist/css/'));
+
 watch('./src/sass/*.scss', series(cleanCSS, style));
 watch('./src/views/*.pug', series(cleanHTML, html));
 watch('./static/js/*.js', series(cleanHTML, html));
@@ -69,3 +89,5 @@ watch('./static/js/*.js', series(cleanHTML, html));
 // watch('./index.html', series(clean, htmlTask));
 // watch('./index.html', htmlTask);
 exports.default = series(browserSyncTask);
+
+exports.build = series(prodhtml, prodstyle);
