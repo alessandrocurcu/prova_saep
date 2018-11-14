@@ -1,9 +1,8 @@
-@import "normalize.scss";
 $bgc: #f5f6f6; // background-color
 $tc: #424242; // text-color
 
 html {
-  @include qrq-system-font-stack;
+  // @include qrq-system-font-stack;
   -webkit-text-size-adjust: 100%; // [1]
   -ms-text-size-adjust: 100%; // [1]
   -webkit-tap-highlight-color: transparent; // [2]
@@ -12,6 +11,7 @@ html {
   -moz-osx-font-smoothing: grayscale; // [4]
   background-color: $bgc;
   color: $tc;
+  font-family: 'Open Sans', sans-serif;
 }
 
 *,

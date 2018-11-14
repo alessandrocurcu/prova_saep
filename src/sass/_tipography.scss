@@ -1,10 +1,25 @@
-h1 {
-  // font-size: 2rem;
-  // line-height: 1.25;
-  // margin-top: 0.9375em;
-  // margin-bottom: 0.3125em;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-  // @include sm {
-  //   font-size: 4rem;
-  // }
+:root {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 3.815rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.563rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  line-height: 1.5;
 }
