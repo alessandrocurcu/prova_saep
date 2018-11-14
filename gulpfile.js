@@ -28,7 +28,7 @@ const browserSyncTask = cb => {
 };
 
 const html = () =>
-  src('./src/views/*.pug')
+  src(['./src/views/*.pug', '!./src/views/_?*.pug'])
     .pipe(
       pug({
         pretty: true,
@@ -38,7 +38,7 @@ const html = () =>
     .pipe(browserSync.stream());
 
 const prodhtml = () =>
-  src('./src/views/*.pug')
+  src(['./src/views/*.pug', '!./src/views/_?*.pug'])
     .pipe(
       pug({
         pretty: true,
@@ -47,7 +47,7 @@ const prodhtml = () =>
     .pipe(dest('./dist'));
 
 const cleanCSS = cb => {
-  del(['./static/css/']);
+  del(['./css/']);
   cb();
 };
 
@@ -57,7 +57,7 @@ const prodcleanCSS = cb => {
 };
 
 const cleanHTML = cb => {
-  del(['./index.html']);
+  del(['./*.html']);
   cb();
 };
 
@@ -94,7 +94,7 @@ const prodstyle = () =>
 const watchFiles = () => {
   watch('./src/sass/*.scss', series(cleanCSS, style));
   watch('./src/views/*.pug', series(cleanHTML, html));
-  watch('./static/js/*.js', series(cleanHTML, html));
+  watch('./js/*.js', series(cleanHTML, html));
 };
 
 exports.dev = watchFiles;
@@ -104,4 +104,5 @@ exports.build = parallel(
   series(prodcleanCSS, prodstyle)
 );
 
-exports.default = defaultTask;
+exports.prova = series(prodcleanHTML, prodhtml);
+exports.prova2 = prodcleanHTML;
