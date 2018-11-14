@@ -1,26 +1,31 @@
 h2 Navigazione
-nav.primary-navigation
+nav.primaryNavigation
   ul
-    li
-      a(href="#") The Society
-      ul.dropdown-menu
-        li The Constitution
-        li The History
-        li Commitees
-        li National Delegates
-        li Members
-    li
-      a(href="#") The Congresses
-      ul.dropdown-menu
+    li.primaryNavigation__item 
+      p The Society
+      ul.dropdownMenu.toggle
+        li
+          a(href="./society.html") The Constitution
+        li 
+          a(href="./society.html") The History
+        li 
+          a(href="./society.html") Commitees
+        li 
+          a(href="./society.html") National Delegates
+        li 
+          a(href="./society.html") Members
+    li.primaryNavigation__item
+      p The Congresses
+      ul.dropdownMenu.toggle
         li Annual Congress
         li Patronages and Meetings
         li Calendar
-    li
-      a(href="#") Education
-      ul.dropdown-menu
+    li.primaryNavigation__item
+      p Education
+      ul.dropdownMenu.toggle
         li Fellowship
         li Video learning
-    li
+    li.primaryNavigation__item
       a(href="#") Research
-    li
+    li.primaryNavigation__item
       a(href="./membership.html") Become a member  
