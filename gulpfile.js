@@ -4,7 +4,6 @@ const browserSync = require('browser-sync').create();
 const log = require('fancy-log');
 const color = require('ansi-colors');
 const del = require('del');
-
 // HTML
 const pug = require('gulp-pug');
 
@@ -52,8 +51,18 @@ const cleanCSS = cb => {
   cb();
 };
 
+const prodcleanCSS = cb => {
+  del(['./dist/css/']);
+  cb();
+};
+
 const cleanHTML = cb => {
   del(['./index.html']);
+  cb();
+};
+
+const prodcleanHTML = cb => {
+  del(['./dist/*.html']);
   cb();
 };
 
@@ -82,12 +91,19 @@ const prodstyle = () =>
     .pipe(beautify())
     .pipe(dest('./dist/css/'));
 
-watch('./src/sass/*.scss', series(cleanCSS, style));
-watch('./src/views/*.pug', series(cleanHTML, html));
-watch('./static/js/*.js', series(cleanHTML, html));
+// watch('./src/sass/*.scss', series(cleanCSS, style));
+// watch('./src/views/*.pug', series(cleanHTML, html));
+// watch('./static/js/*.js', series(cleanHTML, html));
 
-// watch('./index.html', series(clean, htmlTask));
-// watch('./index.html', htmlTask);
-exports.default = series(browserSyncTask);
+// exports.dev = series(
+//   watch('./src/sass/*.scss', series(cleanCSS, style)),
+//   watch('./src/views/*.pug', series(cleanHTML, html)),
+//   watch('./static/js/*.js', series(cleanHTML, html))
+// );
 
-exports.build = series(prodhtml, prodstyle);
+exports.build = parallel(
+  series(prodcleanHTML, prodhtml),
+  series(prodcleanCSS, prodstyle)
+);
+
+exports.default = defaultTask;
