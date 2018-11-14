@@ -76,7 +76,7 @@ const style = () => {
       })
     )
     .pipe(beautify())
-    .pipe(dest('./static/css/'))
+    .pipe(dest('./css/'))
     .pipe(browserSync.stream());
 };
 
@@ -91,15 +91,13 @@ const prodstyle = () =>
     .pipe(beautify())
     .pipe(dest('./dist/css/'));
 
-// watch('./src/sass/*.scss', series(cleanCSS, style));
-// watch('./src/views/*.pug', series(cleanHTML, html));
-// watch('./static/js/*.js', series(cleanHTML, html));
+const watchFiles = () => {
+  watch('./src/sass/*.scss', series(cleanCSS, style));
+  watch('./src/views/*.pug', series(cleanHTML, html));
+  watch('./static/js/*.js', series(cleanHTML, html));
+};
 
-// exports.dev = series(
-//   watch('./src/sass/*.scss', series(cleanCSS, style)),
-//   watch('./src/views/*.pug', series(cleanHTML, html)),
-//   watch('./static/js/*.js', series(cleanHTML, html))
-// );
+exports.dev = watchFiles;
 
 exports.build = parallel(
   series(prodcleanHTML, prodhtml),
