@@ -64,6 +64,7 @@ const style = () => {
 
 watch('./src/sass/*.scss', series(cleanCSS, style));
 watch('./src/views/*.pug', series(cleanHTML, html));
+watch('./static/js/*.js', series(cleanHTML, html));
 
 // watch('./index.html', series(clean, htmlTask));
 // watch('./index.html', htmlTask);

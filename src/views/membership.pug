@@ -1,0 +1,93 @@
+extends _base.pug
+block personal
+  meta(name="description", content="")
+  title Nuovo titolo
+block link
+  link(href="./static/css/main.css", rel="stylesheet")
+block body
+  body
+    include _primary_nav.pug
+    h1 How to become a member of SECEC: instructions, document required and application form
+    p Welcome to the application for membership of SECEC/ESSSE. Please read the instructions carefully before you enter the online application process. If you are in doubt please discuss your application with <a>your local National Delegate</a>.
+    h2 General information
+    p All applicants must have demonstrated a genuine interest in shoulder and/or elbow surgery. Members are elected into the Society by its Ordinary Members at its General Assembly ( held usually in September) each year upon the proposal of the Membership Committee after approval of the National Delegates.
+    p If we do not accept your application we will inform you by e-mail on our reasons for not accepting you as a member.
+    h2 Requirements
+    p There are several kind of memberships, each one with different perks and requirements: Junior, Associate and Ordinary. At a minimum for the application to be successful you will need the following documents:
+    ul 
+      li Motivation letter: please motivate your application for membership of our society
+      li CV (Curriculum Vitae)
+        ul
+          li Name, age, birthplace, country of citizenship, country for application (if different).
+          li Education, university degree’, clinical education, year and place for registration as medical specialist and the speciality.
+      li Sponsorship letter: a letter from an ordinary member of our society that supports your application for membership. At the minimum we need an undersigned statement saying ”I support the application of x.x. for associate-/junior-/ordinary- or.. membership of SECEC”.
+    h3 Special requirements to become an Ordinary Member  
+    p In order to become ad Ordinary Member you have to have obatined a certain degree of success in the field. To evaluate your achievements we have designed a point grade system: if you score is 30 points or above you're eligible to become an Ordinary Member. As an example: for every article in which you were involved published in journals referenced in the Index Medicus you will obtain 5 points.
+    p The criteria are listed below but you don't need to calculate this score by yourself; by filling the application form the score will be calculated automatically.
+    button Calculate your score
+    h2 The memberships
+    h3 Junior Member
+    h4 Perks and duties
+    ul
+      li encouraged to take part in all the activities of the Society
+      li has no right to vote
+      li receives the Journal of Shoulder and Elbow Surgery
+      li special registration fee for all SECEC congresses
+      li can participate in closed meetings
+      li has full access to the website
+      li becomes associate member after the age of 35, upon request 
+    h4 requirements
+    ul
+      li orthopaedic / trauma surgeon under 35 years
+      li to reside in Europe
+      li participation in 1 SECEC meeting
+      li letter of motivation
+      li short CV
+      li 1 Ordinary Member's sponsorship
+      li annual fee of 275 €
+    button 
+      a(href="./junior_application.html") Apply
+    h3 Associate Member
+    h4 Perks and duties
+    ul
+      li encouraged to take part in all the activities of the Society
+      li has no right to vote
+      li receives the Journal of Shoulder and Elbow Surgery
+      li special registration fee for all SECEC congresses
+      li can participate in closed meetings
+      li  has full access to the website
+    h4 requirements:
+    ul
+      li orthopaedic / trauma surgeon
+      li to reside in Europe
+      li participation in 2 SECEC meetings
+      li letter of motivation
+      li short CV
+      li 2 Ordinary Member's sponsorship
+      li annual fee of 275 €
+      li NB : fellows selected to the Intra European travelling fellowship become ex officio Associate members.  
+    button Apply
+    h3 Ordinary Member
+    h4 Perks and duties
+    ul
+      li encouraged to take part in all the activities of the Society
+      li has full voting rights
+      li is eligible for membership in all the Committees
+      li receives the Journal of Shoulder and Elbow Surgery
+      li special registration fee for all SECEC congresses
+      li can participate in closed meetings
+      li has full access to the website
+    h4 requirements:
+    ul
+      li orthopaedic / trauma surgeon
+      li to reside in Europe
+      li 30 points in the scientific activity grading system of the SECEC
+      li letter of motivation
+      li short CV
+      li 2 Ordinary Member's sponsorship
+      li annual fee of 275 €
+      li NB: fellows selected to the Europe / USA  and  Europe / Japan travelling fellowships become ex officio Ordinary members
+      li: strong Before you apply, calculate your score
+    button 
+      a(href="./ordinary_application.html") Calculate your score
+        

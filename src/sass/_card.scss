@@ -1,0 +1,27 @@
+.card {
+  text-align: center;
+
+  .span2 & {
+    text-align: left;
+  }
+
+  &__img {
+    display: inline-block;
+    // width: 100%;
+    // max-width: 100%;
+    height: auto;
+
+    .span2 & {
+      width: 90%;
+      // max-width: 50%;
+      height: 200px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    line-height: 1;
+  }
+
+  &__description {}
+}

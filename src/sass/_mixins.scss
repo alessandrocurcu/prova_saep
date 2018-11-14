@@ -40,3 +40,33 @@ $screen-xl-min: 1200px;
 }
 
 // https://medium.com/codeartisan/breakpoints-and-media-queries-in-scss-46e8f551e2f2
+
+
+// SYSTEM FONT STACK
+@mixin qrq-system-font-stack() {
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    "Helvetica Neue",
+    sans-serif;
+}
+
+// CLEARFIX
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+// Hyphenate (CSS tricks)
+.hyphenate {
+  word-wrap: break word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
