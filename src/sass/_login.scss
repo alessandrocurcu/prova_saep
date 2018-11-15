@@ -1,0 +1,64 @@
+.form {
+
+  input[type="text"],
+  input[type="password"],
+  input[type="checkbox"] {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #e1e1e1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    text-decoration: none;
+    line-height: normal;
+    // min-height: 3rem; //Opera fix
+
+    &:focus {
+      outline: none;
+      color: green;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+
+    &-orizzontal {
+      flex-direction: row;
+    }
+  }
+}
+
+.btn {
+  border-radius: 0px 2px 2px 0px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  border: none;
+  font-size: 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: #333;
+  }
+}
+
+
+.login {
+  display: none;
+
+  &__title {
+    font-size: 1.25rem;
+  }
+
+  &__form {
+    //width: 300px;
+  }
+
+  @include sm {
+    display: block;
+  }
+}

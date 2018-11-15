@@ -1,0 +1,15 @@
+.grid {
+  margin-top: 96.78px;
+
+  @include sm {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    margin-top: 215.12px;
+    padding: 1.563rem 0;
+    grid-gap: 1.953rem;
+  }
+}
+
+.intro {
+  font-size: 1.25rem;
+}

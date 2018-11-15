@@ -9,42 +9,44 @@
     <link href="./css/main.css" rel="stylesheet"/>
   </head>
   <body>
-    <h2>Navigazione</h2>
-    <nav class="primary-navigation">
+    <nav class="primaryNavigation">
       <ul>
-        <li><a href="#">The Society</a>
-          <ul>
-            <li>The Constitution</li>
-            <li>The History</li>
-            <li>Commitees</li>
-            <li>National Delegates</li>
-            <li>Members</li>
+        <li class="primaryNavigation__item"> 
+          <p>The Society</p>
+          <ul class="dropdownMenu toggle">
+            <li><a href="./society.html">The Constitution</a></li>
+            <li> <a href="./history.html">The History</a></li>
+            <li> <a href="./commitees.html">Commitees</a></li>
+            <li> <a href="./society.html">National Delegates</a></li>
+            <li> <a href="./society.html">Members</a></li>
           </ul>
         </li>
-        <li><a href="#">The Congresses</a>
-          <ul>
+        <li class="primaryNavigation__item">
+          <p>The Congresses</p>
+          <ul class="dropdownMenu toggle">
             <li>Annual Congress</li>
             <li>Patronages and Meetings</li>
             <li>Calendar</li>
           </ul>
         </li>
-        <li><a href="#">Education</a>
-          <ul>
+        <li class="primaryNavigation__item">
+          <p>Education</p>
+          <ul class="dropdownMenu toggle">
             <li>Fellowship</li>
             <li>Video learning</li>
           </ul>
         </li>
-        <li><a href="#">Research</a></li>
-        <li><a href="./membership.html">Become a member  </a></li>
+        <li class="primaryNavigation__item"><a href="#">Research</a></li>
+        <li class="primaryNavigation__item"><a href="./membership.html">Become a member  </a></li>
       </ul>
     </nav>
-    <div class="application">
-      <div class="application__head">
+    <section class="application">
+      <header class="application__head">
         <h1>Ordinary membership application form</h1>
         <p> In order to become ad Ordinary Member you have to have obatined a certain degree of success in the field. To evaluate your achievements we have designed a point grade system: if you score is 30 points or above you're eligible to become an Ordinary Member.</p>
         <p>All the information that you will provide below will be checked by our scientific commitee: be accurate.</p>
-      </div>
-      <div class="application__body">
+      </header>
+      <main class="application__body">
         <div class="application__section">
           <div class="application__head">
             <h2>Published articles</h2>
@@ -142,8 +144,8 @@
             <li>fellows selected to the Europe / USA  or  Europe / Japan travelling fellowship become ex officio Ordinary Member</li>
           </ul>
         </div>
-      </div>
-    </div>
+      </main>
+    </section>
   </body>
   <script src="./js/index.js"></script>
 </html>
