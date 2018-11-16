@@ -714,6 +714,7 @@ p {
       display: grid;
       grid-template-columns: 8fr 4fr;
       margin-top: calc(194px + 3.815rem);
+      margin-top: calc(194px + 1.9075rem);
       grid-column-gap: 1.953rem; } }
 
 .intro {
