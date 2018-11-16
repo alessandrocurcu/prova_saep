@@ -1,0 +1,39 @@
+.btn {
+  border: none;
+  background-color: $accento;
+  font-weight: 700;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: ff-meta-web-pro, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  letter-spacing: 1px;
+
+  &:hover,
+  &:focus {
+    background-color: darken($accento, 10%);
+  }
+
+  &:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+  }
+
+  &:active {}
+
+  &--cta {
+    font-size: 0.8rem;
+    background-color: $rosso;
+  }
+
+  .primaryNavigation__navbar & {
+    position: relative;
+    padding: 0 1rem;
+    font-size: inherit;
+  }
+}

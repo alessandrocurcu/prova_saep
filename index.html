@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.typekit.net/ngl1jlg.css"/>
   </head>
-  <body class="container">
+  <body>
     <header class="header">
       <nav class="serviceNav">
         <ul class="serviceNav__navbar container">
@@ -23,7 +23,7 @@
         </div><span class="navbar__icon"><i class="fas fa-user"> </i></span>
       </div>
       <nav class="primaryNavigation" role="navigation">
-        <ul class="container">
+        <ul class="primaryNavigation__navbar container">
           <li class="primaryNavigation__item">the Society
             <ul class="dropdownMenu toggle">
               <li><a href="./society.html">The Constitution</a></li>
@@ -47,105 +47,34 @@
             </ul>
           </li>
           <li class="primaryNavigation__item"><a href="#">Research</a></li>
-          <li class="primaryNavigation__item"><a href="./membership.html">Become a member  </a></li>
+          <li class="primaryNavigation__item btn"><a href="./membership.html">Become a member  </a></li>
         </ul>
       </nav>
     </header>
-    <div class="grid">
-      <div class="intro__bend"></div>
-      <div class="intro">
+    <section class="bend"></section>
+    <section class="intro">
+      <div class="container grid_8_4">
         <p class="intro__text">Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.</p>
       </div>
-      <section class="homepageMembership"> 
-        <p>Our members can access a weathy numbers of top quality research and training video, also you will be able to obtain access to the largest network of professionals in Europe.You will granted access to our fellowhip and improve your knowledge and you ranks among your peers. </p>
-        <p>Join SECEC community and enjoy its advantages</p>
-        <button class="btn">Become a member   </button>
-      </section>
-      <section class="login">
-        <h2 class="login__title">Accedi all'area riservata i membri</h2>
-        <form class="form login__form">
-          <div class="form__group">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username"/>
-          </div>
-          <div class="form__group"> 
-            <label for="password">Password</label>
-            <input type="password" name="password"/>
-          </div>
-          <div class="form__group-orizzontal"> 
-            <input type="checkbox" name="ricordami"/>
-            <label for="ricordami">Remember me</label>
-          </div>
-          <p>Forgot password?</p>
-          <input class="btn" type="submit" value="Accedi"/>
-        </form>
-      </section>
-    </div>
-    <section class="congresses">
-      <h2>Congresses</h2>
-      <div class="mainCongress">
-        <h3 class="mainCongress__title">28th SECEC-ESSSE Congress </h3>
-        <p class="mainCongress__location">Geneve (Switzerland)</p>
-        <p class="mainCongress__date">19-22 September 2018</p>
-        <p class="mainCongress__description">Talks and other features, the congress will take place in the iconic and luxurious CICG convenniently located just off the Place des Nations (UN) and within easy reach of the city center.</p>
-        <p class="mainCongress__CTA">For more information <a href="emma.events/secec2018">visit the congress' ufficial site</a></p>
-      </div>
-      <div class="othersCongresses">
-        <div class="othersCongresses__congress">
-          <h3>ICSES Congress 2019 </h3>
-          <p>Buenos Aires (Argentina)</p>
-          <p>17-20 September 2019</p>
-        </div>
-        <div class="othersCongresses__congress">
-          <h3>SECEC Closed Meeting 2019 </h3>
-          <p>Copenhagen (Danmark)</p>
-          <p>???</p>
-        </div>
-      </div>
     </section>
-    <section class="newsSection">
-      <h2>News</h2>
-      <div class="news__list">
-        <article class="news">
-          <h3 class="news__title">Registry Committee Newsletter</h3>
-          <p class="news__date">20/08/2018</p>
-          <section class="news__description">
-            <p>Dear SECEC Member,</p>
-            <p>The Register Committee wants to know members opinions and queries to improve the data delivered by the National Registers and also to add new research paths for the Registers.</p>
-            <p>The Registry Committee needs your help gathering information in order to further inform and develop the content and reports of national joint arthroplasty registries.</p>
-            <p>We are also planning an ICL proposal for the upcoming SECEC meeting in Geneva. To help us & help you we would be grateful if you could complete this quick survey (Click here to see the form)</p>
-            <p>Many thanks for your kind cooperation,</p>
-            <p>Carlos Torrens, Chairman of the Registry Committee  </p>
-          </section>
-        </article>
-      </div>
-    </section>
-    <section class="patronages">
-      <h2 class="patronages__title">Congresses, Meetings and Courses under the SECEC Patronage</h2>
-      <div class="patronages__list">
-        <div class="patronage">
-          <div class="patronage__title">13th Hanover Arthroscopy and Arthroplasty Course</div>
-          <div class="patronage__place">Hanover, Germany</div>
-          <div class="patronage__date">November 9. - 10., 2018</div>
-          <div class="patronage__info">More info on www.arthroskopiekurs-hannover.de</div>
+    <section class="login">
+      <h2 class="login__title">Accedi all'area riservata i membri</h2>
+      <form class="form login__form">
+        <div class="form__group">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username"/>
         </div>
-        <div class="patronage">
-          <div class="patronage__title">International Shoulder Safari</div>
-          <div class="patronage__place">Israel</div>
-          <div class="patronage__date">November 11-18, 2018</div>
-          <div class="patronage__info">More info on www.shouldersafari.com</div>
+        <div class="form__group"> 
+          <label for="password">Password</label>
+          <input type="password" name="password"/>
         </div>
-        <div class="patronage">
-          <div class="patronage__title">Advanced Course on Shoulder Arthroscopy</div>
-          <div class="patronage__place">Val d'Isère, France</div>
-          <div class="patronage__date">January 20-25, 2019</div>
-          <div class="patronage__info">More info on www.valdisereshoulder.com        </div>
+        <div class="form__group-orizzontal"> 
+          <input type="checkbox" name="ricordami"/>
+          <label for="ricordami">Remember me</label>
         </div>
-      </div>
-    </section>
-    <section class="presidentMessage">
-      <h2>The annual message from our President Roger Emery</h2><img src="./img/secec-president-2018.png"/>
-      <p>I hope you are enjoying the hottest European summer on record, and looking forward to early autumn on Lake Geneva. The 28th Congress will be, as usual, a scientific meeting of the highest quality, and a wonderful opportunity for communication. A return to Switzerland, the home of so many of our contributors and in particular our co-founder Norbert Gschwend, is always a pleasure; and the venue of Geneva is an ideal location as it is a cradle of so many NGOs and an exemplar of what Europe can achieve through active co-operation. Our major theme will be health economics with a focus on how we deliver treatment to our patients, and on how we ensure effectiveness with respect to both outcomes and healthcare costs. We need to evaluate how our scientific output changes our clinical.practice . Once again we have included technology not only for current procedures but also to understand what is available and how it could potentially change our discipline.</p>
+        <p>Forgot password?</p>
+        <input class="btn" type="submit" value="Accedi"/>
+      </form>
     </section>
   </body>
   <script src="./js/index.js"></script>

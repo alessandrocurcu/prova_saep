@@ -5,16 +5,16 @@
   width: 100%;
   min-height: 50px;
   background-color: $grigio3;
+  font-family: ff-meta-web-pro, sans-serif;
 }
 
 .serviceNav {
-  background-color: $blu1;
-  font-family: ff-meta-web-pro, sans-serif;
+  background-color: $fascia1;
   font-weight: 300;
 
   &__navbar {
-    margin: 0;
-    padding: 0;
+    // margin: 0;
+    padding-right: 1rem;
     list-style: none;
     display: none;
 
@@ -24,27 +24,17 @@
       justify-content: flex-end;
       align-items: center;
       height: 1.953rem;
-      color: $grigio3;
+      color: white;
       font-size: 0.64rem;
       text-transform: uppercase;
-      // padding: 0 0.8rem;
     }
   }
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-  min-width: 300px;
-  // padding: 0.328rem 0.8rem;
-  // background-color: red;
 
-  @include sm {
-    // padding: 0.328rem 0;
-  }
-}
 
 .navbar {
+  position: relative;
   // background-image: url('./../img/shoulder.jpg');
   // background-repeat: no-repeat;
   // background-size: cover;
@@ -74,10 +64,37 @@
       display: none;
     }
   }
+
+  &:after {
+    // content: '';
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // right: 0;
+    // display: block;
+    // // height: 100px;
+    // width: 40%;
+    // background-color: red;
+    // transform: skewX(-30deg);
+  }
+}
+
+.prova {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  // height: 100px;
+  width: 40%;
+  background-color: $rosso;
+  transform: skewX(-30deg);
 }
 
 .logo {
   // display: block;
+  color: $rosso;
   display: flex;
   align-items: center;
 
@@ -94,11 +111,11 @@
 
 .logotype {
 
-  color: $rosso;
+
 
   &__french {
     display: block;
-    border-bottom: 1px solid $rosso;
+    border-bottom: 1px solid currentColor;
     padding-bottom: 3px;
   }
 
@@ -122,7 +139,7 @@
   @include sm {
     display: block;
     width: 100%;
-    background-color: $bgc;
+    background-color: white;
   }
 }
 
@@ -167,14 +184,7 @@
 
     &:last-child {
       margin-left: auto;
-      background-color: $rosso;
-      font-weight: 700;
-      color: white;
 
-      &:hover {
-        background-color: darken($rosso, 10%);
-        //color: rebeccapurple;
-      }
     }
 
     &:not(:last-child) {
