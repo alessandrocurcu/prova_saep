@@ -122,7 +122,7 @@
   @include sm {
     display: block;
     width: 100%;
-    background-color: white;
+    background-color: $bgc;
   }
 }
 
@@ -153,7 +153,8 @@
     // border: 1px solid #333;
 
     &:hover {
-      background-color: $giallo;
+      background-color: $rosso;
+      color: white;
       //color: rebeccapurple;
     }
 
@@ -166,11 +167,12 @@
 
     &:last-child {
       margin-left: auto;
-      background-color: $giallo;
+      background-color: $rosso;
       font-weight: 700;
+      color: white;
 
       &:hover {
-        background-color: #ffcb00;
+        background-color: darken($rosso, 10%);
         //color: rebeccapurple;
       }
     }
