@@ -1,27 +1,73 @@
 .card {
-  text-align: center;
+  display: flex;
+  color: white;
 
-  .span2 & {
-    text-align: left;
+  flex-direction: column;
+  font-family: ff-meta-web-pro, sans-serif;
+  padding: ($vr / 2) 1.953rem $vr 1.953rem;
+
+  // justify-content: space-between;
+  // align-items: center;
+  &__title {
+    // position: relative;
+    font-size: 1.563rem;
+    margin-top: 0;
+    margin-bottom: $vr / 2;
+    font-weight: 300;
+    line-height: 1.25;
+
+    .card--cta & {
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
   }
 
-  &__img {
-    display: inline-block;
-    // width: 100%;
-    // max-width: 100%;
-    height: auto;
+  &__description {
+    // font-family: ff-meta-serif-web-pro, serif;
+    font-size: 1rem;
+    margin-bottom: $vr / 2;
 
-    .span2 & {
-      width: 90%;
-      // max-width: 50%;
-      height: 200px;
+    .card--cta & {
+      font-size: 0.8rem;
+      line-height: 1.25;
+      font-weight: 300;
     }
   }
 
-  &__title {
-    margin: 0;
-    line-height: 1;
+  &:nth-child(even) {
+    background-color: $rosso;
   }
 
-  &__description {}
+  &:nth-child(odd):not(:last-child) {
+    background-color: darken($rosso, 20%);
+  }
+
+  &--cta {
+    background-color: $giallo;
+    color: $blu1;
+
+    button {
+      background-color: $blu1;
+      color: $giallo;
+      font-weight: 600;
+      padding: 9px !important;
+      text-align: center !important;
+    }
+  }
+
+  button {
+    margin-top: auto;
+    text-align: left;
+    padding: 0;
+    padding-bottom: 9px;
+  }
+
+  .grid-membership & {}
+
+  // * {
+  //   border: 1px solid red;
+  // }
+
+  &--small {}
 }

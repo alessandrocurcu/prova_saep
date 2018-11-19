@@ -1,10 +1,10 @@
 .btn {
   border: none;
-  background-color: $rosso;
+  background-color: $grigio3;
   font-weight: 400;
-  color: white;
-  padding: 0.64rem 1.25rem;
-  font-size: 1rem;
+  color: $blu1;
+  padding: (0.64rem / 2) (1.25rem / 2);
+  font-size: 0.8rem;
   text-transform: uppercase;
   font-family: ff-meta-web-pro, sans-serif;
   text-decoration: none;
@@ -13,6 +13,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   letter-spacing: 1px;
+  border-radius: 10px;
 
   &:hover,
   &:focus {
@@ -30,10 +31,13 @@
     // position: relative;
     // z-index: 2;
     font-size: inherit;
-    color: lighten($rosso, 10%);
-    // background-color: $accento;
-    // font-weight: 700;
-    font-style: italic;
+    // color: lighten($rosso, 10%);
+    background-color: lighten($rosso, 10%);
+    color: $accento;
+    font-weight: 700;
+    // font-style: italic;
+    padding: 0.64rem 1.25rem;
+    letter-spacing: 0;
     // color: white;
 
     // display: none;
@@ -41,6 +45,10 @@
     &:hover,
     &:focus {
       // background-color: darken($accento, 10%);
+    }
+
+    .membership & {
+      display: none;
     }
 
     // &:before {
@@ -57,20 +65,28 @@
     // }
   }
 
-  &--hollow {
-    background-color: $giallo;
+  .login & {
+    background-color: $accento2;
     // border: 1px solid currentColor;
     width: 100%;
     color: $accento;
     font-weight: 600;
     font-size: 0.64rem;
+    padding: 0.64rem 1.25rem;
     transition: background 0.3s ease-in-out;
 
     // padding: 0 // border-radius: 5px;
     &:hover,
     &:focus {
-      background-color: darken($giallo, 20%);
+      background-color: darken($accento2, 20%);
     }
+  }
+
+  &--hollow {
+    background-color: transparent;
+    // border: 1px solid darken($accento2, 20%);
+    color: $giallo;
+
   }
 
   .primaryNavigation__navbar & {

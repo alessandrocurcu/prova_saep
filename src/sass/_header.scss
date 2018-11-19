@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -185,13 +186,14 @@
     li {
       &:hover {
         //background-color: red;
-        color: rebeccapurple;
+        // color: rebeccapurple;
       }
     }
 
     &:last-child {
       // margin-left: auto;
-
+      font-style: italic;
+      color: darken($rosso, 10%);
     }
 
     &:not(:last-child) {

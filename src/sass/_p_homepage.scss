@@ -1,8 +1,18 @@
-.grid {
+.grid-intro {
   @include sm {
     display: grid;
     grid-template-columns: 10fr 2fr;
     grid-column-gap: 1.953rem;
+
+  }
+}
+
+.grid-membership {
+  @include sm {
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    grid-auto-rows: minmax($vr * 10, auto);
+    // grid-column-gap: 1.953rem;
   }
 }
 
@@ -27,24 +37,100 @@
   background-color: $fascia1;
 
   &__text {
+    position: relative;
     margin: 0 auto;
 
     font-size: 1.563rem;
     grid-column: 1/ 2;
     color: white;
-    padding: 3.815rem 0;
+    margin: ($vr * 3) 0;
+    margin-bottom: 0;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+
+    // border-bottom: 2px solid $accento2;
 
     a {
       font-style: italic;
+      transition: color 0.3s ease-in-out;
 
       &:hover,
       &:focus {
-        color: $accento;
-        text-decoration: underline;
+        color: darken($accento2, 20%);
+        // text-decoration: underline;
       }
     }
+
+    p {
+      // &:after {
+      //   content: ' ';
+      //   display: inline-block;
+      //   height: 2px;
+      //   width: 120px;
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 0;
+      //   background-color: $accento2;
+      // }
+    }
+
   }
 
   @include sm {}
+}
+
+.membership {
+  position: relative;
+  // top: - ($vr * 2);
+  color: white;
+  background-color: $blu1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+
+
+  .container {
+    padding: $vr 1.953rem;
+    padding: $vr * 2 0;
+  }
+
+  &__title,
+  &__subtitle {
+    position: relative;
+    margin-top: $vr;
+    margin-bottom: $vr / 2;
+    font-weight: 200;
+
+    &:after {
+      content: ' ';
+      display: inline-block;
+      height: 2px;
+      width: 8%;
+      position: absolute;
+      top: - (1rem / 3);
+      left: 0;
+      background-color: $accento2;
+    }
+  }
+
+  &__subtitle {
+    display: none;
+
+    &:after {
+      // display: none;
+      width: 3%;
+    }
+  }
+
+  &__intro {
+    width: 75%;
+    font-size: 1.25rem;
+    margin-bottom: $vr * 2;
+
+  }
+
+  // button {
+  //   display: none;
+  //   margin-bottom: $vr * 2;
+
+  // }
+
+
 }
