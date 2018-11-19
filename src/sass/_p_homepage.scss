@@ -121,11 +121,13 @@
 
   }
 
-  // button {
-  //   display: none;
-  //   margin-bottom: $vr * 2;
 
-  // }
+
+  .card:not(:last-child) button {
+    display: none;
+    // margin-bottom: $vr * 2;
+
+  }
 
 
 }

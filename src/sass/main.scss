@@ -40,15 +40,15 @@ p {
 }
 
 .bend {
+  display: flex;
+  align-items: center;
   margin-top: 96.78px;
-  padding-top: $vr;
+  // padding-top: $vr;
   width: 100%;
-
-
   height: 14.552rem;
 
   @include sm {
-    margin-top: 194px;
+    margin-top: 205.75px;
   }
 
   &--color1 {

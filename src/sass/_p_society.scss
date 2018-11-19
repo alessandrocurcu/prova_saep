@@ -1,4 +1,5 @@
-.constitution {
+.constitution,
+.history {
 
   h2,
   h3,
@@ -6,7 +7,7 @@
     margin: 0;
     font-weight: 400;
     position: relative;
-    left: - 1rem;
+    // left: - 1rem;
 
 
   }
@@ -14,7 +15,7 @@
   h2 {
     font-size: 2.441rem;
     font-size: 1.563rem;
-    margin-bottom: $vr / 4;
+    margin-bottom: $vr / 2;
 
     &:after {
       content: ' ';
@@ -47,22 +48,34 @@
     padding: 0;
   }
 
-  p {
-    font-size: 1rem;
-    line-height: 1.5;
+
+
+  p,
+  ul,
+  ol {
+    padding-left: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.6;
   }
 
   p+p {
-    margin-bottom: $vr / 2;
+    margin-bottom: $vr * 1.5;
   }
 
   p+ul {
     margin-top: $vr / 2;
   }
 
+  .author {
+    font-style: italic;
+    margin-top: $vr;
+    margin-bottom: $vr;
+    font-size: 1rem;
+  }
+
   &__grid {
     display: grid;
-    grid-template-columns: 8fr 4fr;
+    grid-template-columns: 9fr 3fr;
     margin-top: $vr * 2;
 
     .article {
