@@ -66,19 +66,24 @@
   }
 
   .login & {
-    background-color: $accento2;
+    // background-color: $accento2;
+    background-color: transparent;
     // border: 1px solid currentColor;
     width: 100%;
     color: $accento;
+    color: white;
+    border: 1px solid currentColor;
     font-weight: 600;
     font-size: 0.64rem;
     padding: 0.64rem 1.25rem;
-    transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     // padding: 0 // border-radius: 5px;
     &:hover,
     &:focus {
       background-color: darken($accento2, 20%);
+      background-color: $accento2;
+      color: $blu1;
     }
   }
 

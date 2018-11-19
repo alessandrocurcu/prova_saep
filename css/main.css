@@ -523,17 +523,21 @@ p {
     .membership .btn--cta {
       display: none; }
   .login .btn {
-    background-color: #FFE066;
+    background-color: transparent;
     width: 100%;
     color: #202C39;
+    color: white;
+    border: 1px solid currentColor;
     font-weight: 600;
     font-size: 0.64rem;
     padding: 0.64rem 1.25rem;
-    -webkit-transition: background 0.3s ease-in-out;
-    -o-transition: background 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out; }
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
     .login .btn:hover, .login .btn:focus {
-      background-color: #ffcb00; }
+      background-color: #ffcb00;
+      background-color: #FFE066;
+      color: #202C39; }
   .btn--hollow {
     background-color: transparent;
     color: #FFE066; }
@@ -760,6 +764,7 @@ p {
   font-family: ff-meta-web-pro, sans-serif;
   color: white;
   background-color: #5d171a;
+  background-color: #202C39;
   padding: 1.25rem 1.953rem 2.5rem 1.953rem;
   font-weight: 400;
   margin: 1.25rem 0 0 0;
@@ -867,9 +872,9 @@ p {
   margin-top: 96.78px;
   width: 100%;
   background-color: #AF2B31;
-  background-image: url("./../img/intro2.jpg");
+  background-image: url("./../img/ossaBlu.jpg");
   background-repeat: no-repeat;
-  background-position: 83% 83%;
+  background-position: 12% 12%;
   background-size: cover;
   height: 14.552rem; }
   @media (min-width: 576px) {
