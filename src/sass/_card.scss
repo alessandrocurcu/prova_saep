@@ -53,6 +53,11 @@
       font-weight: 600;
       padding: 9px !important;
       text-align: center !important;
+
+      &:hover,
+      &:focus {
+        background-color: darken($blu1, 10%);
+      }
     }
   }
 
@@ -61,6 +66,12 @@
     text-align: left;
     padding: 0;
     padding-bottom: 9px;
+
+    // &:hover,
+    // &:focus {
+    //   color: darken($giallo, 30%);
+    // }
+
   }
 
   .grid-membership & {}

@@ -510,8 +510,6 @@ p {
   -moz-appearance: none;
   letter-spacing: 1px;
   border-radius: 10px; }
-  .btn:hover, .btn:focus {
-    background-color: #862126; }
   .btn:focus {
     outline: 1px solid #fff;
     outline-offset: -4px; }
@@ -696,6 +694,8 @@ p {
   .primaryNavigation__item:last-child {
     font-style: italic;
     color: #862126; }
+    .primaryNavigation__item:last-child:hover, .primaryNavigation__item:last-child:focus {
+      color: white; }
 
 .dropdownMenu {
   position: absolute;
@@ -828,6 +828,8 @@ p {
       font-weight: 600;
       padding: 9px !important;
       text-align: center !important; }
+      .card--cta button:hover, .card--cta button:focus {
+        background-color: #0e1318; }
   .card button {
     margin-top: auto;
     text-align: left;

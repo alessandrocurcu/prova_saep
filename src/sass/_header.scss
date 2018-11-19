@@ -194,6 +194,13 @@
       // margin-left: auto;
       font-style: italic;
       color: darken($rosso, 10%);
+      // transition: color 0.2s ease-in-out;
+
+      &:hover,
+      &:focus {
+        color: white;
+        // text-decoration: underline;
+      }
     }
 
     &:not(:last-child) {
