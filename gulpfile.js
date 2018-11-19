@@ -12,6 +12,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const beautify = require('gulp-cssbeautify');
 const moduleImporter = require('sass-module-importer');
+const browserify = require('gulp-browserify');
 
 const defaultTask = cb => {
   cb();
@@ -46,7 +47,15 @@ const prodhtml = () =>
     )
     .pipe(dest('./dist'));
 
-const prodjs = () => src('./js/index.js').pipe(dest('./dist/js/'));
+const prodjs = () =>
+  src('./js/index.js')
+    .pipe(browserify())
+    .pipe(dest('./dist/js/'));
+
+const js = () =>
+  src('./src/js/index.js')
+    .pipe(browserify())
+    .pipe(dest('./js/'));
 
 const prodimg = () => src('./img/*.*').pipe(dest('./dist/img/'));
 
@@ -67,6 +76,11 @@ const prodcleanCSS = cb => {
 
 const prodcleanJS = cb => {
   del(['./dist/js/']);
+  cb();
+};
+
+const cleanJS = cb => {
+  del(['./js/index.js']);
   cb();
 };
 
@@ -108,7 +122,7 @@ const prodstyle = () =>
 const watchFiles = () => {
   watch('./src/sass/*.scss', series(cleanCSS, style));
   watch('./src/views/*.pug', series(cleanHTML, html));
-  watch('./js/*.js', series(cleanHTML, html));
+  watch('./src/js/*.js', series(cleanJS, js));
 };
 
 exports.dev = parallel(watchFiles, browserSyncTask);
