@@ -9,9 +9,8 @@ const wrapper = document.getElementById('wrapper');
 
 const formHookButton = document.getElementById('form_hook_button');
 
-console.log(formHookButton);
-
 const dropdownMenus = document.querySelectorAll('.dropdownMenu');
+
 const primaryNavigationItems = document.querySelectorAll(
   '.primaryNavigation__item'
 );
@@ -25,9 +24,10 @@ const toggleClick = e => {
 };
 
 const toggleHover = e => {
-  if (typeof e.currentTarget.children[1] === 'undefined') return;
+  console.log(e.currentTarget.children[0]);
+  if (typeof e.currentTarget.children[0].children[0] === 'undefined') return;
   // e.preventDefault();
-  e.currentTarget.children[1].classList.toggle('toggle');
+  e.currentTarget.children[0].classList.toggle('toggle');
 };
 
 primaryNavigationItems.forEach(el => {

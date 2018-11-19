@@ -7,6 +7,7 @@
   min-height: 50px;
   background-color: $grigio3;
   font-family: ff-meta-web-pro, sans-serif;
+  @include box_shadow(1);
 }
 
 .serviceNav {
@@ -140,7 +141,7 @@
 
 .primaryNavigation {
   display: none;
-  font-family: ff-meta-web-pro, sans-serif;
+  font-family: $secondaryText;
   font-weight: 400;
   letter-spacing: 1px;
 
@@ -176,9 +177,10 @@
     cursor: pointer;
     padding: 0 1rem;
     // border: 1px solid #333;
+    // transition: all 0.2s ease-in-out;
 
     &:hover {
-      background-color: $rosso;
+      background-color: $blu1;
       color: white;
       //color: rebeccapurple;
     }
@@ -190,8 +192,7 @@
       }
     }
 
-    &:last-child {
-      // margin-left: auto;
+    &--highlight {
       font-style: italic;
       color: darken($rosso, 10%);
       // transition: color 0.2s ease-in-out;
@@ -201,6 +202,11 @@
         color: white;
         // text-decoration: underline;
       }
+    }
+
+    &:last-child {
+      margin-left: auto;
+      font-weight: 700;
     }
 
     &:not(:last-child) {
@@ -216,18 +222,46 @@
 .dropdownMenu {
   position: absolute;
   list-style: none;
-  background-color: $bgc;
-  padding-left: 1rem;
-  top: 52px + 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.64rem;
+  // align-items: center;
+  background-color: $blu1;
+  // padding-left: 1rem;
+  padding-left: 0;
+
+  width: 200px;
+  top: 50px;
   left: -1px;
   right: -1px;
 
-  border-right: 1px solid #333;
-  border-bottom: 1px solid #333;
-  border-left: 1px solid #333;
+  @include box_shadow(2);
+
+  // border-right: 1px solid #333;
+  // border-bottom: 1px solid #333;
+  // border-left: 1px solid #333;
   // top: 0;
   // right: 0;
   // display: none;
+  li {
+    // margin-bottom: $vr;
+    padding: ($vr / 1.5) 0 ($vr / 1.5) 1rem;
+    // padding-left: 1rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($blu1, 5%);
+
+      a {
+        transition: all 0.2s ease-in-out;
+        display: inline-block;
+        transform: translateX(10px);
+      }
+    }
+
+
+  }
 }
 
 .toggle {
