@@ -1,10 +1,21 @@
 .card {
+  position: relative;
+  z-index: 1;
   display: flex;
   color: white;
-
+  opacity: 0.9;
   flex-direction: column;
   font-family: ff-meta-web-pro, sans-serif;
   padding: ($vr / 2) 1.953rem $vr 1.953rem;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+  }
 
   // justify-content: space-between;
   // align-items: center;

@@ -789,16 +789,30 @@ p {
       display: block; } }
 
 .card {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: white;
+  opacity: 0.9;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: ff-meta-web-pro, sans-serif;
-  padding: 0.625rem 1.953rem 1.25rem 1.953rem; }
+  padding: 0.625rem 1.953rem 1.25rem 1.953rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer; }
+  .card:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    position: relative;
+    z-index: 2;
+    opacity: 1; }
   .card__title {
     font-size: 1.563rem;
     margin-top: 0;
