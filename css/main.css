@@ -810,7 +810,8 @@ p {
       line-height: 1.2; }
   .card__description {
     font-size: 1rem;
-    margin-bottom: 0.625rem; }
+    margin-bottom: 0.625rem;
+    line-height: 1.4; }
     .card--cta .card__description {
       font-size: 0.8rem;
       line-height: 1.25;
@@ -839,7 +840,7 @@ p {
 @media (min-width: 576px) {
   .grid-intro {
     display: grid;
-    grid-template-columns: 9fr 3fr;
+    grid-template-columns: 10fr 2fr;
     grid-column-gap: 1.953rem; } }
 
 @media (min-width: 576px) {

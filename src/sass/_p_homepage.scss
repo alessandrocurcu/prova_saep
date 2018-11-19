@@ -1,7 +1,7 @@
 .grid-intro {
   @include sm {
     display: grid;
-    grid-template-columns: 9fr 3fr;
+    grid-template-columns: 10fr 2fr;
     grid-column-gap: 1.953rem;
 
   }
