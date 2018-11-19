@@ -82,3 +82,7 @@ $screen-xl-min: 1200px;
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+.dropshadowBox {
+  box-shadow: 0px 0px 26px -1px rgba(0, 0, 0, 0.6);
+}

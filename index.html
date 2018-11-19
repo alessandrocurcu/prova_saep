@@ -14,7 +14,7 @@
     <header class="header">
       <nav class="serviceNav">
         <ul class="serviceNav__navbar container">
-          <li>Log in</li>
+          <li><span><i class="fas fa-userLog"></i></span> log in</li>
         </ul>
       </nav>
       <div class="navbar container"><span class="navbar__icon"><i class="fas fa-bars"></i></span>
@@ -47,34 +47,33 @@
             </ul>
           </li>
           <li class="primaryNavigation__item"><a href="#">Research</a></li>
-          <li class="primaryNavigation__item btn"><a href="./membership.html">Become a member  </a></li>
+          <li class="primaryNavigation__item btn--cta"><a href="./membership.html">Secec/ESSSE congress 2018 </a></li>
         </ul>
       </nav>
     </header>
     <section class="bend"></section>
     <section class="intro">
-      <div class="container grid_8_4">
-        <p class="intro__text">Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.</p>
+      <div class="container grid">
+        <p class="intro__text">Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.     </p>
+        <section class="login">
+          <h2 class="login__title">Access to the private members' area</h2>
+          <form class="form login__form">
+            <div class="form__group form__group--vertical">
+              <label for="username">Username</label>
+              <input type="text" name="username" id="username"/>
+            </div>
+            <div class="form__group form__group--vertical login__password"> 
+              <label for="password">Password<a href="#">Forgot password?</a></label>
+              <input type="password" name="password"/>
+            </div>
+            <div class="form__group form__group--orizzontal"> 
+              <input type="checkbox" name="ricordami"/>
+              <label for="ricordami">Remember me</label>
+            </div>
+            <input class="btn btn--hollow" type="submit" value="Accedi"/>
+          </form>
+        </section>
       </div>
-    </section>
-    <section class="login">
-      <h2 class="login__title">Accedi all'area riservata i membri</h2>
-      <form class="form login__form">
-        <div class="form__group">
-          <label for="username">Username</label>
-          <input type="text" name="username" id="username"/>
-        </div>
-        <div class="form__group"> 
-          <label for="password">Password</label>
-          <input type="password" name="password"/>
-        </div>
-        <div class="form__group-orizzontal"> 
-          <input type="checkbox" name="ricordami"/>
-          <label for="ricordami">Remember me</label>
-        </div>
-        <p>Forgot password?</p>
-        <input class="btn" type="submit" value="Accedi"/>
-      </form>
     </section>
   </body>
   <script src="./js/index.js"></script>

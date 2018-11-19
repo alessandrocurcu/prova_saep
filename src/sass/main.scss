@@ -39,13 +39,7 @@ p {
   }
 }
 
-.grid_8_4 {
-  @include sm {
-    display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
-    grid-column-gap: 1.953rem;
-  }
-}
+
 
 
 

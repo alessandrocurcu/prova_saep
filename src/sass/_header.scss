@@ -14,7 +14,7 @@
 
   &__navbar {
     // margin: 0;
-    padding-right: 1rem;
+    // padding-right: 1rem;
     list-style: none;
     display: none;
 
@@ -27,6 +27,11 @@
       color: white;
       font-size: 0.64rem;
       text-transform: uppercase;
+
+      li {
+        display: none;
+      }
+
     }
   }
 }
@@ -100,7 +105,7 @@
 
   a {
     flex: none;
-    margin-right: 1%;
+    margin-right: (1rem / 2);
   }
 
   &__img {
@@ -135,6 +140,8 @@
 .primaryNavigation {
   display: none;
   font-family: ff-meta-web-pro, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
 
   @include sm {
     display: block;
@@ -183,7 +190,7 @@
     }
 
     &:last-child {
-      margin-left: auto;
+      // margin-left: auto;
 
     }
 

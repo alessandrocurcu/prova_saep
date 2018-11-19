@@ -1,10 +1,10 @@
 .btn {
   border: none;
-  background-color: $accento;
-  font-weight: 700;
+  background-color: $rosso;
+  font-weight: 400;
   color: white;
-  padding: 0.8rem 1rem;
-  font-size: 0.8rem;
+  padding: 0.64rem 1.25rem;
+  font-size: 1rem;
   text-transform: uppercase;
   font-family: ff-meta-web-pro, sans-serif;
   text-decoration: none;
@@ -16,7 +16,7 @@
 
   &:hover,
   &:focus {
-    background-color: darken($accento, 10%);
+    background-color: darken($rosso, 10%);
   }
 
   &:focus {
@@ -27,13 +27,61 @@
   &:active {}
 
   &--cta {
-    font-size: 0.8rem;
-    background-color: $rosso;
+    // position: relative;
+    // z-index: 2;
+    font-size: inherit;
+    color: lighten($rosso, 10%);
+    // background-color: $accento;
+    // font-weight: 700;
+    font-style: italic;
+    // color: white;
+
+    // display: none;
+
+    &:hover,
+    &:focus {
+      // background-color: darken($accento, 10%);
+    }
+
+    // &:before {
+    //   content: ' ';
+    //   display: inline-block;
+    //   position: absolute;
+    //   z-index: -1;
+    //   top: 0;
+    //   right: 0;
+    //   background-color: $accento;
+    //   width: 100%;
+    //   height: 50px;
+    //   transform: skew(-18deg)
+    // }
+  }
+
+  &--hollow {
+    background-color: $giallo;
+    // border: 1px solid currentColor;
+    width: 100%;
+    color: $accento;
+    font-weight: 600;
+    font-size: 0.64rem;
+    transition: background 0.3s ease-in-out;
+
+    // padding: 0 // border-radius: 5px;
+    &:hover,
+    &:focus {
+      background-color: darken($giallo, 20%);
+    }
   }
 
   .primaryNavigation__navbar & {
     position: relative;
-    padding: 0 1rem;
-    font-size: inherit;
+    padding: 0 0.9rem;
+    // margin-right: 1.953rem;
+    // width: 200.333px;
+    // widmaerginth: 270.633px;
+    display: flex;
+    justify-content: center;
+    // text-align: center;
+    // font-size: inherit;
   }
 }

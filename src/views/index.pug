@@ -11,28 +11,26 @@ block body
     include _header.pug
     section.bend
     section.intro
-      .container.grid_8_4
-        //- .intro__bend
-        p.intro__text Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.
-          //- img.intro__img(src="./img/secec_community.jpg", alt="")
+      .container.grid
+        p.intro__text Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.     
+        section.login
+          h2.login__title Access to the private members' area
+          form.form.login__form
+            .form__group.form__group--vertical
+              label(for="username") Username
+              input(type="text", name="username", id="username")
+            .form__group.form__group--vertical.login__password  
+              label(for="password") Password<a href="#">Forgot password?</a>
+              input(type="password", name="password")
+            .form__group.form__group--orizzontal  
+              input(type="checkbox", name="ricordami")
+              label(for="ricordami") Remember me
+            input.btn.btn--hollow(type="submit", value="Accedi")
+    //- img.intro__img(src="./img/secec_community.jpg", alt="")
       //- section.homepageMembership  
       //-   p Our members can access a weathy numbers of top quality research and training video, also you will be able to obtain access to the largest network of professionals in Europe.You will granted access to our fellowhip and improve your knowledge and you ranks among your peers. 
       //-   p Join SECEC community and enjoy its advantages
-      //-   button.btn.btn--cta Become a member   
-    section.login
-      h2.login__title Accedi all'area riservata i membri
-      form.form.login__form
-        .form__group
-          label(for="username") Username
-          input(type="text", name="username", id="username")
-        .form__group  
-          label(for="password") Password
-          input(type="password", name="password")
-        .form__group-orizzontal  
-          input(type="checkbox", name="ricordami")
-          label(for="ricordami") Remember me
-        p Forgot password?
-        input.btn(type="submit", value="Accedi")
+      //-   button.btn.btn--cta Become a member       
     //- section.congresses
     //-   h2 Congresses
     //-   .mainCongress
