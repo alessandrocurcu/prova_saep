@@ -30,21 +30,35 @@
   &--cta {
     // position: relative;
     // z-index: 2;
-    font-size: inherit;
+    // font-size: inherit;
     // color: lighten($rosso, 10%);
-    background-color: lighten($blu1, 0);
-    color: $accento2;
-    font-weight: 700;
+    // background-color: lighten($blu1, 0);
+    // color: $accento2;
+    // font-weight: 700;
     // font-style: italic;
     // padding: 0.64rem 1.25rem;
-    letter-spacing: 0;
+    // letter-spacing: 0;
     // color: white;
 
     // display: none;
 
+    background-color: transparent;
+    // border: 1px solid currentColor;
+    width: 100%;
+    color: $accento2;
+    color: white;
+    border: 1px solid currentColor;
+    font-weight: 600;
+    font-size: 0.64rem;
+    padding: 0.64rem 1.25rem;
+    transition: all 0.3s ease-in-out;
+
+    // padding: 0 // border-radius: 5px;
     &:hover,
     &:focus {
-      // background-color: darken($accento, 10%);
+      background-color: darken($accento2, 20%);
+      background-color: $accento2;
+      color: $blu1;
     }
 
     .membership & {
