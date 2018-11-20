@@ -7,7 +7,7 @@
   min-height: 50px;
   background-color: white;
   font-family: ff-meta-web-pro, sans-serif;
-  @include box_shadow(1);
+  @include box_shadow(3);
 }
 
 .serviceNav {
@@ -245,7 +245,7 @@
   left: -1px;
   right: -1px;
 
-  @include box_shadow(2);
+  @include box_shadow(4);
 
   // border-right: 1px solid #333;
   // border-bottom: 1px solid #333;

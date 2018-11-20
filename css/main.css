@@ -597,7 +597,8 @@ p {
       color: #202C39; }
   .btn--hollow {
     background-color: transparent;
-    color: #FFE066; }
+    color: #FFE066;
+    font-size: 1rem; }
   .primaryNavigation__navbar .btn {
     position: relative;
     padding: 0 0.9rem;
@@ -617,8 +618,8 @@ p {
   min-height: 50px;
   background-color: white;
   font-family: ff-meta-web-pro, sans-serif;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
 .serviceNav {
   background-color: #AF2B31;
@@ -788,8 +789,8 @@ p {
   top: 50px;
   left: -1px;
   right: -1px;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
   .dropdownMenu li {
     padding: 0.83333rem 0 0.83333rem 1rem;
     -webkit-transition: all 0.2s ease-in-out;
@@ -927,7 +928,9 @@ p {
     .card--cta .card__description {
       font-size: 0.8rem;
       line-height: 1.25;
-      font-weight: 300; }
+      font-weight: 300;
+      font-style: italic;
+      opacity: 0.8; }
   .card:nth-child(even) {
     background-color: #AF2B31; }
   .card:nth-child(odd):not(:last-child) {
@@ -961,21 +964,30 @@ p {
     grid-template-columns: repeat(5, 2fr);
     grid-auto-rows: minmax(12.5rem, auto); } }
 
+section {
+  padding: 2.5rem 0; }
+
 .homepageHeroImage {
   background-image: url("./../img/ossaBlu.jpg");
   background-repeat: no-repeat;
   background-position: 12% 12%;
   background-size: cover; }
 
+.congressImage {
+  background-image: url("./../img/geneve.jpg");
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
+  background-size: cover; }
+
 .intro {
-  background-color: #AF2B31; }
+  background-color: #AF2B31;
+  padding: 0; }
   .intro__text {
     position: relative;
-    margin: 0 auto;
     font-size: 1.563rem;
     grid-column: 1/ 2;
     color: white;
-    margin: 3.75rem 0;
+    margin: 3.75rem auto;
     margin-bottom: 0;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
     .intro__text a {
@@ -984,16 +996,13 @@ p {
       -o-transition: color 0.3s ease-in-out;
       transition: color 0.3s ease-in-out; }
       .intro__text a:hover, .intro__text a:focus {
-        color: #ffcb00; }
+        color: #FFE066; }
 
 .membership {
   position: relative;
   color: white;
   background-color: #202C39;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-  .membership .container {
-    padding: 1.25rem 1.953rem;
-    padding: 2.5rem 0; }
   .membership__title, .membership__subtitle {
     position: relative;
     margin-top: 1.25rem;
@@ -1002,22 +1011,79 @@ p {
     .membership__title:after, .membership__subtitle:after {
       content: ' ';
       display: inline-block;
-      height: 2px;
+      height: 3px;
       width: 8%;
       position: absolute;
       top: -0.33333rem;
       left: 0;
+      border-radius: 50px;
       background-color: #FFE066; }
   .membership__subtitle {
     display: none; }
     .membership__subtitle:after {
       width: 3%; }
-  .membership__intro {
+  .membership__text {
     width: 75%;
     font-size: 1.25rem;
     margin-bottom: 2.5rem; }
   .membership .card:not(:last-child) button {
     display: none; }
+
+.congresses {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  .congresses .container {
+    background-color: rgba(175, 43, 49, 0.9);
+    color: white;
+    padding: 1.25rem 1.953rem;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.mainCongress {
+  text-align: center; }
+  .mainCongress__title {
+    position: relative;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    font-size: 3.052rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #202C39; }
+    .mainCongress__title:after {
+      content: ' ';
+      display: block;
+      height: 3px;
+      width: 20%;
+      position: absolute;
+      bottom: -0.25rem;
+      background-color: #202C39;
+      border-radius: 50px; }
+  .mainCongress__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1.25rem;
+    font-family: ff-meta-web-pro, sans-serif;
+    font-weight: 300; }
+    .mainCongress__info p i {
+      margin-right: 0.33333rem; }
+    .mainCongress__info p:first-child {
+      margin-right: 2rem; }
+  .mainCongress__description {
+    width: 75%;
+    font-size: 1.25rem;
+    margin: 0 auto 2.5rem auto; }
+  .mainCongress__CTA {
+    margin-bottom: 1.25rem;
+    font-family: ff-meta-web-pro, sans-serif;
+    font-weight: 300; }
 
 .constitution h2,
 .constitution h3,

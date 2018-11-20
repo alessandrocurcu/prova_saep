@@ -16,6 +16,28 @@
   }
 }
 
+section {
+  padding: $vr * 2 0;
+}
+
+// .section__title {
+//   position: relative;
+//   margin-top: $vr;
+//   margin-bottom: $vr / 2;
+//   font-weight: 200;
+
+//   &:after {
+//     content: ' ';
+//     display: inline-block;
+//     height: 2px;
+//     width: 8%;
+//     position: absolute;
+//     top: - (1rem / 3);
+//     left: 0;
+//     background-color: $accento2;
+//   }
+// }
+
 
 
 .homepageHeroImage {
@@ -27,18 +49,28 @@
   background-size: cover;
 }
 
+.congressImage {
+  background-image: url('./../img/geneve.jpg');
+  // background-image: url('./../img/intro2Blu.jpg');
+  background-repeat: no-repeat;
+  // background-position: 83% 83%;
+  background-position: 20% 20%;
+  background-size: cover;
+}
+
 .intro {
 
   background-color: $fascia1;
+  padding: 0;
 
   &__text {
     position: relative;
-    margin: 0 auto;
+
 
     font-size: 1.563rem;
     grid-column: 1/ 2;
     color: white;
-    margin: ($vr * 3) 0;
+    margin: ($vr * 3) auto;
     margin-bottom: 0;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
 
@@ -50,7 +82,7 @@
 
       &:hover,
       &:focus {
-        color: darken($accento2, 20%);
+        color: $accento2;
         // text-decoration: underline;
       }
     }
@@ -82,8 +114,8 @@
 
 
   .container {
-    padding: $vr 1.953rem;
-    padding: $vr * 2 0;
+    // padding: $vr 1.953rem;
+    // padding: $vr * 2 0;
   }
 
   &__title,
@@ -96,11 +128,12 @@
     &:after {
       content: ' ';
       display: inline-block;
-      height: 2px;
+      height: 3px;
       width: 8%;
       position: absolute;
       top: - (1rem / 3);
       left: 0;
+      border-radius: 50px;
       background-color: $accento2;
     }
   }
@@ -114,7 +147,7 @@
     }
   }
 
-  &__intro {
+  &__text {
     width: 75%;
     font-size: 1.25rem;
     margin-bottom: $vr * 2;
@@ -130,4 +163,80 @@
   }
 
 
+}
+
+.congresses {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+
+  // background-color: $rosso;
+  // padding: $vr 0;
+  .container {
+    background-color: rgba(175, 43, 49, 0.9);
+    // opacity: 0.9;
+    color: white;
+    padding: $vr 1.953rem;
+    @include box_shadow(3);
+  }
+
+}
+
+.mainCongress {
+  text-align: center;
+  // border: 3px solid $blu1;
+
+  &__title {
+    position: relative;
+    margin-top: $vr;
+    margin-bottom: $vr;
+    font-weight: 600;
+    font-size: 3.052rem;
+    display: flex;
+    justify-content: center;
+    color: $accento;
+
+    &:after {
+      content: ' ';
+      display: block;
+      height: 3px;
+      width: 20%;
+      position: absolute;
+      bottom: - (1rem / 4);
+      // left: 50%;
+      background-color: $accento;
+      border-radius: 50px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $vr;
+    font-family: $secondaryText;
+    font-weight: 300;
+
+    p {
+      i {
+        margin-right: (1rem / 3);
+      }
+
+      &:first-child {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &__description {
+
+    width: 75%;
+    font-size: 1.25rem;
+    margin: 0 auto ($vr * 2) auto;
+    // margin-bottom: $vr * 2;
+  }
+
+  &__CTA {
+    margin-bottom: $vr;
+    font-family: $secondaryText;
+    font-weight: 300;
+    // font-size: 1.25rem;
+  }
 }
