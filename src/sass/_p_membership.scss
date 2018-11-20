@@ -5,7 +5,7 @@
   // background-position: 83% 83%;
   background-position: 78% 78%;
   background-size: cover;
-  background-color: rgba(32, 44, 57, 0.7);
+  background-color: rgba(32, 44, 57, 0.9);
   background-blend-mode: multiply;
 }
 
@@ -25,7 +25,12 @@
     .prima {
       grid-column: 1 / 3;
 
+      a {
+        font-style: italic;
+        color: $giallo;
 
+        &:hover {}
+      }
 
       p:first-child {
         font-size: 1.563rem;
@@ -134,8 +139,12 @@
         // font-weight: 300;
       }
 
+      p:not(:last-child) {
+        margin-bottom: ($vr / 2);
+      }
+
       h3 {
-        margin-bottom: $vr;
+        margin-bottom: ($vr / 2);
         font-weight: 600;
       }
     }

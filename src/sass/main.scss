@@ -70,6 +70,11 @@ p {
     color: white;
   }
 
+  &--color4 {
+    background-color: darken($blu1, 10%);
+    color: white;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: 10fr 2fr;
@@ -181,6 +186,7 @@ p {
 @import '_header';
 @import '_login';
 @import '_card';
+@import '_footer';
 
 
 // Pagine

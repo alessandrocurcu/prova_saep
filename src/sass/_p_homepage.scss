@@ -148,16 +148,16 @@ section {
   &__subtitle {
     position: relative;
     margin-top: $vr;
-    margin-bottom: $vr / 2;
+    margin-bottom: $vr;
     font-weight: 200;
 
     &:after {
       content: ' ';
       display: inline-block;
-      height: 3px;
-      width: 8%;
+      height: 2px;
+      width: 100px;
       position: absolute;
-      top: - (1rem / 3);
+      bottom: - (1rem / 3);
       left: 0;
       border-radius: 50px;
       background-color: $accento2;
