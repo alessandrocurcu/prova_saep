@@ -65,6 +65,11 @@ p {
     color: white;
   }
 
+  &--color3 {
+    background-color: darken($rosso, 20%);
+    color: white;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: 10fr 2fr;
