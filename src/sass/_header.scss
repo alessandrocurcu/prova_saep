@@ -12,9 +12,10 @@
 
 .serviceNav {
   background-color: $fascia1;
-  font-weight: 300;
+  font-weight: 600;
 
   &__navbar {
+    padding-right: 1.953rem;
     // margin: 0;
     // padding-right: 1rem;
     list-style: none;
@@ -31,9 +32,37 @@
       text-transform: uppercase;
 
       li {
-        display: none;
-      }
+        // display: none;
+        position: relative;
 
+        i {
+          margin-right: 4.5px;
+        }
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            background-color: white;
+            height: (1.953rem / 2);
+            width: 1px;
+            top: 1px;
+            right: -9px;
+            // font-size: inherit;
+            // line-height: 1;
+            // margin-left: 9px;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          color: $blu1;
+          // text-decoration: underline;
+        }
+      }
     }
   }
 }
@@ -216,6 +245,8 @@
     &:last-child {
       margin-left: auto;
       font-weight: 700;
+      padding-right: 1.953rem;
+      padding-left: 1.953rem;
     }
 
     &:not(:last-child) {

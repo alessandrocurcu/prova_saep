@@ -492,40 +492,45 @@ return ImagesLoaded;
 });
 
 },{"ev-emitter":1}],3:[function(require,module,exports){
-var imagesLoaded = require('imagesloaded');
-
+const imagesLoaded = require('imagesloaded');
 
 (function IIFE() {
-  "use strict";
+  'use strict';
 
-  window.addEventListener("DOMContentLoaded", () => { 
+  window.addEventListener('DOMContentLoaded', () => {
     const dropdownMenus = document.querySelectorAll('.dropdownMenu');
-    
-    const primaryNavigationItems = document.querySelectorAll('.primaryNavigation__item');
-    
+
+    const primaryNavigationItems = document.querySelectorAll(
+      '.primaryNavigation__item'
+    );
+
     const toggleClick = e => {
-      if (typeof e.currentTarget.children[0].children[0] === 'undefined') return;
+      if (typeof e.currentTarget.children[0].children[0] === 'undefined')
+        return;
       e.preventDefault();
       e.currentTarget.children[0].classList.toggle('toggle');
     };
-  
+
     const toggleHover = e => {
-      if (typeof e.currentTarget.children[0].children[0] === 'undefined') return;
-     
-      
+      if (typeof e.currentTarget.children[0].children[0] === 'undefined')
+        return;
+
       e.currentTarget.children[0].classList.toggle('toggle');
     };
-  
-  primaryNavigationItems.forEach(el => {
-    
-    
-    el.addEventListener('mouseenter', toggleHover);
-    el.addEventListener('mouseleave', toggleHover);
-    
+
+    primaryNavigationItems.forEach(el => {
+      el.addEventListener('mouseenter', toggleHover);
+      el.addEventListener('mouseleave', toggleHover);
+    });
   });
-  
-});
-}());
+
+  const loginbtn = document.getElementById('login');
+  if (!loginbtn) return;
+  loginbtn.addEventListener('click', e => {
+    e.preventDefault();
+    location.href = './personal.html';
+  });
+})();
 
 // const wrapper = document.getElementById('wrapper');
 
@@ -538,10 +543,6 @@ var imagesLoaded = require('imagesloaded');
 
 // console.log(formHookButton);
 
-
-
 // console.log(primaryNavigationItems);
-
-
 
 },{"imagesloaded":2}]},{},[3])

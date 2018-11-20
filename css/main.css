@@ -646,8 +646,9 @@ p {
 
 .serviceNav {
   background-color: #AF2B31;
-  font-weight: 300; }
+  font-weight: 600; }
   .serviceNav__navbar {
+    padding-right: 1.953rem;
     list-style: none;
     display: none; }
     @media (min-width: 576px) {
@@ -666,7 +667,22 @@ p {
         font-size: 0.64rem;
         text-transform: uppercase; }
         .serviceNav__navbar li {
-          display: none; } }
+          position: relative; }
+          .serviceNav__navbar li i {
+            margin-right: 4.5px; }
+          .serviceNav__navbar li:not(:last-child) {
+            margin-right: 1rem; }
+            .serviceNav__navbar li:not(:last-child):after {
+              content: "";
+              position: absolute;
+              display: inline-block;
+              background-color: white;
+              height: 0.9765rem;
+              width: 1px;
+              top: 1px;
+              right: -9px; }
+          .serviceNav__navbar li:hover, .serviceNav__navbar li:focus {
+            color: #202C39; } }
 
 .navbar {
   position: relative;
@@ -790,7 +806,9 @@ p {
       color: white; }
   .primaryNavigation__item:last-child {
     margin-left: auto;
-    font-weight: 700; }
+    font-weight: 700;
+    padding-right: 1.953rem;
+    padding-left: 1.953rem; }
 
 .dropdownMenu {
   position: absolute;
