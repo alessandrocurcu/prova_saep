@@ -139,6 +139,7 @@ p {
 
 
 .application-form {
+  width: 30%;
   display: flex;
   flex-direction: column;
 }
@@ -197,3 +198,29 @@ p {
 @import '_p_homepage';
 @import '_p_society';
 @import '_p_membership';
+
+.junior {
+  h2 {
+    margin-top: $vr;
+    margin-bottom: $vr;
+    // margin-top: 0;
+    // margin-bottom: $vr;
+    position: relative;
+    // margin-top: $vr;
+    // margin-bottom: ($vr * 2);
+    font-weight: 200;
+    // color: white;
+
+    &:after {
+      content: ' ';
+      display: inline-block;
+      height: 2px;
+      width: 100px;
+      position: absolute;
+      bottom: - (1rem / 3);
+      left: 0;
+      border-radius: 50px;
+      background-color: $rosso;
+    }
+  }
+}

@@ -534,6 +534,7 @@ p {
     color: #FFE066; }
 
 .application-form {
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1595,3 +1596,19 @@ section {
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 0.41667rem; }
+
+.junior h2 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  font-weight: 200; }
+  .junior h2:after {
+    content: ' ';
+    display: inline-block;
+    height: 2px;
+    width: 100px;
+    position: absolute;
+    bottom: -0.33333rem;
+    left: 0;
+    border-radius: 50px;
+    background-color: #AF2B31; }

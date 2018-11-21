@@ -4,57 +4,95 @@ block personal
   title Nuovo titolo
 block link
   link(href="./css/main.css", rel="stylesheet")
+  link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.5.0/css/all.css", integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU", crossorigin="anonymous")
+  link(rel="stylesheet", href="https://use.typekit.net/ngl1jlg.css")
 block body
   body
-    h1 Junior membership application form
-    form.form.application-form
-      h2 Personal
-      label(for="firstname") Firstname
-      input(type="text", name="firstname", id="firstname")
-      label(for="surname") Surname
-      input(type="text", name="surname", id="surname")
-      label(for="email") Email
-      input(type="email", name="email", id="email")
-      label(for="email") Title
-      input(type="email", name="email", id="email")
-      label(for="email") Gender
-      input(type="email", name="email", id="email")
-      label(for="email") Date Of Birth(MM/DD/YYYY)
-      input(type="email", name="email", id="email")
-      label(for="email") Nationality
-      input(type="email", name="email", id="email")
-      label(for="email") In which country are you applying
-      input(type="email", name="email", id="email")
-      label(for="firstname") Address 1	
-      input(type="text", name="firstname")
-      label(for="firstname") Zip Code	
-      input(type="text", name="firstname")
-      label(for="firstname") City	
-      input(type="text", name="firstname")
-      label(for="firstname") Country	
-      input(type="text", name="firstname")
-      label(for="firstname") Phone	
-      input(type="text", name="firstname")
-      label(for="firstname") Mobile	
-      input(type="text", name="firstname")
-      h2 Hospital
-      label(for="firstname") Hospital/Company name
-      input(type="text", name="firstname")
-      label(for="firstname") Department
-      input(type="text", name="firstname")
-      label(for="firstname") Clinical Position	
-      input(type="text", name="firstname")
-      label(for="firstname") Address 1	
-      input(type="text", name="firstname")
-      label(for="firstname") Zip Code	
-      input(type="text", name="firstname")
-      label(for="firstname") City	
-      input(type="text", name="firstname")
-      label(for="firstname") Country	
-      input(type="text", name="firstname")
-      label(for="firstname") Phone	
-      input(type="text", name="firstname")
-      label(for="firstname") Fax	
-      input(type="text", name="firstname")
-      label(for="firstname") Email	
-      input(type="text", name="firstname")
+    include _header.pug
+    section.bend.bend--small.bend--color2
+      .container
+        .bend__grid
+          .bend__text
+            ul.breadcrumb
+              li 
+                a(href="#") Home
+              li
+                a(href="#") The History
+            h1 Junior membership application form
+    section.junior
+      .container      
+        form.form.application-form
+          h2 Personal
+          .form__group
+            label(for="firstname") Firstname
+            input(type="text", name="firstname", id="firstname")
+          .form__group
+            label(for="surname") Surname
+            input(type="text", name="surname", id="surname")
+          .form__group  
+            label(for="email") Email
+            input(type="email", name="email", id="email")
+          .form__group   
+            label(for="email") Title
+            input(type="email", name="email", id="email")
+          .form__group   
+            label(for="email") Gender
+            input(type="email", name="email", id="email")
+          .form__group   
+            label(for="email") Date Of Birth(MM/DD/YYYY)
+            input(type="email", name="email", id="email")
+          .form__group   
+            label(for="email") Nationality
+            input(type="email", name="email", id="email")
+          .form__group   
+            label(for="email") In which country are you applying
+            input(type="email", name="email", id="email")
+          .form__group   
+            label(for="firstname") Address 1	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Zip Code	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") City	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Country	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Phone	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Mobile	
+            input(type="text", name="firstname")
+          h2 Hospital
+          .form__group 
+            label(for="firstname") Hospital/Company name
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Department
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Clinical Position	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Address 1	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Zip Code	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") City	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Country	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Phone	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Fax	
+            input(type="text", name="firstname")
+          .form__group   
+            label(for="firstname") Email	
+            input(type="text", name="firstname")
