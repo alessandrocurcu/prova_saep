@@ -70,17 +70,17 @@
 
     &:nth-child(even) {
       background-color: $blu1;
-      background-color: $grigio3;
+      background-color: lighten($grigio3, 10%);
     }
 
     &:nth-child(odd) {
       background-color: darken($blu1, 10%);
-      background-color: darken($grigio3, 10%);
+      background-color: lighten($grigio3, 5%);
       ;
     }
 
     &:hover {
-      transform: translate(1rem);
+      transform: translate(-1rem);
       // background-color: curreninherit;
 
     }

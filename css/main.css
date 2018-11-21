@@ -984,14 +984,14 @@ p {
     color: #333; }
     .patronagesSection .card:nth-child(even) {
       background-color: #202C39;
-      background-color: #E3E3E2; }
+      background-color: #fcfcfc; }
     .patronagesSection .card:nth-child(odd) {
       background-color: #0e1318;
-      background-color: #cacac8; }
+      background-color: #f0f0ef; }
     .patronagesSection .card:hover {
-      -webkit-transform: translate(1rem);
-          -ms-transform: translate(1rem);
-              transform: translate(1rem); }
+      -webkit-transform: translate(-1rem);
+          -ms-transform: translate(-1rem);
+              transform: translate(-1rem); }
   .card--cta {
     background-color: #FFE066;
     color: #202C39; }
@@ -1401,7 +1401,7 @@ section {
 .patronages {
   max-height: 80vh;
   overflow-y: auto;
-  overflow-x: hidden; }
+  width: 75%; }
   .patronages i {
     margin: 0.41667rem;
     margin-right: 4px;
