@@ -981,17 +981,13 @@ p {
   .membership .card:nth-child(odd):not(:last-child) {
     background-color: #5d171a; }
   .patronagesSection .card {
-    color: #333; }
-    .patronagesSection .card:nth-child(even) {
-      background-color: #202C39;
-      background-color: #fcfcfc; }
-    .patronagesSection .card:nth-child(odd) {
-      background-color: #0e1318;
-      background-color: #f0f0ef; }
+    color: #333;
+    background-color: #f7f7f7; }
     .patronagesSection .card:hover {
-      -webkit-transform: translate(-1rem);
-          -ms-transform: translate(-1rem);
-              transform: translate(-1rem); }
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none;
+      background-color: #E3E3E2; }
   .card--cta {
     background-color: #FFE066;
     color: #202C39; }
@@ -1398,15 +1394,16 @@ section {
   font-size: 1.25rem;
   margin-bottom: 2.5rem; }
 
-.patronages {
-  max-height: 80vh;
-  overflow-y: auto;
-  width: 75%; }
-  .patronages i {
-    margin: 0.41667rem;
-    margin-right: 4px;
-    margin-left: 0;
-    color: #AF2B31; }
+.patronages i {
+  margin: 0.41667rem;
+  margin-right: 4px;
+  margin-left: 0;
+  color: #AF2B31; }
+
+.patronages-grid {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  grid-gap: 1.953rem; }
 
 .constitution h2,
 .constitution h3,

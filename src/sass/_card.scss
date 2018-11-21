@@ -67,21 +67,22 @@
 
   .patronagesSection & {
     color: #333;
+    background-color: lighten($grigio3, 8%);
 
-    &:nth-child(even) {
-      background-color: $blu1;
-      background-color: lighten($grigio3, 10%);
-    }
+    // &:nth-child(even) {
+    //   background-color: $blu1;
+    //   background-color: lighten($grigio3, 10%);
+    // }
 
-    &:nth-child(odd) {
-      background-color: darken($blu1, 10%);
-      background-color: lighten($grigio3, 5%);
-      ;
-    }
+    // &:nth-child(odd) {
+    //   background-color: darken($blu1, 10%);
+    //   background-color: lighten($grigio3, 5%);
+    //   ;
+    // }
 
     &:hover {
-      transform: translate(-1rem);
-      // background-color: curreninherit;
+      transform: none;
+      background-color: $grigio3;
 
     }
   }
