@@ -1597,6 +1597,11 @@ section {
     margin: 0;
     margin-bottom: 0.41667rem; }
 
+.committee__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .junior h2 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
