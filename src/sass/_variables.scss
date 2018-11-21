@@ -48,6 +48,26 @@ $type0: 1rem;
 $type-1: 0.8rem;
 $type-2: 0.64rem;
 
+h1 {
+  font-size: 3.815rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.563rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
 @mixin themeRed {
   background-color: $primaryColor;
   color: rgba(255, 255, 255, 0.9);

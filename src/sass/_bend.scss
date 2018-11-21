@@ -1,0 +1,79 @@
+.bend {
+  $hight: $vr * 11;
+  display: flex;
+  align-items: center;
+  margin-top: 96.78px;
+  font-family: $primaryText;
+  width: 100%;
+  height: $hight;
+
+  @include sm {
+    margin-top: 205.75px;
+  }
+
+  &--small {
+    height: 5.313rem;
+
+    @include sm {
+      height: ($hight / 1.5);
+    }
+  }
+
+  &--color1 {
+    background-color: $fascia1;
+    color: white;
+  }
+
+  &--themeRed {
+    // background-color: $primaryColor;
+    // color: rgba(255, 255, 255, 0.9);
+    @include themeRed;
+  }
+
+  &--color2 {
+    background-color: $secondaryColor;
+    color: rgba(255, 255, 255, 0.9);
+    // color: white;
+    // @include themeBlue;
+  }
+
+  &--themeBlue {
+    background-color: $secondaryColor;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &--color3 {
+    background-color: darken($rosso, 20%);
+    color: white;
+  }
+
+  &--color4 {
+    background-color: darken($blu1, 10%);
+    color: white;
+  }
+
+  &--bkgImage {
+    background-repeat: no-repeat;
+    background-position: 78% 78%;
+    background-size: cover;
+    background-color: rgba(32, 44, 57, 0.9);
+    background-blend-mode: multiply;
+    color: white;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    font-size: $type4;
+    line-height: 1.20;
+    font-weight: 400;
+  }
+
+  &__text {}
+
+}
