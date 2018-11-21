@@ -797,7 +797,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
+  cursor: default;
   padding: 0 1rem; }
   .primaryNavigation__item:hover {
     background-color: #202C39;

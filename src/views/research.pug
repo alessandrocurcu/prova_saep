@@ -1,0 +1,22 @@
+extends _base.pug
+block personal
+  meta(name="description", content="")
+  title Nuovo titolo
+block link
+  link(href="./css/main.css", rel="stylesheet")
+  link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.5.0/css/all.css", integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU", crossorigin="anonymous")
+  link(rel="stylesheet", href="https://use.typekit.net/ngl1jlg.css")
+block body
+  body
+    include _header.pug
+    section.bend.bend--color1
+      .container
+        .bend__grid
+          .bend__text
+            ul.breadcrumb
+              li 
+                a(href="index.html") Home
+              li
+                a(href="#") Research
+            h1 Research
+    include _footer.pug  
