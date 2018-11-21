@@ -21,6 +21,8 @@
     }
   }
 
+
+
   // justify-content: space-between;
   // align-items: center;
   &__title {
@@ -53,12 +55,35 @@
     }
   }
 
-  &:nth-child(even) {
-    background-color: $rosso;
+  .membership & {
+    &:nth-child(even) {
+      background-color: $rosso;
+    }
+
+    &:nth-child(odd):not(:last-child) {
+      background-color: darken($rosso, 20%);
+    }
   }
 
-  &:nth-child(odd):not(:last-child) {
-    background-color: darken($rosso, 20%);
+  .patronagesSection & {
+    color: #333;
+
+    &:nth-child(even) {
+      background-color: $blu1;
+      background-color: $grigio3;
+    }
+
+    &:nth-child(odd) {
+      background-color: darken($blu1, 10%);
+      background-color: darken($grigio3, 10%);
+      ;
+    }
+
+    &:hover {
+      transform: translate(1rem);
+      // background-color: curreninherit;
+
+    }
   }
 
   &--cta {
