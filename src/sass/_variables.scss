@@ -20,6 +20,10 @@ $grigioText1: #888;
 $grigioText2: #777;
 $grigioText3: #333;
 
+$primaryColor: $rosso;
+$secondaryColor: $blu1;
+$neutralGray: lighten($grigio3, 6%);
+$accent: $giallo;
 
 $fascia1: $rosso;
 $fascia2: $grigio3;
@@ -28,8 +32,42 @@ $accento: $blu1;
 $accento2: $giallo;
 
 $vr: 1.25rem;
+$gutter: 1.953rem;
 
 $secondaryText: ff-meta-web-pro,
 sans-serif;
 $primaryText: ff-meta-serif-web-pro,
 serif;
+
+$type5: 3.052rem;
+$type4: 2.441rem;
+$type3: 1.953rem;
+$type2: 1.563rem;
+$type1: 1.25rem;
+$type0: 1rem;
+$type-1: 0.8rem;
+$type-2: 0.64rem;
+
+@mixin themeRed {
+  background-color: $primaryColor;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+}
+
+@mixin themeBlue {
+  background-color: $secondaryColor;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+}
+
+@mixin themeGray {
+  background-color: $neutralGray;
+  color: rgba(66, 66, 66, 0.9);
+  // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+}
+
+@mixin themeWhite {
+  background-color: white;
+  color: rgba(66, 66, 66, 0.9);
+  // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+}

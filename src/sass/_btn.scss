@@ -13,7 +13,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   letter-spacing: 1px;
-  border-radius: 10px;
+  border-radius: 5px;
 
   &:hover,
   &:focus {
@@ -117,6 +117,17 @@
     // padding: 0;
     border: 1px solid currentColor;
     color: inherit;
+  }
+
+  &--red {
+    background-color: $rosso;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+
+    &:hover,
+    &:focus {
+      background-color: darken($rosso, 10%);
+    }
   }
 
   .primaryNavigation__navbar & {

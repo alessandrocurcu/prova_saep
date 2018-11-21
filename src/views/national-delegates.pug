@@ -9,7 +9,7 @@ block link
 block body
   body
     include _header.pug
-    section.bend.bend--color1
+    section.bend.bend--color1.bend--small
       .container
         .bend__grid
           .bend__text
@@ -20,5 +20,32 @@ block body
                 a(href="#") The Society  
               li
                 a(href="#") National Delegates
-            h1 List of the European Society for Surgery of the Shoulder and Elbow's committees
+            h1 National Delegates
+    section
+      .container
+        h2 How does it work?
+        ul
+          li Each European country of the society will be represented by one or more National Delegate. 
+          li In countries with 10 Ordinary Members or more the National Delegate will be elected by these members. 
+          li In countries with less than 10 Ordinary Members the National Delegate will be appointed by the Executive Committee. 
+          li The term of the National Delegates is three (3) years and they can be re-elected / reappointed for up to two (2) successive terms. 
+          li The number of delegates from countries is fixed by the Executive Committee in relation to the number of ordinary members and should not exceed two (2). 
+          li The Executive Committee will endeavour to ensure that each European family will be represented.
+        p The Board of Directors consits of the founding members, the Executive Committee members who are ex officio members of the Board and the National Delegates.
+        p Countries with their National Delegate are listed in alphabetical order. Please click on the name to contact a National Delegate         
+    section.bend--color2
+      .container
+        .delegates
+          .delegates__grid
+            each val in [1,2,3,4,5,6,7,8]
+              a(href="#").delegate
+                .delegate__country
+                  p Austria
+                .delegate__name
+                  p Markus Wambacher
+                .delegate__address
+                  ul
+                    li Medical University Innsbruck 
+                    li Anichstrasse 
+                    li Innsbruck 6020          
     include _footer.pug  

@@ -82,8 +82,8 @@
 
     &:hover {
       transform: none;
-      background-color: $grigio3;
-
+      // background-color: $grigio3;
+      @include box_shadow(4);
     }
   }
 

@@ -374,7 +374,7 @@ section {
     position: relative;
     // margin-top: $vr;
     margin-bottom: ($vr * 2);
-    font-weight: 200;
+    font-weight: 500;
     color: white;
 
     &:after {
@@ -391,138 +391,73 @@ section {
   }
 }
 
-.grid-news-img {
+.news__grid {
   @include sm {
     display: grid;
     grid-template-columns: 4fr 4fr 4fr;
-    grid-column-gap: (1.953rem / 2);
-    align-items: start;
-  }
-}
-
-.grid-news-noimg {
-  @include sm {
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr;
-    grid-column-gap: (1.953rem / 2);
-    align-items: start;
+    // grid-template-rows: minmax(1fr, 100px);
+    // grid-auto-rows: minmax(100px, auto);
+    grid-column-gap: 1.953rem;
+    // align-items: end;
   }
 }
 
 
 .news {
-  @include box_shadow(1);
+  // @include box_shadow(1);
+  // flex: 0 0 300px;
+  // overflow: hidden;
+  // @include truncate;
 
-  .grid-news-noimg & {
-    margin-top: (1.953rem / 2);
-  }
 
-  &__title,
-  h3 {
-    font-weight: 600;
-    margin: 0 0;
-    line-height: 1.1;
-    margin-bottom: ($vr / 2);
-    font-size: 1.25rem;
-    // padding: ($vr / 2) (1.953rem / 2);
-  }
 
   &__date {
     font-family: $secondaryText;
-    // background-color: $blu1;
-    background-color: white;
+    background-color: $rosso;
     padding: ($vr / 2) (1.953rem / 2);
-    // color: white;
-    font-weight: 300;
-    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    font-size: 0.8rem;
 
     i {
       margin-right: (1rem / 4);
     }
-
-    .grid-news-noimg & {
-      background-color: $rosso;
-      color: white
-    }
   }
 
-  &__description {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: lighten($grigio3, 6%);
     padding: ($vr / 2) (1.953rem / 2);
     padding-top: $vr;
 
-
-
-    h4,
-    h5,
-    h6 {
-      font-weight: 300;
-      margin: 0 0;
-      margin-bottom: ($vr / 2);
-      font-size: 1rem;
-      text-transform: uppercase;
-    }
-
-    *+h4,
-    *+h5,
-    *+h6 {
-      margin-top: ($vr / 2);
-    }
-
-    ul {
-      margin: 0;
-      // padding: 0;
-    }
-
-    p,
-    ul,
-    ol {
-      margin-bottom: ($vr / 3);
-    }
-
-    // *:not(:last-child) {
-    //   margin-bottom: ($vr / 3);
-    // }
-    *+button {
-      margin-top: $vr;
-    }
-
-    button {
-      border: none;
-      background-color: transparent;
-      font-weight: 400;
-      color: $blu1;
-      border: 1px solid currentColor;
-      padding: (0.64rem / 2) 1.953rem;
-      font-size: 0.8rem;
-      line-height: 1;
-      // text-transform: uppercase;
-      font-family: ff-meta-web-pro, sans-serif;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background-color 200ms ease-in-out;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      letter-spacing: 1px;
-      border-radius: 5px;
-
-      &:hover,
-      &:focus {
-        background-color: $blu1;
-        color: white;
-      }
-
-      &:focus {
-        outline: 1px solid #fff;
-        outline-offset: -4px;
-      }
-    }
-
   }
-}
 
-.news--span2 {
-  grid-column: 1 / 3;
+  &__title {
+    font-weight: 600;
+    margin: 0 0;
+    line-height: 1.1;
+    margin-bottom: ($vr / 2);
+    // @include truncate;
+    // padding-right: (1.953rem / 2);
+    font-size: 1.25rem;
+    // width: 100%;
+    // @include truncate;
+    // padding: ($vr / 2) (1.953rem / 2);
+  }
+
+  &__description {
+    overflow: hidden;
+    height: 4vw;
+    max-height: 90px;
+    margin-bottom: $vr;
+    line-height: 1.3;
+  }
+
+  &__cta {
+    margin-top: auto;
+  }
 }
 
 .patronagesSection {
@@ -532,7 +467,7 @@ section {
     position: relative;
     // margin-top: $vr;
     margin-bottom: ($vr * 2);
-    font-weight: 200;
+    font-weight: 500;
     // color: white;
 
     &:after {
@@ -553,6 +488,22 @@ section {
     font-size: 1.25rem;
     margin-bottom: $vr * 2;
   }
+
+  &__pagination {
+    // color: red;
+    text-align: center;
+    font-size: 1.563rem;
+    line-height: 1;
+
+    i {
+      // padding-top: 5px;
+      margin-left: 9px;
+    }
+
+    a {
+      color: $rosso;
+    }
+  }
 }
 
 .patronages {
@@ -570,8 +521,9 @@ section {
   }
 }
 
-.patronages-grid {
+.patronages__grid {
   display: grid;
   grid-template-columns: 6fr 6fr;
   grid-gap: 1.953rem;
+  margin-bottom: ($vr * 2);
 }
