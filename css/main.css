@@ -1090,23 +1090,49 @@ section {
 .footer {
   font-family: ff-meta-web-pro, sans-serif;
   font-weight: 300;
-  padding: 3rem 0; }
+  padding: 1.5rem 0; }
+  @media (min-width: 576px) {
+    .footer {
+      padding: 3rem 0; } }
   .footer p {
     font-size: 0.8rem;
-    margin-bottom: 0.5rem; }
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem; }
+    @media (min-width: 576px) {
+      .footer p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem; } }
   .footer i {
     margin-right: 9px;
     color: #AF2B31; }
   .footer__grid {
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-column-gap: 1.953rem;
-    justify-items: start; }
+    text-align: center;
+    grid-gap: 1.302rem; }
+    @media (min-width: 576px) {
+      .footer__grid {
+        text-align: left;
+        justify-items: start;
+        grid-template-columns: 3fr 3fr;
+        grid-gap: 1.953rem; }
+        .footer__grid ul {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 0.9765rem; } }
+    @media (min-width: 768px) {
+      .footer__grid {
+        grid-gap: 1.302rem; } }
+    @media (min-width: 992px) {
+      .footer__grid {
+        grid-template-columns: 3fr 3fr 3fr 3fr; } }
   .footer__subtitle {
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     font-size: 1rem;
     position: relative; }
+    @media (min-width: 576px) {
+      .footer__subtitle {
+        margin-bottom: 1rem; } }
     .footer__subtitle:after {
       content: ' ';
       display: inline-block;
@@ -1114,8 +1140,11 @@ section {
       width: 40px;
       position: absolute;
       bottom: -6px;
-      left: 0;
+      left: calc(50% - 20px);
       background-color: #AF2B31; }
+      @media (min-width: 576px) {
+        .footer__subtitle:after {
+          left: 0; } }
   .footer__sitemap ul {
     margin: 0;
     margin-top: 0.25rem;
@@ -1127,7 +1156,13 @@ section {
       margin-bottom: 0.5rem; }
     .footer__sitemap ul li {
       padding-bottom: 0.5rem;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.4); }
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
 
 .homepage-hero-image {
   background-image: url("./../img/ossaBlu.jpg");
