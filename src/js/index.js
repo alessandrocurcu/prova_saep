@@ -4,24 +4,31 @@ const imagesLoaded = require('imagesloaded');
   'use strict';
 
   window.addEventListener('DOMContentLoaded', () => {
-    const dropdownMenus = document.querySelectorAll('.dropdownMenu');
+    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
 
     const primaryNavigationItems = document.querySelectorAll(
-      '.primaryNavigation__item'
+      '.primary-navigation__item'
     );
 
     const toggleClick = e => {
-      if (typeof e.currentTarget.children[0].children[0] === 'undefined')
+      if (
+        typeof e.currentTarget.children[0].children[0].children[0] ===
+        'undefined'
+      )
         return;
       e.preventDefault();
-      e.currentTarget.children[0].classList.toggle('toggle');
+      e.currentTarget.children[0].classList.toggle('js-toggle');
     };
 
     const toggleHover = e => {
-      if (typeof e.currentTarget.children[0].children[0] === 'undefined')
+      console.log(e.currentTarget.children[0].children[0].children[0]);
+      if (
+        typeof e.currentTarget.children[0].children[0].children[0] ===
+        'undefined'
+      )
         return;
 
-      e.currentTarget.children[0].classList.toggle('toggle');
+      e.currentTarget.children[0].classList.toggle('js-toggle');
     };
 
     primaryNavigationItems.forEach(el => {
