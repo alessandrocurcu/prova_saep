@@ -958,7 +958,16 @@ section {
       .hero--small {
         padding: 2.25rem 0; } }
   .hero--no-text {
-    height: 15rem; }
+    height: 7.5rem; }
+    @media (min-width: 576px) {
+      .hero--no-text {
+        height: 9rem; } }
+    @media (min-width: 768px) {
+      .hero--no-text {
+        height: 10.5rem; } }
+    @media (min-width: 992px) {
+      .hero--no-text {
+        height: 15rem; } }
   @media (min-width: 576px) {
     .hero__grid {
       display: grid;
@@ -997,24 +1006,39 @@ section {
 
 .login {
   position: relative;
-  top: -4.5rem;
-  display: none;
   font-family: ff-meta-web-pro, sans-serif;
-  color: white;
-  background-color: #5d171a;
   background-color: #202C39;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   padding: 0.75rem 1.953rem 1.5rem 1.953rem;
   font-weight: 400;
-  margin: 1.5rem 0 0 0;
-  -webkit-box-shadow: 0px 0px 26px -1px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 0px 26px -1px rgba(0, 0, 0, 0.6); }
+  margin: 0 auto; }
+  @media (min-width: 576px) {
+    .login {
+      width: 60%; } }
+  @media (min-width: 768px) {
+    .login {
+      width: 100%;
+      display: block;
+      padding: 0.75rem 1.953rem 1.5rem 1.953rem;
+      -webkit-box-shadow: 0px 0px 26px -1px rgba(0, 0, 0, 0.6);
+              box-shadow: 0px 0px 26px -1px rgba(0, 0, 0, 0.6); } }
+  @media (min-width: 992px) {
+    .login {
+      top: -3rem; } }
+  @media (min-width: 1200px) {
+    .login {
+      top: -4.5rem; } }
   .login__title {
     text-align: center;
     font-weight: 300;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.25;
     margin-bottom: 1rem; }
+    @media (min-width: 768px) {
+      .login__title {
+        font-size: 1rem; } }
   .login__form {
     font-size: 0.8rem; }
   .login__password label {
@@ -1027,9 +1051,6 @@ section {
   .login__password a {
     color: #FFE066;
     font-weight: 300; }
-  @media (min-width: 576px) {
-    .login {
-      display: block; } }
 
 .card {
   position: relative;
@@ -1190,25 +1211,43 @@ section {
   background-size: cover; }
 
 .introduction {
-  padding: 0;
+  padding: 1.5rem 0;
   background-color: #AF2B31;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-  @media (min-width: 576px) {
+  @media (min-width: 992px) {
+    .introduction {
+      padding: 0; } }
+  @media (min-width: 768px) {
     .introduction__grid {
       display: grid;
       grid-template-columns: 9fr 3fr;
       grid-column-gap: 1.953rem; } }
   .introduction__text {
-    font-size: 1.563rem;
-    grid-column: 1 / 2;
+    font-size: 1rem;
+    text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 0; }
+    margin-bottom: 1.5rem; }
+    .introduction__text p {
+      margin: 0; }
+    @media (min-width: 576px) {
+      .introduction__text {
+        grid-column: 1 / 2;
+        font-size: 1.25rem;
+        line-height: 1.3; } }
+    @media (min-width: 768px) {
+      .introduction__text {
+        text-align: left;
+        margin-bottom: 0; } }
+    @media (min-width: 992px) {
+      .introduction__text {
+        font-size: 1.563rem;
+        line-height: 1.5; } }
     .introduction__text a {
       font-style: italic;
       -webkit-transition: color 0.3s ease-in-out;

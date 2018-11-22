@@ -28,7 +28,19 @@
   }
 
   &--no-text {
-    height: ($vr * 10);
+    height: ($vr * 5);
+
+    @include sm {
+      height: ($vr * 6);
+    }
+
+    @include md {
+      height: ($vr * 7);
+    }
+
+    @include lg {
+      height: ($vr * 10);
+    }
   }
 
 
