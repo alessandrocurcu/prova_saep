@@ -11,13 +11,20 @@
 
 .container {
   margin: 0 auto;
+  padding: 0 16px;
   width: 100%;
   max-width: 1200px;
-  min-width: 300px;
+  // min-width: 340px;
 
 
   @include sm {
-    // padding: 0.328rem 0;
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  @include md {
+    padding: 0;
+    width: 90%;
   }
 }
 
