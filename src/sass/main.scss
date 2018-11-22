@@ -29,7 +29,12 @@
 }
 
 section {
-  padding: ($vr * 3) 0;
+  padding: ($vr * 1) 0;
+
+  @include sm {
+    padding: ($vr * 3) 0;
+
+  }
 }
 
 @mixin title-line($colore) {
