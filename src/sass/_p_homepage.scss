@@ -12,7 +12,6 @@
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     grid-auto-rows: minmax($vr * 10, auto);
-    // grid-column-gap: 1.953rem;
   }
 }
 
@@ -21,67 +20,26 @@
     display: grid;
     grid-template-columns: 6fr 6fr;
     grid-column-gap: 1.953rem;
-    // grid-auto-rows: minmax($vr * 10, auto);
-    // grid-column-gap: 1.953rem;
   }
 }
-
-section {
-  padding: $vr * 2 0;
-}
-
-// .section__title {
-//   position: relative;
-//   margin-top: $vr;
-//   margin-bottom: $vr / 2;
-//   font-weight: 200;
-
-//   &:after {
-//     content: ' ';
-//     display: inline-block;
-//     height: 2px;
-//     width: 8%;
-//     position: absolute;
-//     top: - (1rem / 3);
-//     left: 0;
-//     background-color: $accento2;
-//   }
-// }
 
 
 
 .homepageHeroImage {
   background-image: url('./../img/ossaBlu.jpg');
-  // background-image: url('./../img/intro2Blu.jpg');
   background-repeat: no-repeat;
-  // background-position: 83% 83%;
   background-position: 12% 12%;
   background-size: cover;
 }
 
 .congressImage {
   background-image: url('./../img/geneve.jpg');
-  // background-image: url('./../img/intro2Blu.jpg');
   background-repeat: no-repeat;
-  // background-position: 83% 83%;
   background-position: 20% 20%;
   background-size: cover;
   position: relative;
   background-color: rgba(32, 44, 57, 0.8);
   background-blend-mode: multiply;
-
-  // &:after {
-
-  //   position: absolute;
-  //   display: block;
-  //   content: "";
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   opacity: 0.2;
-  //   background-color: $rosso;
-  // }
 }
 
 .intro {

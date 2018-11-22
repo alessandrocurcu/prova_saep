@@ -9,10 +9,10 @@ block link
 block body
   body
     include _header.pug
-    section.bend.bend--color1.bend--small
+    section.hero.hero--small.bend--theme-red
       .container
-        .bend__grid
-          .bend__text
+        .hero__grid
+          .hero__text
             ul.breadcrumb
               li 
                 a(href="#") Home
@@ -20,22 +20,24 @@ block body
                 a(href="#") The Society  
               li
                 a(href="#") National Delegates
-            h1.bend__title National Delegates
-    section
+            h1.hero__title National Delegates
+    section.delegates-rules
       .container
-        h2 How does it work?
-        ul
-          li Each European country of the society will be represented by one or more National Delegate. 
-          li In countries with 10 Ordinary Members or more the National Delegate will be elected by these members. 
-          li In countries with less than 10 Ordinary Members the National Delegate will be appointed by the Executive Committee. 
-          li The term of the National Delegates is three (3) years and they can be re-elected / reappointed for up to two (2) successive terms. 
-          li The number of delegates from countries is fixed by the Executive Committee in relation to the number of ordinary members and should not exceed two (2). 
-          li The Executive Committee will endeavour to ensure that each European family will be represented.
-        p The Board of Directors consits of the founding members, the Executive Committee members who are ex officio members of the Board and the National Delegates.
-        p Countries with their National Delegate are listed in alphabetical order. Please click on the name to contact a National Delegate         
-    section.bend--color2
+        h2.delegates-rules__title How does it work?
+        .delegates-rules__grid
+          .delegates-rules__text
+            ul
+              li Each European country of the society will be represented by one or more National Delegate. 
+              li In countries with 10 Ordinary Members or more the National Delegate will be elected by these members. 
+              li In countries with less than 10 Ordinary Members the National Delegate will be appointed by the Executive Committee. 
+              li The term of the National Delegates is three (3) years and they can be re-elected / reappointed for up to two (2) successive terms. 
+              li The number of delegates from countries is fixed by the Executive Committee in relation to the number of ordinary members and should not exceed two (2). 
+              li The Executive Committee will endeavour to ensure that each European family will be represented.
+              li The Board of Directors consits of the founding members, the Executive Committee members who are ex officio members of the Board and the National Delegates.      
+    section.bend--theme-blue
       .container
         .delegates
+          h2.delegates__title National delegates
           .delegates__grid
             each val in [1,2,3,4,5,6,7,8]
               a(href="#").delegate

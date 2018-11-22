@@ -1,0 +1,58 @@
+.hero {
+  display: flex;
+  align-items: center;
+  margin-top: 96.78px;
+  font-family: $primaryText;
+  width: 100%;
+  padding: ($vr * 3) 0;
+
+  @include sm {
+    margin-top: 205.75px;
+  }
+
+  &--small {
+    padding: 5.313rem;
+
+    @include sm {
+      padding: ($vr * 1.5) 0;
+    }
+  }
+
+
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    font-size: $type4;
+    line-height: 1.20;
+    font-weight: 300;
+  }
+
+  &__text {}
+
+}
+
+.sub-hero {
+  display: flex;
+  align-items: center;
+  padding: ($vr * 1.5) 0;
+
+  &__text {
+    margin: 0;
+    font-size: 1.563rem;
+    line-height: 1.4;
+  }
+
+
+  &__link {
+    font-style: italic;
+    color: $giallo;
+
+    &:hover {}
+  }
+}

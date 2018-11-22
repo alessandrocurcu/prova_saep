@@ -9,15 +9,6 @@
   font-family: $primaryText;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-p {
-  margin: 0;
-}
-
 .container {
   margin: 0 auto;
   width: 100%;
@@ -30,14 +21,31 @@ p {
   }
 }
 
+section {
+  padding: ($vr * 3) 0;
+}
+
+@mixin title-line($colore) {
+  content: ' ';
+  display: inline-block;
+  height: 2px;
+  width: 70px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background-color: $colore;
+}
+
 
 /* Componenti
 -------------- */
 @import '_btn';
 @import '_breadcrumb';
+@import '_form';
 
 @import '_bend';
 @import '_header';
+@import '_hero';
 @import '_login';
 @import '_card';
 @import '_footer';

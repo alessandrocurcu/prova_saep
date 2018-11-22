@@ -1,0 +1,45 @@
+.form {
+  font-family: ff-meta-web-pro, sans-serif;
+
+  input[type="text"],
+  input[type="password"],
+  input[type="checkbox"] {
+    // padding: 0.512rem 0.8rem;
+    border: 1px solid #e1e1e1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    text-decoration: none;
+    line-height: normal;
+    // min-height: 3rem; //Opera fix
+
+    &:focus {
+      outline: none;
+      color: black;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $vr/1.5;
+
+    &--vertical {
+      label {
+        margin-bottom: $vr/4;
+      }
+    }
+
+
+    &--orizzontal {
+      align-items: baseline;
+      flex-direction: row;
+
+      label {
+        margin-left: (1rem/2);
+        margin-bottom: 0;
+      }
+    }
+  }
+}

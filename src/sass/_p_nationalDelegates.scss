@@ -1,9 +1,50 @@
+.delegates-rules {
+  &__grid {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+  }
+
+  &__title {
+    position: relative;
+    font-weight: 300;
+    margin: 0;
+    font-size: $type3;
+    margin-bottom: $vr;
+    line-height: 1.4;
+
+    &:after {
+      @include title-line($primaryColor)
+    }
+  }
+
+  &__text {
+    font-size: $type1;
+
+    li {
+      margin-bottom: $vr;
+    }
+  }
+}
+
 .delegates {
+
+  &__title {
+    position: relative;
+    font-weight: 300;
+    margin: 0;
+    font-size: $type3;
+    margin-bottom: ($vr * 2);
+    line-height: 1.4;
+
+    &:after {
+      @include title-line($primaryColor)
+    }
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: (1.953rem / 2);
-
+    grid-gap: ($gutter / 2);
   }
 }
 
@@ -13,29 +54,40 @@
   text-align: center;
   transition: all 0.2s ease-in-out;
 
+  p {
+    margin: 0;
+  }
+
 
   &:hover {
     @include box_shadow(5);
     transform: scale(1.04);
+
+    .delegate__country {
+      background-color: darken($primaryColor, 15%);
+
+    }
   }
 
   &__country {
     font-size: $type1;
     font-weight: 600;
     @include themeRed;
-    padding: ($vr / 2) ($gutter / 2) ($vr / 2);
+    padding: ($vr / 4) ($gutter / 2);
+    transition: all 0.2s ease-in-out;
+
   }
 
   &__name {
     font-size: $type-1;
     text-transform: uppercase;
-    padding: ($vr / 3) ($gutter / 2);
+    padding: ($vr / 4) ($gutter / 2);
     @include themeWhite;
   }
 
   &__address {
     font-size: $type-1;
-    padding: ($vr / 3) ($gutter / 2);
+    padding: ($vr / 4) ($gutter / 2);
 
     ul {
       margin: 0;
