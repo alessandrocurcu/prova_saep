@@ -9,10 +9,10 @@ block link
 block body
   body
     include _header.pug
-    section.bend.bend--color1
+    section.hero.bend--theme-red
       .container
-        .bend__grid
-          .bend__text
+        .hero__grid
+          .hero__text
             ul.breadcrumb
               li 
                 a(href="#") Home
@@ -20,7 +20,7 @@ block body
                 a(href="#") The Society
               li
                 a(href="#") The Constitution 
-            h1.bend__title Constitution of the association named European society for surgery of the shoulder and the elbow
+            h1.hero__title Constitution of the association named European society for surgery of the shoulder and the elbow
     section.constitution
       .container
         .constitution__grid
@@ -195,3 +195,4 @@ block body
           .article  
             h2 Article 14
             p If the association is wound up by vote of at least two-third of the members present at a membership meeting at which action is taken as provided in article 13, the members elect one or more liquidators at such meeting and any assets are devolved according to article 9 of the Act of July 1st, 1901 and the Decree of August 16., 1901.
+    include _footer.pug         

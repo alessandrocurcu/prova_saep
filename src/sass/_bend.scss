@@ -15,7 +15,7 @@
   }
 
   &--theme-red {
-    @include themeRed;
+    @include theme-red;
   }
 
   &--color2 {
@@ -30,13 +30,13 @@
     color: rgba(255, 255, 255, 0.9);
   }
 
-  &--color3 {
-    background-color: darken($rosso, 20%);
-    color: white;
+  &--theme-blue-dark {
+    background-color: darken($secondaryColor, 10%);
+    color: rgba(255, 255, 255, 0.9);
   }
 
-  &--color4 {
-    background-color: darken($blu1, 10%);
+  &--color3 {
+    background-color: darken($rosso, 20%);
     color: white;
   }
 

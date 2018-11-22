@@ -49,7 +49,7 @@
 }
 
 .delegate {
-  @include themeGray;
+  @include theme-gray;
   font-family: $secondaryText;
   text-align: center;
   transition: all 0.2s ease-in-out;
@@ -72,7 +72,7 @@
   &__country {
     font-size: $type1;
     font-weight: 600;
-    @include themeRed;
+    @include theme-red;
     padding: ($vr / 4) ($gutter / 2);
     transition: all 0.2s ease-in-out;
 
@@ -82,7 +82,7 @@
     font-size: $type-1;
     text-transform: uppercase;
     padding: ($vr / 4) ($gutter / 2);
-    @include themeWhite;
+    @include theme-white;
   }
 
   &__address {

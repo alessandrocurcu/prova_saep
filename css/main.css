@@ -624,12 +624,12 @@ section {
   background-color: #202C39;
   color: rgba(255, 255, 255, 0.9); }
 
+.bend--theme-blue-dark {
+  background-color: #0e1318;
+  color: rgba(255, 255, 255, 0.9); }
+
 .bend--color3 {
   background-color: #5d171a;
-  color: white; }
-
-.bend--color4 {
-  background-color: #0e1318;
   color: white; }
 
 .bend--bkg-image-dark {
@@ -877,6 +877,8 @@ section {
     @media (min-width: 576px) {
       .hero--small {
         padding: 2.25rem 0; } }
+  .hero--no-text {
+    height: 15rem; }
   .hero__grid {
     display: grid;
     grid-template-columns: 10fr 2fr; }
@@ -1015,27 +1017,21 @@ section {
     padding: 0;
     padding-bottom: 9px; }
 
-.grid-footer {
-  padding: 3rem 0; }
-
 .footer {
   font-family: ff-meta-web-pro, sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  padding: 3rem 0; }
   .footer p {
     font-size: 0.8rem;
     margin-bottom: 0.5rem; }
   .footer i {
     margin-right: 9px;
     color: #AF2B31; }
-  .footer__info {
+  .footer__grid {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-column-gap: 1.953rem;
     justify-items: start; }
-  .footer__title {
-    margin: 0;
-    font-size: 1.25rem;
-    grid-column: 1 / 5; }
   .footer__subtitle {
     margin: 0;
     margin-bottom: 1rem;
@@ -1063,57 +1059,45 @@ section {
       padding-bottom: 0.5rem;
       border-bottom: 1px dashed rgba(255, 255, 255, 0.4); }
 
-@media (min-width: 576px) {
-  .grid-intro {
-    display: grid;
-    grid-template-columns: 9fr 3fr;
-    grid-column-gap: 1.953rem; } }
+.homepage-hero-image {
+  background-image: url("./../img/ossaBlu.jpg");
+  background-repeat: no-repeat;
+  background-position: 12% 12%;
+  background-size: cover; }
+
+.introduction {
+  padding: 0;
+  background-color: #AF2B31;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  @media (min-width: 576px) {
+    .introduction__grid {
+      display: grid;
+      grid-template-columns: 9fr 3fr;
+      grid-column-gap: 1.953rem; } }
+  .introduction__text {
+    font-size: 1.563rem;
+    grid-column: 1 / 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0; }
+    .introduction__text a {
+      font-style: italic;
+      -webkit-transition: color 0.3s ease-in-out;
+      -o-transition: color 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out; }
+      .introduction__text a:hover, .introduction__text a:focus {
+        color: #FFE066; }
 
 @media (min-width: 576px) {
   .grid-membership {
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     grid-auto-rows: minmax(15rem, auto); } }
-
-@media (min-width: 576px) {
-  .grid-othersCongresses {
-    display: grid;
-    grid-template-columns: 6fr 6fr;
-    grid-column-gap: 1.953rem; } }
-
-.homepageHeroImage {
-  background-image: url("./../img/ossaBlu.jpg");
-  background-repeat: no-repeat;
-  background-position: 12% 12%;
-  background-size: cover; }
-
-.congressImage {
-  background-image: url("./../img/geneve.jpg");
-  background-repeat: no-repeat;
-  background-position: 20% 20%;
-  background-size: cover;
-  position: relative;
-  background-color: rgba(32, 44, 57, 0.8);
-  background-blend-mode: multiply; }
-
-.intro {
-  background-color: #AF2B31;
-  padding: 0; }
-  .intro__text {
-    position: relative;
-    font-size: 1.563rem;
-    grid-column: 1/ 2;
-    color: white;
-    margin: 4.5rem auto;
-    margin-bottom: 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-    .intro__text a {
-      font-style: italic;
-      -webkit-transition: color 0.3s ease-in-out;
-      -o-transition: color 0.3s ease-in-out;
-      transition: color 0.3s ease-in-out; }
-      .intro__text a:hover, .intro__text a:focus {
-        color: #FFE066; }
 
 .membership {
   position: relative;
@@ -1161,6 +1145,12 @@ section {
           -ms-transform: translateY(0);
               transform: translateY(0); }
 
+@media (min-width: 576px) {
+  .grid-othersCongresses {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    grid-column-gap: 1.953rem; } }
+
 .congresses {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
   .congresses .container1 {
@@ -1173,6 +1163,15 @@ section {
     width: 100%;
     max-width: 1200px;
     min-width: 300px; }
+
+.congressImage {
+  background-image: url("./../img/geneve.jpg");
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
+  background-size: cover;
+  position: relative;
+  background-color: rgba(32, 44, 57, 0.8);
+  background-blend-mode: multiply; }
 
 .mainCongress {
   text-align: center; }
@@ -1446,8 +1445,7 @@ section {
 .constitution__grid,
 .history__grid {
   display: grid;
-  grid-template-columns: 9fr 3fr;
-  margin-top: 3rem; }
+  grid-template-columns: 9fr 3fr; }
   .constitution__grid .article,
   .history__grid .article {
     grid-column: 1 / 2;
@@ -1470,7 +1468,7 @@ section {
     height: 2px;
     width: 70px;
     position: absolute;
-    bottom: -5px;
+    bottom: -6px;
     left: 0;
     background-color: #AF2B31; }
 
@@ -1524,7 +1522,7 @@ section {
     height: 2px;
     width: 70px;
     position: absolute;
-    bottom: -5px;
+    bottom: -6px;
     left: 0;
     background-color: #AF2B31; }
 
@@ -1565,6 +1563,9 @@ section {
     margin: 0;
     margin-bottom: 0.5rem; }
 
+.committee p {
+  margin: 0; }
+
 .committee__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1587,7 +1588,7 @@ section {
     height: 2px;
     width: 70px;
     position: absolute;
-    bottom: -5px;
+    bottom: -6px;
     left: 0;
     background-color: #AF2B31; }
 
@@ -1609,7 +1610,7 @@ section {
     height: 2px;
     width: 70px;
     position: absolute;
-    bottom: -5px;
+    bottom: -6px;
     left: 0;
     background-color: #AF2B31; }
 

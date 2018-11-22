@@ -9,10 +9,10 @@ block link
 block body
   body
     include _header.pug
-    section.bend.bend--color2
+    section.hero.bend--theme-blue
       .container
-        .bend__grid
-          .bend__text
+        .hero__grid
+          .hero__text
             ul.breadcrumb
               li 
                 a(href="#") Home
@@ -20,7 +20,7 @@ block body
                 a(href="#") The Society  
               li
                 a(href="#") The History
-            h1.bend__title Our Society: history and members
+            h1.hero__title Our Society: history and members
     section.history
       .container
         .history__grid 
@@ -35,6 +35,7 @@ block body
             p Didier Patte, one of the founders of the Society, unfortunately died only 2 years after the initial inauguration of the Society, and with him a very active and dynamic spirit was lost. In his honour, a scientific award was created, to be given for the best paper in the field of shoulder and elbow surgery through the society.
             p With the ever increasing number of active members and improved revenues from the annual meetings, it became possible to initiate travelling fellowships. They were meant to foster the exchange between European and other countries in the world in understanding shoulder and elbow surgery. At this point, fellow-ships are elected for Europe, the United States and Japan.
             p The founding of at this time 10 national societies within the various countries of Europe, are to a great extent the responsibilities of the respective members of the Shoulder and Elbow Society, reflecting the activities which have developed in various countries such as Austria, Denmark, England, Finland, France, Germany, Holland, Italy, Sweden and Spain. This is also reflected in the increasing numbers of scientific publications and books published out of this circle. Table 3 will list the main topics which were discussed at the various congresses.
+    include _footer.pug
     //- h2 Personalities
     //- h3 Founding Members of SECEC
     //- ul

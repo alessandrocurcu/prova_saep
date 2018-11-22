@@ -69,7 +69,7 @@ p {
   line-height: 1.5;
 }
 
-@mixin themeRed {
+@mixin theme-red {
   background-color: $primaryColor;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
@@ -81,13 +81,13 @@ p {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
 }
 
-@mixin themeGray {
+@mixin theme-gray {
   background-color: $neutralGray;
   color: rgba(66, 66, 66, 0.9);
   // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
 }
 
-@mixin themeWhite {
+@mixin theme-white {
   background-color: white;
   color: rgba(66, 66, 66, 0.9);
   // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);

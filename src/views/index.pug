@@ -9,24 +9,25 @@ block link
 block body
   body.hp
     include _header.pug
-    section.hero.homepageHeroImage
-    section.intro
-      .container.grid-intro
-        .intro__text
-          p Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.     
-        section.login
-          h2.login__title Access to the private members' area
-          form.form.login__form
-            .form__group.form__group--vertical
-              label(for="username") Username
-              input(type="text", name="username", id="username")
-            .form__group.form__group--vertical.login__password  
-              label(for="password") Password<a href="#">Forgot password?</a>
-              input(type="password", name="password")
-            .form__group.form__group--orizzontal  
-              input(type="checkbox", name="ricordami")
-              label(for="ricordami") Remember me
-            input#login.btn(type="submit", value="Accedi")
+    section.hero.hero--no-text.homepage-hero-image
+    section.introduction
+      .container
+        .introduction__grid
+          .introduction__text
+            p Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.     
+          section.login
+            h2.login__title Access to the private members' area
+            form.form.login__form
+              .form__group.form__group--vertical
+                label(for="username") Username
+                input(type="text", name="username", id="username")
+              .form__group.form__group--vertical.login__password  
+                label(for="password") Password<a href="#">Forgot password?</a>
+                input(type="password", name="password")
+              .form__group.form__group--orizzontal  
+                input(type="checkbox", name="ricordami")
+                label(for="ricordami") Remember me
+              input#login.btn(type="submit", value="Accedi")
     section.membership
       .container
         h2.membership__title Become a member of our society
