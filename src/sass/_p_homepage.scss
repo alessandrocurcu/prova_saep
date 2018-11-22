@@ -347,9 +347,9 @@
 
   &__date {
     font-family: $secondaryText;
-    background-color: $rosso;
-    padding: ($vr / 2) (1.953rem / 2);
-    color: white;
+    @include theme-red;
+    margin: 0;
+    padding: ($vr / 2) ($gutter / 2);
     font-weight: 400;
     font-size: 0.8rem;
 
@@ -365,7 +365,6 @@
     background-color: lighten($grigio3, 6%);
     padding: ($vr / 2) (1.953rem / 2);
     padding-top: $vr;
-
   }
 
   &__title {
@@ -382,6 +381,7 @@
   }
 
   &__description {
+    margin: 0;
     overflow: hidden;
     height: 4vw;
     max-height: 90px;

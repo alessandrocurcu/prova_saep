@@ -27,14 +27,11 @@
 
   &__grid {
     display: grid;
-    text-align: center;
-    // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    text-align: left;
     grid-gap: ($gutter / 1.5);
 
 
     @include sm {
-      text-align: left;
-      justify-items: start;
       grid-template-columns: 3fr 3fr;
       grid-gap: $gutter;
 
@@ -68,12 +65,12 @@
       content: ' ';
       display: inline-block;
       height: 1px;
-      width: 40px;
+      width: 100%;
       position: absolute;
       bottom: -6px;
-      left: calc(50% - 20px);
-
-      background-color: $primaryColor;
+      left: 0;
+      border-bottom: 1px dashed rgba(175, 43, 49, 0.8);
+      opacity: 0.4;
 
       @include sm {
         left: 0;
@@ -96,7 +93,7 @@
 
       li {
         padding-bottom: $vr / 3;
-        border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
         display: flex;
         align-items: center;
       }
