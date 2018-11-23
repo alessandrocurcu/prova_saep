@@ -1107,10 +1107,10 @@ section {
     background-color: #AF2B31; }
   .membership .card:nth-child(odd):not(:last-child) {
     background-color: #5d171a; }
-  .patronagesSection .card {
-    color: #333;
-    background-color: #f7f7f7; }
-    .patronagesSection .card:hover {
+  .patronages-section .card {
+    background-color: #f2f2f2;
+    color: rgba(66, 66, 66, 0.9); }
+    .patronages-section .card:hover {
       -webkit-transform: none;
           -ms-transform: none;
               transform: none;
@@ -1507,24 +1507,29 @@ section {
     font-weight: 300;
     color: #FFE066; }
 
-.newsSection {
-  background-color: #202C39; }
-  .newsSection__title {
-    margin-top: 0;
+.news-section {
+  background-color: #202C39;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  .news-section__title {
     position: relative;
-    margin-bottom: 3rem;
-    font-weight: 500;
-    color: white; }
-    .newsSection__title:after {
+    margin-top: 0;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    font-weight: 200;
+    font-size: 1.953rem; }
+    .news-section__title:after {
       content: ' ';
       display: inline-block;
       height: 2px;
-      width: 100px;
+      width: 80px;
       position: absolute;
-      bottom: -0.33333rem;
+      bottom: -6px;
       left: 0;
-      border-radius: 50px;
       background-color: #FFE066; }
+    @media (min-width: 576px) {
+      .news-section__title {
+        margin-top: -1.5rem; } }
 
 @media (min-width: 576px) {
   .news__grid {
@@ -1545,6 +1550,8 @@ section {
     margin-right: 0.25rem; }
 
 .news__body {
+  background-color: #f2f2f2;
+  color: rgba(66, 66, 66, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1577,34 +1584,42 @@ section {
 .news__cta {
   margin-top: auto; }
 
-.patronagesSection__title {
-  margin-top: 0;
+.patronages-section__title {
   position: relative;
-  margin-bottom: 3rem;
-  font-weight: 500; }
-  .patronagesSection__title:after {
+  margin-top: 0;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  font-weight: 200;
+  font-size: 1.953rem; }
+  .patronages-section__title:after {
     content: ' ';
     display: inline-block;
     height: 2px;
-    width: 100px;
+    width: 80px;
     position: absolute;
-    bottom: -0.33333rem;
+    bottom: -6px;
     left: 0;
-    border-radius: 50px;
-    background-color: #AF2B31; }
+    background-color: #FFE066; }
+  @media (min-width: 576px) {
+    .patronages-section__title {
+      margin-top: -1.5rem; } }
 
-.patronagesSection__description {
-  width: 75%;
+.patronages-section__description {
+  width: 100%;
   font-size: 1.25rem;
-  margin-bottom: 3rem; }
+  margin-bottom: 1.5rem; }
+  @media (min-width: 992px) {
+    .patronages-section__description {
+      width: 75%;
+      margin-bottom: 3rem; } }
 
-.patronagesSection__pagination {
+.patronages-section__pagination {
   text-align: center;
   font-size: 1.563rem;
   line-height: 1; }
-  .patronagesSection__pagination i {
+  .patronages-section__pagination i {
     margin-left: 9px; }
-  .patronagesSection__pagination a {
+  .patronages-section__pagination a {
     color: #AF2B31; }
 
 .patronages i {

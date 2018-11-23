@@ -67,9 +67,10 @@
     }
   }
 
-  .patronagesSection & {
-    color: #333;
-    background-color: lighten($grigio3, 8%);
+  .patronages-section & {
+    // color: #424242;
+    // background-color: lighten($grigio3, 8%);
+    @include theme-gray;
 
     &:hover {
       transform: none;

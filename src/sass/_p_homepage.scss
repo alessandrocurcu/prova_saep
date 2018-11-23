@@ -382,28 +382,24 @@
   }
 }
 
-.newsSection {
-  background-color: $blu1;
+.news-section {
+  @include theme-blue;
 
   &__title {
-    margin-top: 0;
-    // margin-bottom: $vr;
     position: relative;
-    // margin-top: $vr;
-    margin-bottom: ($vr * 2);
-    font-weight: 500;
-    color: white;
+    margin-top: 0;
+    line-height: 1;
+    margin-bottom: $vr;
+    font-weight: 200;
+    font-size: $type3;
+
 
     &:after {
-      content: ' ';
-      display: inline-block;
-      height: 2px;
-      width: 100px;
-      position: absolute;
-      bottom: - (1rem / 3);
-      left: 0;
-      border-radius: 50px;
-      background-color: $giallo;
+      @include title-line($accent, 80px);
+    }
+
+    @include sm {
+      margin-top: - $vr;
     }
   }
 }
@@ -421,13 +417,6 @@
 
 
 .news {
-  // @include box_shadow(1);
-  // flex: 0 0 300px;
-  // overflow: hidden;
-  // @include truncate;
-
-
-
   &__date {
     font-family: $secondaryText;
     @include theme-red;
@@ -442,6 +431,7 @@
   }
 
   &__body {
+    @include theme-gray;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -455,12 +445,9 @@
     margin: 0 0;
     line-height: 1.1;
     margin-bottom: ($vr / 2);
-    // @include truncate;
-    // padding-right: (1.953rem / 2);
     font-size: 1.25rem;
-    // width: 100%;
-    // @include truncate;
-    // padding: ($vr / 2) (1.953rem / 2);
+
+
   }
 
   &__description {
@@ -477,33 +464,34 @@
   }
 }
 
-.patronagesSection {
+.patronages-section {
   &__title {
-    margin-top: 0;
-    // margin-bottom: $vr;
     position: relative;
-    // margin-top: $vr;
-    margin-bottom: ($vr * 2);
-    font-weight: 500;
-    // color: white;
+    margin-top: 0;
+    line-height: 1;
+    margin-bottom: $vr;
+    font-weight: 200;
+    font-size: $type3;
+
 
     &:after {
-      content: ' ';
-      display: inline-block;
-      height: 2px;
-      width: 100px;
-      position: absolute;
-      bottom: - (1rem / 3);
-      left: 0;
-      border-radius: 50px;
-      background-color: $rosso;
+      @include title-line($accent, 80px);
+    }
+
+    @include sm {
+      margin-top: - $vr;
     }
   }
 
   &__description {
-    width: 75%;
+    width: 100%;
     font-size: 1.25rem;
-    margin-bottom: $vr * 2;
+    margin-bottom: $vr;
+
+    @include lg {
+      width: 75%;
+      margin-bottom: $vr * 2;
+    }
   }
 
   &__pagination {
@@ -524,11 +512,6 @@
 }
 
 .patronages {
-  // max-height: 80vh;
-  // overflow-y: auto;
-  // overflow-x: hidden;
-  // width: 75%;
-  // border: 1px solid $rosso;
 
   i {
     margin: ($vr / 3);
