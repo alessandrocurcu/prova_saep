@@ -15,7 +15,7 @@
     line-height: 1.4;
 
     &:after {
-      @include title-line($primaryColor)
+      @include title-line($primaryColor, 70px)
     }
   }
 
@@ -98,7 +98,7 @@
     line-height: 1.4;
 
     &:after {
-      @include title-line($primaryColor)
+      @include title-line($primaryColor, 70px)
     }
   }
 
