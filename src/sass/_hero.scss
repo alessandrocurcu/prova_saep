@@ -20,11 +20,15 @@
   }
 
   &--small {
-    padding: 5.313rem;
+    padding: ($vr);
 
     @include sm {
       padding: ($vr * 1.5) 0;
     }
+
+    @include md {}
+
+    @include lg {}
   }
 
   &--no-text {

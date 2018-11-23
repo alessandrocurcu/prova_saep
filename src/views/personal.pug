@@ -7,18 +7,22 @@ block link
   link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.5.0/css/all.css", integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU", crossorigin="anonymous")
   link(rel="stylesheet", href="https://use.typekit.net/ngl1jlg.css")
 block body
-  body.p-membership
+  body
     include _header.pug
-    .bend.bend--small.bend--color1
+    .hero.hero--small.bend--theme-red
       .container
-        .bend__grid
-          .bend__text
+        .hero__grid
+          .hero__text
             ul.breadcrumb
               li 
                 a(href="./index.html") Home
               li Personal Area
-            h1.bend__title Benvenuto Alessandro
-    section
+            h1.hero__title Benvenuto Alessandro
+    section.personal-area
+      nav.secondary-navigation
+        .container
+          ul.secondary-navigation__navbar
+            li Menu
       .container
         aside
           nav

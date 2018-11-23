@@ -953,7 +953,7 @@ section {
     .hero {
       padding: 4.5rem 0; } }
   .hero--small {
-    padding: 5.313rem; }
+    padding: 1.5rem; }
     @media (min-width: 576px) {
       .hero--small {
         padding: 2.25rem 0; } }
@@ -1867,3 +1867,17 @@ section {
     left: 0;
     border-radius: 50px;
     background-color: #AF2B31; }
+
+.personal-area {
+  padding-top: 0 !important; }
+
+.secondary-navigation {
+  background-color: #f2f2f2;
+  color: rgba(66, 66, 66, 0.9); }
+  @media (min-width: 768px) {
+    .secondary-navigation {
+      display: none; } }
+  .secondary-navigation__navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
