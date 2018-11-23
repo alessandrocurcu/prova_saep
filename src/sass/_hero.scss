@@ -20,7 +20,7 @@
   }
 
   &--small {
-    padding: ($vr);
+    //padding: ($vr);
 
     @include sm {
       padding: ($vr * 1.5) 0;

@@ -196,19 +196,26 @@
     font-size: $type2;
     display: flex;
     justify-content: center;
+    line-height: 1.2;
 
     &:after {
       content: ' ';
       display: block;
-      height: 2px;
-      width: 20%;
+      height: 3px;
       position: absolute;
-      bottom: - (1rem / 4);
+      width: 100%;
+      bottom: - (1rem / 1.5);
       background-color: currentColor;
+      opacity: 0.8;
       border-radius: 50px;
+
+      @include sm {
+        width: 30%;
+      }
     }
 
     @include md {
+
       font-size: $type3;
     }
 

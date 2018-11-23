@@ -28,6 +28,10 @@
 
     .col-1 {
 
+      p {
+        margin: 0;
+      }
+
       p:nth-child(3) {
         font-style: italic;
       }
@@ -54,11 +58,16 @@
       grid-column: 3 / 4;
 
       h3 {
-        margin-bottom: ($vr / 2);
+        margin-bottom: ($vr / 3);
         font-weight: 600;
+
+        &:last-of-type {
+          margin-top: ($vr);
+        }
       }
 
       p {
+        margin: 0;
         font-size: $type0;
       }
 
@@ -135,6 +144,9 @@
     }
 
     .member {
+      font-family: $secondaryText;
+      text-shadow: none;
+
       &__type {
         font-size: $type1;
         margin: ($vr / 2) 0;

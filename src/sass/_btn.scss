@@ -117,6 +117,12 @@
     // padding: 0;
     border: 1px solid currentColor;
     color: inherit;
+
+    &:hover,
+    &:focus {
+      background-color: $tc;
+      color: white;
+    }
   }
 
   &--red {

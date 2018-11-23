@@ -28,6 +28,25 @@
   }
 }
 
+@mixin container {
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 350px;
+
+
+  @include sm {
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  @include md {
+    padding: 0;
+    width: 90%;
+  }
+}
+
 section {
   padding: ($vr * 1) 0;
 

@@ -18,27 +18,24 @@ block body
                 a(href="./index.html") Home
               li Personal Area
             h1.hero__title Benvenuto Alessandro
-    section.personal-area
-      nav.secondary-navigation
-        .container
-          ul.secondary-navigation__navbar
-            li Menu
-      .container
-        aside
+    section.personal-area      
+      .personal-area__grid
+        aside.secondary-navigation
           nav
-            ul
-              li Demographics
+            ul.secondary-navigation__navbar
+              li: span Demographics
                 ul
                   li Name & Demographics
                   li Manage Addresses
                   li Username & Password
                   li Biography
-              li Membership & Participation
+              li: span Membership
                 ul
                   li My committees
-              li Communication
+              li: span Communication
                 ul
                   li Contact Information
-                  li Emergency Contact   
-        main
-          h2 Titolo area   
+                  li Emergency Contact      
+        main.informations
+          .information
+            h2.information__title Demographics   
