@@ -462,7 +462,8 @@ a {
   margin: 0 auto;
   padding: 0 16px;
   width: 100%;
-  max-width: 1200px; }
+  max-width: 1200px;
+  min-width: 350px; }
   @media (min-width: 576px) {
     .container {
       padding: 0 16px;
@@ -1614,9 +1615,13 @@ section {
 
 .patronages__grid {
   display: grid;
-  grid-template-columns: 6fr 6fr;
-  grid-gap: 1.953rem;
-  margin-bottom: 3rem; }
+  grid-row-gap: 1.5rem; }
+  @media (min-width: 768px) {
+    .patronages__grid {
+      display: grid;
+      grid-template-columns: 6fr 6fr;
+      grid-gap: 1.953rem;
+      margin-bottom: 3rem; } }
 
 .constitution h2,
 .constitution h3,

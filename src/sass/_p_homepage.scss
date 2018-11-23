@@ -540,7 +540,12 @@
 
 .patronages__grid {
   display: grid;
-  grid-template-columns: 6fr 6fr;
-  grid-gap: 1.953rem;
-  margin-bottom: ($vr * 2);
+  grid-row-gap: $vr;
+
+  @include md {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    grid-gap: $gutter;
+    margin-bottom: ($vr * 2);
+  }
 }
