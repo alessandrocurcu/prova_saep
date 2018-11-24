@@ -10,6 +10,15 @@ const imagesLoaded = require('imagesloaded');
       '.primary-navigation__item'
     );
 
+    const primaryNavigation = document.getElementById('primary-nav');
+
+    const hamburgher = document.getElementById('hamburgher');
+
+    hamburgher.addEventListener('click', e => {
+      console.log(e.target);
+      primaryNavigation.classList.toggle('toggle-nav');
+    });
+
     const toggleClick = e => {
       if (
         typeof e.currentTarget.children[0].children[0].children[0] ===

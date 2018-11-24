@@ -164,16 +164,38 @@
 }
 
 .primary-navigation {
-  display: none;
+  // display: none;
+  position: fixed;
   font-family: $secondaryText;
   font-weight: 400;
   letter-spacing: 1px;
+  z-index: 9;
+  top: 98px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  // transition: transform 0.2s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+  // transform: translateY(calc(-100% - 98px));
+  opacity: 0;
+  @include theme-gray;
 
   @include sm {
+    @include no-theme;
+    // transform: translateY(0);
+    opacity: 1;
+    position: relative;
+    top: 0;
     display: block;
     width: 100%;
     @include theme-gray;
   }
+}
+
+.toggle-nav {
+  transition: opacity 0.1s ease-in-out;
+  // transform: translateY(0);
+  opacity: 1;
 }
 
 .primary-navigation {
@@ -182,9 +204,12 @@
     font-size: $type-1;
     text-transform: uppercase;
     height: ($vr * 2);
-    align-items: center;
+    flex-direction: column;
+
 
     @include sm {
+      flex-direction: row;
+      align-items: center;
       font-size: $type-2;
       height: ($vr * 1.5);
     }
@@ -207,15 +232,19 @@
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: default;
     padding: 0 ($gutter / 2);
+    border-bottom: 1px dashed rgba(175, 43, 49, 0.8);
 
     &:hover {
       @include theme-blue;
     }
 
     @include sm {
+      border: none;
       padding: 0 ($gutter / 3);
+      justify-content: flex-start;
     }
 
     @include md {
@@ -242,12 +271,13 @@
     }
 
     &:last-child {
-      margin-left: auto;
+
       font-weight: 700;
-      padding-right: $gutter;
-      padding-left: $gutter;
+      // padding-right: $gutter;
+      // padding-left: $gutter;
 
       @include sm {
+        margin-left: auto;
         padding-right: ($gutter / 3);
         padding-left: ($gutter / 3);
       }
