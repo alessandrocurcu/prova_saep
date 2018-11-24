@@ -41,12 +41,19 @@
   }
 
   &__description {
-    font-size: 1rem;
+    font-size: $type0;
     margin-top: 0;
     margin-bottom: $vr / 2;
-    line-height: 1.4;
+    line-height: 1.3;
 
-    @include sm {}
+    @include lg {
+      line-height: 1.4;
+      font-size: $type-1;
+    }
+
+    @include rwd(1100) {
+      font-size: $type0;
+    }
 
     .card--cta & {
       font-size: 0.8rem;
@@ -89,6 +96,16 @@
       font-weight: 600;
       padding: 9px !important;
       text-align: center !important;
+      margin: 0 auto;
+      width: 100%;
+
+      @include sm {
+        width: 40%;
+      }
+
+      @include sm {
+        width: 100%;
+      }
 
       &:hover,
       &:focus {
