@@ -532,6 +532,43 @@ const imagesLoaded = require('imagesloaded');
       el.addEventListener('mouseleave', toggleHover);
       el.addEventListener('click', toggleClick);
     });
+
+    const scoreButtons = document.querySelectorAll('[data-score]');
+
+    const scoreApplyButton = document.getElementById('js-score-apply-button');
+
+    const scoreView = document.getElementById('js-score');
+
+    let oldScore = 0;
+    let check = 0;
+    scoreButtons.forEach((el, i, array) => {
+      const youWon = totScore => {
+        if (totScore >= 30 && check === 0) {
+          check = 1;
+          scoreView.textContent = totScore;
+          return 1;
+        }
+        console.log('Non ancora');
+        scoreView.textContent = totScore;
+        return 0;
+      };
+
+      const calculateNewScore = newScore => {
+        oldScore += Number(newScore);
+        console.log(oldScore);
+        return oldScore;
+      };
+
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        // console.log(e.target.dataset.score);
+        const { score } = e.target.dataset;
+        console.log(score);
+        if (youWon(calculateNewScore(score))) {
+          scoreApplyButton.classList.toggle('toggle');
+        }
+      });
+    });
   });
 
   const loginbtn = document.getElementById('login');
@@ -540,6 +577,32 @@ const imagesLoaded = require('imagesloaded');
     e.preventDefault();
     location.href = './personal.html';
   });
+
+  /* Score system */
+
+  const scores = {
+    article: 5,
+    sececMeeting: 1,
+    oralPresentation: 3,
+    posterPresentation: 2,
+  };
+
+  let score = 0;
+
+  console.log(scoreButtons);
+
+  const buttonArticle = document.getElementById('js-article');
+
+  const buttonMeeting = document.getElementById('js-meeting');
+
+  buttonArticle.addEventListener('click', () => {
+    score += 5;
+    console.log(score);
+  });
+
+  const addPoints = points => {
+    score += points;
+  };
 })();
 
 },{"imagesloaded":2}]},{},[3])

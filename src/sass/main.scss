@@ -15,7 +15,7 @@
   width: 100%;
   max-width: 1200px;
   min-width: 350px;
-
+  position: relative;
 
   @include sm {
     padding: 0 16px;
@@ -26,6 +26,8 @@
     padding: 0;
     width: 90%;
   }
+
+
 }
 
 @mixin container {

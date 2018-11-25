@@ -463,7 +463,8 @@ a {
   padding: 0 16px;
   width: 100%;
   max-width: 1200px;
-  min-width: 350px; }
+  min-width: 350px;
+  position: relative; }
   @media (min-width: 576px) {
     .container {
       padding: 0 16px;
@@ -2307,6 +2308,52 @@ body {
     padding-left: 0.9765rem; }
     .criteria__score p {
       margin: 0; }
+
+.score {
+  background-color: #202C39;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 0.9765rem;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  font-family: ff-meta-web-pro, sans-serif;
+  width: 100%; }
+  .score__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .score__points {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .score__points > .score__text {
+      color: #AF2B31; }
+  .score__title {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.563rem; }
+  .score__text {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-size: 1.563rem; }
+  .score__score {
+    margin-left: 8px; }
+  .score__cta {
+    display: block;
+    text-align: center;
+    margin-top: 0.75rem; }
+
+.toggle {
+  display: none; }
 
 .junior h2 {
   margin-top: 1.5rem;

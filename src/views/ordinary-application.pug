@@ -50,7 +50,7 @@ block body
               .form__group.form__group--orizzontal
                 .form__control
                   input(type="text", name="", placeholder="Published article")
-                  button.btn.btn--form Add article
+                  button.btn.btn--form(data-score="5") Add article
             p.criteria__score + 5<span> points </span> 
           .criteria 
             .criteria__head   
@@ -60,7 +60,7 @@ block body
               .form__group.form__group--orizzontal
                 .form__control
                   input(type="text", name="", placeholder="Meeting attended")
-                  button.btn.btn--form Add meeting
+                  button.btn.btn--form(data-score="1") Add meeting
             p.criteria__score + 1<span> points </span>
           .criteria
             .criteria__head 
@@ -70,7 +70,7 @@ block body
               .form__group.form__group--orizzontal
                 .form__control 
                   input(type="text", name="", placeholder="Presentation")
-                  button.btn.btn--form Add presentation
+                  button.btn.btn--form(data-score="3") Add presentation
             p.criteria__score + 3<span> points </span>   
           .criteria
             .criteria__head  
@@ -80,7 +80,7 @@ block body
               .form__group.form__group--orizzontal
                 .form__control
                   input(type="text", name="", placeholder="Presentation")
-                  button.btn.btn--form add presentation
+                  button.btn.btn--form(data-score="2") add presentation
             p.criteria__score + 2<span> points </span>   
           .criteria
             .criteria__head 
@@ -90,7 +90,7 @@ block body
               .form__group.form__group--orizzontal
                 .form__control  
                   input(type="text", name="", placeholder="Presentation")
-                  button.btn.btn--form Add presentation
+                  button.btn.btn--form(data-score="2") Add presentation
             p.criteria__score + 2<span> points </span>   
           .criteria
             .criteria__head  
@@ -100,7 +100,7 @@ block body
               .form__group.form__group--orizzontal
                 .form__control 
                   input(type="text", name="", placeholder="Chapter book written")
-                  button.btn.btn--form Add chapter
+                  button.btn.btn--form(data-score="5") Add chapter
             p.criteria__score + 5<span> points </span>   
           .criteria
             .criteria__head 
@@ -111,21 +111,21 @@ block body
                 label.criteria__text Didier Patte Prize
                 .form__control
                   input(type="text", name="", placeholder="Award gained")
-                  button.btn.btn--form add award
+                  button.btn.btn--form(data-score="10") add award
               .form__group.form__group--vertical
                 label.criteria__text Best Paper Prize
                 .form__control
                   input(type="text", name="", placeholder="Award gained")
-                  button.btn.btn--form add award
+                  button.btn.btn--form(data-score="3") add award
               .form__group.form__group--vertical
                 label.criteria__text Best Poster Prize 
                 .form__control
                   input(type="text", name="", placeholder="Award gained")
-                  button.btn.btn--form add award    
+                  button.btn.btn--form(data-score="2") add award 
             .criteria__score
               p + 10<span> points </span>
               p + 3<span> points </span>
-              p + 2<span> points </span>         
+              p + 2<span> points </span>  
           .criteria
             .criteria__head  
               h3.criteria__title Fellowship
@@ -133,9 +133,17 @@ block body
             form.form.criteria__form
               .form__group.form__group--orizzontal  
                 input(type="text", name="", placeholder="Fellowship attended")
-                button.btn.btn--form Add fellowship
+                button.btn.btn--form(data-score="12") Add fellowship
             p.criteria__score + 12<span> points </span>
             ul
               li fellows selected to the Intra European travelling fellowship become ex officio Associate Members
               li fellows selected to the Europe / USA  or  Europe / Japan travelling fellowship become ex officio Ordinary Member
+        .score
+          .container.score__body
+            .score__points
+              h3.score__title Your score:
+              p.score__text <span class="score__score" id="js-score">0</span> points
+            #js-score-apply-button.toggle
+              p.score__text You can know apply and become ad Ordinary Member of Secec
+              a.score__cta.btn.btn--cta(href="application.html") APPLY
     include _footer.pug

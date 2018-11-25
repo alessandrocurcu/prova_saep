@@ -102,3 +102,65 @@
     }
   }
 }
+
+.score {
+  @include theme-blue;
+  padding: ($vr / 2) ($gutter / 2);
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  // transform: translateX(-50%);
+  // margin-bottom: $vr / 2;
+  font-family: $secondaryText;
+  width: 100%;
+  // margin: $gutter;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+  }
+
+  &__points {
+    display: flex;
+
+    >.score__text {
+      color: $primaryColor;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 300;
+    font-size: $type2;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: $type-1;
+    font-weight: 300;
+    font-size: $type2;
+  }
+
+
+
+  &__score {
+    // font-weight: 500;
+    // font-size: $type3;
+    // color: $primaryColor;
+    margin-left: 8px;
+  }
+
+  &__cta {
+    display: block;
+    text-align: center;
+    margin-top: $vr / 2;
+  }
+}
+
+.toggle {
+  display: none;
+}
