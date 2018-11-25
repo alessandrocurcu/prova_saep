@@ -4,7 +4,7 @@
   font-weight: 400;
   // color: $blu1;
   padding: (0.64rem / 2) (1.25rem / 2);
-  font-size: 0.8rem;
+  font-size: $type-1;
   text-transform: uppercase;
   font-family: ff-meta-web-pro, sans-serif;
   text-decoration: none;
@@ -64,7 +64,22 @@
       }
     }
 
+  }
 
+  &--form {
+    background-color: $secondaryColor;
+    color: $accent;
+    border-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid $secondaryColor;
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $secondaryColor;
+      background-color: $accent;
+    }
   }
 
   .login & {

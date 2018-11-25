@@ -44,7 +44,7 @@
   }
 
   &__form {
-    font-size: 0.8rem;
+    font-size: $type-1;
     //width: 300px;
   }
 
@@ -55,7 +55,7 @@
     }
 
     a {
-      color: $giallo;
+      color: $accent;
       font-weight: 300;
       // font-style: italic;
       // text-decoration: underline;

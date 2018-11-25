@@ -106,6 +106,8 @@
       }
 
       .membership-rules__cta {
+        display: block;
+        text-align: center;
         margin-top: $vr / 6;
         margin-bottom: $vr / 3;
 
@@ -178,7 +180,7 @@
 
     .member {
       @include theme-gray;
-      font-family: $secondaryText;
+
       text-shadow: none;
       // padding: 0 ($gutter / 2);
       display: flex;
@@ -211,7 +213,7 @@
 
       &__subtitle {
         padding: ($vr / 2) ($gutter / 2);
-        font-weight: 300;
+        font-weight: 500;
         font-size: $type-1;
         text-transform: uppercase;
         margin: 0;
@@ -221,6 +223,7 @@
       }
 
       ul {
+        font-family: $secondaryText;
         font-size: 0.8rem;
         margin: 0;
         // margin-bottom: $vr;

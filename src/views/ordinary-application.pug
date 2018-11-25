@@ -4,84 +4,138 @@ block personal
   title Nuovo titolo
 block link
   link(href="./css/main.css", rel="stylesheet")
+  link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.5.0/css/all.css", integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU", crossorigin="anonymous")
+  link(rel="stylesheet", href="https://use.typekit.net/ngl1jlg.css")
 block body
   body
-    include _primary_nav.pug
+    include _header.pug
+    section.hero.hero--small.bend--theme-blue
+      .container
+        .hero__grid
+          .hero__text
+            ul.breadcrumb
+              li 
+                a(href="#") Home
+              li
+                a(href="#") Become a member  
+              li
+                a(href="#") Calculate your score
+            h1.hero__title Calculate your score and become an Ordinary Member of SECEC
+    .bend--theme-red
+      .container
+        .sub-hero
+          p.sub-hero__text  All the information that you will provide below will be checked and verified by our scientific commitee: please be accurate and sincere   
     section.application
-      header.application__head
-        h1 Ordinary membership application form
-        p  In order to become ad Ordinary Member you have to have obatined a certain degree of success in the field. To evaluate your achievements we have designed a point grade system: if you score is 30 points or above you're eligible to become an Ordinary Member.
-        p All the information that you will provide below will be checked by our scientific commitee: be accurate.
-      main.application__body
-        .application__section
-          .application__head
-            h2 Published articles
-            p Articles in which you were involved published in journals referenced in the Index Medicus will grant you 5 points for each article
-          form.application__upload
-            input(type="text", name="")
-            button Add article
-          p.application__score +5  
-        .application__section 
-          .application__head   
-            h2 SECEC / ICSS meetings attended
-            p SECEC / ESSSE meetings and ICSS you attended (will be   checked): 1 point for all authors
-          form.application__upload  
-            input(type="text", name="")
-            button add meeting
-          p.application__score +5
-        .application__section
-          .application__head 
-            h2 Oral presentation
-            p oral presentations at SECEC / ESSSE congresses or   ICSS: 3 points for all authors
-          form.application__upload  
-            input(type="text", name="")
-            button add presentation
-          p.application__score +5   
-        .application__section
-          .application__head  
-            h2 Poster presentation
-            p poster presentations at SECEC / ESSSE congresses or   ICSS: 2 points for all authors
-          form.application__upload
-            input(type="text", name="")
-            button add presentation
-          p.application__score +5   
-        .application__section
-          .application__head 
-            h2 Oral international presentation
-            p oral presentations you made or participated in at   international congresses devoted to shoulder and elbow:   2 points for all authors
-          form.application__upload  
-            input(type="text", name="")
-            button add presentation
-          p.application__score +5   
-        .application__section
-          .application__head  
-            h2 Book chapter
-            p book chapters you participated in dealing with shoulder and elbow: 5 points for all authors
-          form.application__upload  
-            input(type="text", name="")
-            button add chapter
-          p.application__score +5   
-        .application__section
-          .application__head 
-            h2 Awards
-            p SECEC / ESSSE awards you received
-          ul
-            li - Didier Patte Prize: 10 points becomes ex officio Ordinary Members
-            li - Best Paper Prize: 3 points for all authors
-            li - Best Poster Prize: 2 points for all authors
-          form.application__upload  
-            input(type="text", name="")
-            button add award
-          p.application__score +5
-        .application__section
-          .application__head  
-            h2 Fellowship
-            p SECEC fellowships: 12 points
-          form.application__upload  
-            input(type="text", name="")
-            button add fellowship
-          p.application__score +5
-          ul
-            li fellows selected to the Intra European travelling fellowship become ex officio Associate Members
-            li fellows selected to the Europe / USA  or  Europe / Japan travelling fellowship become ex officio Ordinary Member
-    
+      .container
+        header.application__header
+          h2.application__title How does it work?
+          .grid
+            .col-1
+              p  In order to become ad Ordinary Member you have to have obatined a certain degree of success in the field. To evaluate your achievements we have designed a point grade system: if you score is 30 points or above you're eligible to become an Ordinary Member.
+            //- .col-2
+            //-   h3.application__sub-title Criteria
+            //-   ul
+            //-     li Articles in which you were involved published in journals referenced in the Index Medicus: <span> 5 points</span>
+            //-     li SECEC / ESSSE meetings and ICSS you attended:<span> 1 point </span>
+            //-     li Oral presentations at SECEC / ESSSE congresses or ICSS:<span> 3 points</span>
+            //-     li Poster presentations at SECEC / ESSSE congresses or ICSS: <span> 2 points</span>
+            //-     li Oral presentations you made or participated in at international congresses devoted to shoulder and elbow: <span>2 points</span>
+            //-     li Book chapters you participated in dealing with shoulder and elbow: <span>5 points</span>
+        main.criterias
+          .criteria
+            .criteria__head
+              h3.criteria__title Published articles
+              p.criteria__text Articles in which you were involved published in journals referenced in the Index Medicus
+            form.form.criteria__form
+              .form__group.form__group--orizzontal
+                .form__control
+                  input(type="text", name="", placeholder="Published article")
+                  button.btn.btn--form Add article
+            p.criteria__score + 5<span> points </span> 
+          .criteria 
+            .criteria__head   
+              h3.criteria__title SECEC / ICSS meetings attended
+              p.criteria__text SECEC / ESSSE meetings and ICSS you attended
+            form.form.criteria__form
+              .form__group.form__group--orizzontal
+                .form__control
+                  input(type="text", name="", placeholder="Meeting attended")
+                  button.btn.btn--form Add meeting
+            p.criteria__score + 1<span> points </span>
+          .criteria
+            .criteria__head 
+              h3.criteria__title Oral presentation
+              p.criteria__text oral presentations at SECEC / ESSSE congresses or   ICSS
+            form.form.criteria__form
+              .form__group.form__group--orizzontal
+                .form__control 
+                  input(type="text", name="", placeholder="Presentation")
+                  button.btn.btn--form Add presentation
+            p.criteria__score + 3<span> points </span>   
+          .criteria
+            .criteria__head  
+              h3.criteria__title Poster presentation
+              p.criteria__text poster presentations at SECEC / ESSSE congresses or ICSS
+            form.form.criteria__form
+              .form__group.form__group--orizzontal
+                .form__control
+                  input(type="text", name="", placeholder="Presentation")
+                  button.btn.btn--form add presentation
+            p.criteria__score + 2<span> points </span>   
+          .criteria
+            .criteria__head 
+              h3.criteria__title Oral international presentation
+              p.criteria__text oral presentations you made or participated in at   international congresses devoted to shoulder and elbow
+            form.form.criteria__form
+              .form__group.form__group--orizzontal
+                .form__control  
+                  input(type="text", name="", placeholder="Presentation")
+                  button.btn.btn--form Add presentation
+            p.criteria__score + 2<span> points </span>   
+          .criteria
+            .criteria__head  
+              h3.criteria__title Book chapter
+              p.criteria__text book chapters you participated in dealing with shoulder and elbow
+            form.form.criteria__form
+              .form__group.form__group--orizzontal
+                .form__control 
+                  input(type="text", name="", placeholder="Chapter book written")
+                  button.btn.btn--form Add chapter
+            p.criteria__score + 5<span> points </span>   
+          .criteria
+            .criteria__head 
+              h3.criteria__title Awards
+              p.criteria__text SECEC / ESSSE awards you received
+            form.form.criteria__form
+              .form__group.form__group--vertical
+                label.criteria__text Didier Patte Prize
+                .form__control
+                  input(type="text", name="", placeholder="Award gained")
+                  button.btn.btn--form add award
+              .form__group.form__group--vertical
+                label.criteria__text Best Paper Prize
+                .form__control
+                  input(type="text", name="", placeholder="Award gained")
+                  button.btn.btn--form add award
+              .form__group.form__group--vertical
+                label.criteria__text Best Poster Prize 
+                .form__control
+                  input(type="text", name="", placeholder="Award gained")
+                  button.btn.btn--form add award    
+            .criteria__score
+              p + 10<span> points </span>
+              p + 3<span> points </span>
+              p + 2<span> points </span>         
+          .criteria
+            .criteria__head  
+              h3.criteria__title Fellowship
+              p.criteria__text SECEC fellowships
+            form.form.criteria__form
+              .form__group.form__group--orizzontal  
+                input(type="text", name="", placeholder="Fellowship attended")
+                button.btn.btn--form Add fellowship
+            p.criteria__score + 12<span> points </span>
+            ul
+              li fellows selected to the Intra European travelling fellowship become ex officio Associate Members
+              li fellows selected to the Europe / USA  or  Europe / Japan travelling fellowship become ex officio Ordinary Member
+    include _footer.pug

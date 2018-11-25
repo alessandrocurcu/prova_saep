@@ -518,7 +518,7 @@
 
 
     &:after {
-      @include title-line($accent, 80px);
+      @include title-line($primaryColor, 80px);
     }
 
     @include sm {
@@ -650,7 +650,13 @@
   }
 
   &__cta {
+    position: relative;
     display: block;
     margin-top: ($vr / 2);
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
   }
 }
