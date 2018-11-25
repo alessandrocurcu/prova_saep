@@ -1,9 +1,16 @@
 const imagesLoaded = require('imagesloaded');
 
-(function IIFE() {
+const Headroom = require('./headroom.js');
+
+(function IIFE(HEadroom) {
   'use strict';
 
   window.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('header');
+
+    const headroom2 = new Headroom(header, { offset: 250, tolerance: 5 });
+
+    headroom2.init();
     const dropdownMenus = document.querySelectorAll('.dropdown-menu');
 
     const primaryNavigationItems = document.querySelectorAll(
@@ -27,15 +34,21 @@ const imagesLoaded = require('imagesloaded');
       // }
     };
 
-    const toggleHover = e => {
+    const enterHandler = e => {
+      if (e.currentTarget.children.length !== 2) return;
+
+      e.currentTarget.children[1].classList.toggle('js-toggle');
+    };
+
+    const leaveHandler = e => {
       if (e.currentTarget.children.length !== 2) return;
 
       e.currentTarget.children[1].classList.toggle('js-toggle');
     };
 
     primaryNavigationItems.forEach(el => {
-      el.addEventListener('mouseenter', toggleHover);
-      el.addEventListener('mouseleave', toggleHover);
+      el.addEventListener('mouseenter', enterHandler);
+      el.addEventListener('mouseleave', leaveHandler);
       el.addEventListener('click', toggleClick);
     });
 
@@ -109,4 +122,4 @@ const imagesLoaded = require('imagesloaded');
   const addPoints = points => {
     score += points;
   };
-})();
+})(Headroom);
