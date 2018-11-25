@@ -545,7 +545,8 @@
     margin: ($vr / 2) 0;
 
     @include sm {
-      margin: ($vr * 2) 0;
+      margin-top: ($vr * 2);
+      margin-bottom: 0;
     }
 
     p {

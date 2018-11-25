@@ -1737,7 +1737,8 @@ body {
   margin: 0.75rem 0; }
   @media (min-width: 576px) {
     .patronages-section__pagination {
-      margin: 3rem 0; } }
+      margin-top: 3rem;
+      margin-bottom: 0; } }
   .patronages-section__pagination p {
     margin: 0;
     line-height: 1.3; }
