@@ -595,3 +595,61 @@
     margin-bottom: ($vr * 2);
   }
 }
+
+.president-message {
+  @include theme-red;
+
+  &__title {
+    position: relative;
+    margin-top: 0;
+    line-height: 1;
+    margin-bottom: $vr;
+    font-weight: 200;
+    font-size: $type3;
+
+
+
+    &:after {
+      @include title-line(white, 80px);
+    }
+
+    @include sm {
+      // margin-top: - $vr;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-row-gap: ($gutter / 2);
+
+    @include sm {
+      grid-template-columns: 3fr 9fr;
+      grid-column-gap: ($gutter / 2);
+    }
+  }
+
+  &__img {
+    width: 80%;
+    margin: 0 auto;
+
+    @include sm {
+      width: 100%;
+      border-right: 1px dotted rgba(255, 255, 255, 0.6);
+      padding-right: ($gutter / 2);
+
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    @include lg {
+      font-size: $type1;
+    }
+  }
+
+  &__cta {
+    display: block;
+    margin-top: ($vr / 2);
+  }
+}

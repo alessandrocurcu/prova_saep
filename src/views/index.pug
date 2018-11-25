@@ -7,7 +7,7 @@ block link
   link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.5.0/css/all.css", integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU", crossorigin="anonymous")
   link(rel="stylesheet", href="https://use.typekit.net/ngl1jlg.css")
 block body
-  body.hp
+  body
     include _header.pug
     section.hero.hero--no-text.homepage-hero-image
     section.introduction
@@ -141,17 +141,15 @@ block body
             .patronage__info <i class="fas fa-info-circle"></i> More info on www.shouldersafari.com
         .patronages-section__pagination
           p <a href="patronages-meetings.html">Discover other SECEC patronages and other meetings</a>   
-          //- .patronage.card
-          //-   .patronage__title.card__title Advanced Course on Shoulder Arthroscopy
-          //-   .patronage__place Val d'Isère, France
-          //-   .patronage__date January 20-25, 2019
-          //-   .patronage__info More info on www.valdisereshoulder.com 
+    section.president-message
+      .container
+        h2.president-message__title The annual message from our President Roger Emery
+        .president-message__grid
+          img.president-message__img(src="./img/secec-president-2018.png")
+          p.president-message__text I hope you are enjoying the hottest European summer on record, and looking forward to early autumn on Lake Geneva. The 28th Congress will be, as usual, a scientific meeting of the highest quality, and a wonderful opportunity for communication.
+            a(href="president-message.html").president-message__cta.btn.btn--void Read the rest
     include _footer.pug            
-    //- img.intro__img(src="./img/secec_community.jpg", alt="")
-            
-     
-    //- section.patronages
-    //-   h2.patronages__title Congresses, Meetings and Courses under the SECEC Patronage
+          
            
     //- section.presidentMessage
     //-   h2 The annual message from our President Roger Emery

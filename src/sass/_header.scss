@@ -1,12 +1,12 @@
 .header {
   position: fixed;
-  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
   min-height: 50px;
   background-color: white;
   font-family: $secondaryText;
+  z-index: z(header);
   @include box_shadow(4);
 }
 
@@ -72,7 +72,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  z-index: z(header, navbar);
+  background-color: white;
 
   @include sm {
     display: block;
@@ -84,6 +85,12 @@
     padding: ($vr / 3) 0;
   }
 
+  .container & {
+    margin: 0 -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   i {
     color: $secondaryText;
     font-size: $type4;
@@ -91,6 +98,19 @@
 
   &__icon {
     display: block;
+    font-size: $type-1;
+    text-align: center;
+
+
+    .fa-bars {
+      font-size: $type3;
+
+    }
+
+    p {
+      margin: 0;
+      text-transform: uppercase;
+    }
 
     @include sm {
       display: none;
@@ -164,38 +184,34 @@
 }
 
 .primary-navigation {
-  // display: none;
   position: fixed;
   font-family: $secondaryText;
   font-weight: 400;
   letter-spacing: 1px;
-  z-index: 9;
+  z-index: z(header, dropdown);
   top: 98px;
   right: 0;
   bottom: 0;
   left: 0;
-  // transition: transform 0.2s ease-in-out;
-  transition: opacity 0.1s ease-in-out;
-  // transform: translateY(calc(-100% - 98px));
-  opacity: 0;
+  transition: transform 0.2s ease-out;
+  transform: translateY(calc(-100% - 98px));
   @include theme-gray;
 
   @include sm {
     @include no-theme;
-    // transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0);
     position: relative;
     top: 0;
     display: block;
     width: 100%;
+
     @include theme-gray;
   }
 }
 
 .toggle-nav {
-  transition: opacity 0.1s ease-in-out;
-  // transform: translateY(0);
-  opacity: 1;
+  transition: transform 0.2s ease-in;
+  transform: translateY(0);
 }
 
 .primary-navigation {
@@ -287,6 +303,16 @@
         padding-left: $gutter;
       }
     }
+
+    >i {
+      margin-left: 9px;
+
+      // transform: rotate(90deg);
+
+      @include sm {
+        display: none;
+      }
+    }
   }
 
   &__first-level-link {
@@ -306,13 +332,17 @@
   font-size: $type-2;
   @include theme-blue;
   padding-left: 0;
-  width: 200px;
+  width: 100%;
   left: -0.5px;
   right: -0.5px;
+  top: 53px;
+  z-index: z(header, dropdown-2nd);
 
   @include box_shadow(4);
 
   @include sm {
+
+    width: 200px;
     top: 40px;
     left: 0px;
   }

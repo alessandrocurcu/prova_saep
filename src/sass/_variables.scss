@@ -96,3 +96,7 @@ p {
   color: inherit;
   text-shadow: none;
 }
+
+$z-indexes: (body: (),
+header: (dropdown, dropdown-2nd, navbar),
+modal: ());

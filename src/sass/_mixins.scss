@@ -173,3 +173,23 @@ $screen-xl-min: 1200px;
   left: 0;
   background-color: $colore;
 }
+
+@function z-index($key1, $key2: null) {
+  $map: $z-indexes;
+  $found-index: null;
+
+  @if (map-has-key($map, $key1)) {
+    $found-index: index(map-keys($map), $key1);
+
+    @if ($key2) {
+      $map: map-get($map, $key1);
+      $found-index: index($map, $key2);
+    }
+  }
+
+  @return $found-index;
+}
+
+@function z($key1, $key2: null) {
+  @return z-index($key1, $key2);
+}

@@ -15,34 +15,28 @@ const imagesLoaded = require('imagesloaded');
     const hamburgher = document.getElementById('hamburgher');
 
     hamburgher.addEventListener('click', e => {
-      console.log(e.target);
       primaryNavigation.classList.toggle('toggle-nav');
     });
 
     const toggleClick = e => {
-      if (
-        typeof e.currentTarget.children[0].children[0].children[0] ===
-        'undefined'
-      )
-        return;
-      e.preventDefault();
-      e.currentTarget.children[0].classList.toggle('js-toggle');
+      // console.log(!e.currentTarget.children[1].classList.contains('js-toggle'));
+      // if (e.currentTarget.children.length !== 2) return;
+      // e.preventDefault();
+      // if (!e.currentTarget.children[1].classList.contains('js-toggle')) {
+      //   e.currentTarget.children[1].classList.toggle('js-toggle');
+      // }
     };
 
     const toggleHover = e => {
-      console.log(e.currentTarget.children[0].children[0].children[0]);
-      if (
-        typeof e.currentTarget.children[0].children[0].children[0] ===
-        'undefined'
-      )
-        return;
+      if (e.currentTarget.children.length !== 2) return;
 
-      e.currentTarget.children[0].classList.toggle('js-toggle');
+      e.currentTarget.children[1].classList.toggle('js-toggle');
     };
 
     primaryNavigationItems.forEach(el => {
       el.addEventListener('mouseenter', toggleHover);
       el.addEventListener('mouseleave', toggleHover);
+      el.addEventListener('click', toggleClick);
     });
   });
 
@@ -53,16 +47,3 @@ const imagesLoaded = require('imagesloaded');
     location.href = './personal.html';
   });
 })();
-
-// const wrapper = document.getElementById('wrapper');
-
-// document.addEventListener('click', e => {
-//   e.preventDefault();
-//   wrapper.classList.toggle('js-change-view');
-// });
-
-// const formHookButton = document.getElementById('form_hook_button');
-
-// console.log(formHookButton);
-
-// console.log(primaryNavigationItems);

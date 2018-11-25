@@ -56,6 +56,11 @@ section {
   }
 }
 
+body {
+  position: relative;
+  z-index: z(body);
+}
+
 
 
 
