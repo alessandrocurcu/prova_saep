@@ -51,8 +51,11 @@ section {
   padding: ($vr * 1) 0;
 
   @include sm {
-    padding: ($vr * 3) 0;
+    padding: ($vr* 1.5) 0;
+  }
 
+  @include md {
+    padding: ($vr * 3) 0;
   }
 }
 

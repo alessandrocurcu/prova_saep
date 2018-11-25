@@ -77,19 +77,33 @@
     }
   }
 
-  &__text {}
-
 }
 
 .sub-hero {
   display: flex;
   align-items: center;
-  padding: ($vr * 1.5) 0;
+  padding: ($vr) 0;
+
+  @include sm {
+    padding: ($vr * 1.5) 0;
+  }
+
+  @include xl {
+    padding: ($vr * 1.5) 0;
+  }
 
   &__text {
     margin: 0;
-    font-size: 1.563rem;
+    font-size: $type0;
     line-height: 1.4;
+
+    @include sm {
+      font-size: $type1;
+    }
+
+    @include md {
+      font-size: $type2;
+    }
   }
 
 

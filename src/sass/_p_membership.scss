@@ -4,8 +4,6 @@
 }
 
 .membership-rules {
-  // font-family: $secondaryText;
-
   h2 {
     position: relative;
     font-weight: 300;
@@ -23,8 +21,18 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: 7fr 1fr 4fr;
-    grid-column-gap: $gutter;
+    grid-row-gap: $vr;
+
+    @include sm {
+      grid-column-gap: $gutter;
+      grid-row-gap: 0;
+      grid-template-columns: 8fr 4fr;
+    }
+
+    @include md {
+
+      grid-template-columns: 7fr 1fr 4fr;
+    }
 
     .col-1 {
 
@@ -39,6 +47,7 @@
       >ul {
         list-style: none;
         padding: 0;
+        line-height: 1.5;
 
         span {
           font-weight: 600;
@@ -55,11 +64,22 @@
     }
 
     .col-2 {
-      grid-column: 3 / 4;
+      @include md {
+        grid-column: 3 / 4;
+      }
 
       h3 {
         margin-bottom: ($vr / 3);
         font-weight: 600;
+
+        @include sm {
+          line-height: 1.2;
+          font-size: $type0;
+        }
+
+        @include md {
+          font-size: $type1;
+        }
 
         &:last-of-type {
           margin-top: ($vr);
@@ -69,10 +89,30 @@
       p {
         margin: 0;
         font-size: $type0;
+
+        @include sm {
+          // line-height: 1.2;
+          font-size: $type-1;
+        }
+
+        @include md {
+          line-height: 1.5;
+          font-size: $type0;
+        }
       }
 
       p:not(:last-child) {
         margin-bottom: ($vr / 2);
+      }
+
+      .membership-rules__cta {
+        margin-top: $vr / 6;
+        margin-bottom: $vr / 3;
+
+        @include sm {
+          margin-top: $vr / 1.5;
+          margin-bottom: $vr;
+        }
       }
     }
   }
@@ -98,7 +138,7 @@
 
 .membership-types {
 
-  h2 {
+  &__title {
     position: relative;
     font-weight: 300;
     margin: 0;
@@ -106,59 +146,99 @@
     margin-bottom: $vr;
     line-height: 1.4;
 
+    @include sm {
+      margin-bottom: $vr * 2;
+    }
+
+    @include md {
+      margin-bottom: $vr;
+    }
+
     &:after {
-      @include title-line($primaryColor, 70px)
+      @include title-line($primaryColor,
+      70px)
     }
   }
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 4fr);
-    grid-column-gap: (1.953rem / 2);
+    grid-row-gap: ($vr / 2);
 
-    .div {
-      padding: $vr (1.953rem / 2);
-
-      ul {
-        font-size: 0.8rem;
-      }
+    @include sm {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .member,
-    .div {
-      padding: 0 (1.953rem / 2);
-      display: flex;
-      flex-direction: column;
-      // margin-bottom: $vr;
-
-      ul {
-        font-size: 0.8rem;
-        margin: 0;
-        margin-bottom: $vr;
-      }
-
-      .btn {
-        margin-top: auto;
-      }
-
+    @include md {
+      width: 100%;
+      grid-template-columns: repeat(3, 4fr);
+      grid-column-gap: ($gutter / 2);
     }
 
     .member {
+      @include theme-gray;
       font-family: $secondaryText;
       text-shadow: none;
+      // padding: 0 ($gutter / 2);
+      display: flex;
+      flex-direction: column;
 
       &__type {
+        @include theme-red;
+        padding: ($vr / 2) ($gutter / 2);
         font-size: $type1;
-        margin: ($vr / 2) 0;
+        margin: 0;
         font-weight: 500;
       }
 
+      &__info {
+        @include theme-gray;
+
+        padding-botton: 0;
+
+        &:last-of-type {
+          margin-bottom: $vr;
+        }
+
+        @include md {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+        }
+      }
+
       &__subtitle {
+        padding: ($vr / 2) ($gutter / 2);
         font-weight: 300;
         font-size: $type-1;
         text-transform: uppercase;
         margin: 0;
         margin-bottom: ($vr / 3);
+        letter-spacing: 1px;
+        @include theme-white;
+      }
+
+      ul {
+        font-size: 0.8rem;
+        margin: 0;
+        // margin-bottom: $vr;
+        padding: ($vr / 2) ($gutter);
+      }
+
+      &__cta {
+        // margin-top: ($vr * 1.5);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: $vr;
+        width: 70%;
+        display: block;
+
+        @include md {
+          margin-top: auto;
+          margin-bottom: $vr;
+        }
       }
     }
 

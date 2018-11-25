@@ -28,61 +28,47 @@
   &:active {}
 
   &--cta {
-    // position: relative;
-    // z-index: 2;
-    // font-size: inherit;
-    // color: lighten($rosso, 10%);
-    // background-color: lighten($blu1, 0);
-    // color: $accento2;
-    // font-weight: 700;
-    // font-style: italic;
-    // padding: 0.64rem 1.25rem;
-    // letter-spacing: 0;
-    // color: white;
-
-    // display: none;
 
     background-color: transparent;
-    // border: 1px solid currentColor;
     width: 100%;
-    color: $accento2;
     color: white;
     border: 1px solid currentColor;
     font-weight: 600;
-    font-size: 0.64rem;
+    font-size: $type-2;
     padding: 0.64rem 1.25rem;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
-    // padding: 0 // border-radius: 5px;
     &:hover,
     &:focus {
-      background-color: darken($accento2, 20%);
+
       background-color: $accento2;
-      color: $blu1;
+      color: $primaryColor;
     }
 
-    .membership & {
-      display: none;
+    @include sm {
+      font-size: $type0;
     }
 
-    // &:before {
-    //   content: ' ';
-    //   display: inline-block;
-    //   position: absolute;
-    //   z-index: -1;
-    //   top: 0;
-    //   right: 0;
-    //   background-color: $accento;
-    //   width: 100%;
-    //   height: 50px;
-    //   transform: skew(-18deg)
-    // }
+    .membership-types &,
+    .membership-rules & {
+      background-color: $secondaryColor;
+      color: $accent;
+      border: none;
+
+      &:hover,
+      &:focus {
+
+        background-color: $accent;
+        color: $secondaryColor;
+
+      }
+    }
+
+
   }
 
   .login & {
-    // background-color: $accento2;
     background-color: transparent;
-    // border: 1px solid currentColor;
     width: 100%;
     color: $accento;
     color: white;
@@ -92,7 +78,6 @@
     padding: 0.64rem 1.25rem;
     transition: all 0.3s ease-in-out;
 
-    // padding: 0 // border-radius: 5px;
     &:hover,
     &:focus {
       background-color: darken($accento2, 20%);
@@ -108,13 +93,11 @@
   &--void {
     background-color: transparent;
     padding: 0;
-    // border: 1px solid currentColor;
     color: inherit;
   }
 
   &--hollow {
     background-color: transparent;
-    // padding: 0;
     border: 1px solid currentColor;
     color: inherit;
 
@@ -139,12 +122,7 @@
   .primaryNavigation__navbar & {
     position: relative;
     padding: 0 0.9rem;
-    // margin-right: 1.953rem;
-    // width: 200.333px;
-    // widmaerginth: 270.633px;
     display: flex;
     justify-content: center;
-    // text-align: center;
-    // font-size: inherit;
   }
 }
