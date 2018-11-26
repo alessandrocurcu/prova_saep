@@ -307,13 +307,21 @@
     }
 
     &:last-child {
-
+      padding: 0;
       font-weight: 700;
 
       @include sm {
         margin-left: auto;
-        padding-right: ($gutter / 3);
-        padding-left: ($gutter / 3);
+
+        a {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          padding-right: ($gutter / 3);
+          padding-left: ($gutter / 3);
+
+        }
+
 
         &:hover,
         &:focus {
@@ -322,8 +330,11 @@
       }
 
       @include md {
-        padding-right: $gutter;
-        padding-left: $gutter;
+        a {
+          padding-right: $gutter;
+          padding-left: $gutter;
+        }
+
       }
     }
 
