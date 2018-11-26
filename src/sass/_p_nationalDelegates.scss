@@ -1,16 +1,25 @@
 .delegates-rules {
   &__grid {
-    display: grid;
-    grid-template-columns: 8fr 4fr;
+
+
+    @include md {
+      display: grid;
+      grid-template-columns: 8fr 4fr;
+    }
   }
 
   &__title {
     position: relative;
     font-weight: 300;
     margin: 0;
-    font-size: $type3;
     margin-bottom: $vr;
     line-height: 1.4;
+    font-size: $type2;
+
+    @include sm {
+
+      font-size: $type3;
+    }
 
     &:after {
       @include title-line($primaryColor, 70px)
@@ -18,10 +27,19 @@
   }
 
   &__text {
-    font-size: $type1;
+    font-size: $type0;
+
+    @include sm {
+      font-size: $type1;
+    }
 
     li {
-      margin-bottom: $vr;
+      margin-bottom: $vr / 2;
+
+      @include sm {
+        margin-bottom: $vr;
+
+      }
     }
   }
 }
