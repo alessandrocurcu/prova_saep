@@ -1,5 +1,7 @@
-nav.serviceNav
+nav.service-nav
   .container
-    ul.serviceNav__navbar
-      li: a(href="#") Support
-      li: a(href="personal.html") <i class="fas fa-user"></i> Log in
+    ul.service-nav__navbar
+      li: a(href="support.html") Support
+      li#login-service-btn <i class="fas fa-user"></i> Log in
+    .service-nav__login.toggle#login-service 
+      include _login.pug

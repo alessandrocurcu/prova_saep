@@ -62,5 +62,40 @@
     }
   }
 
+  .service-nav & {
+    // display: none;
+    width: 292px;
+    z-index: 300;
+    position: absolute;
+    top: 45px;
+    right: 16px;
+    transition: transform 0.2s ease-in-out;
+    @include box-shadow(5);
+    @include theme-red;
 
+    @include sm {}
+
+    @include md {
+      right: 0;
+    }
+  }
+
+
+
+}
+
+.arrow-up {
+  display: none;
+
+  .service-nav & {
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: -12px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid $primaryColor;
+  }
 }

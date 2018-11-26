@@ -727,17 +727,18 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
-.serviceNav {
+.service-nav {
   background-color: #AF2B31;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  font-weight: 600; }
-  .serviceNav__navbar {
+  font-weight: 600;
+  position: relative; }
+  .service-nav__navbar {
     list-style: none;
     display: none;
     margin: 0; }
     @media (min-width: 576px) {
-      .serviceNav__navbar {
+      .service-nav__navbar {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -750,13 +751,13 @@ body {
         height: 1.8rem;
         font-size: 0.64rem;
         text-transform: uppercase; }
-        .serviceNav__navbar li {
+        .service-nav__navbar li {
           position: relative; }
-          .serviceNav__navbar li i {
+          .service-nav__navbar li i {
             margin-right: 4.5px; }
-          .serviceNav__navbar li:not(:last-child) {
+          .service-nav__navbar li:not(:last-child) {
             margin-right: 1rem; }
-            .serviceNav__navbar li:not(:last-child):after {
+            .service-nav__navbar li:not(:last-child):after {
               content: "";
               position: absolute;
               display: inline-block;
@@ -765,11 +766,12 @@ body {
               width: 1px;
               top: 1px;
               right: -9px; }
-          .serviceNav__navbar li:hover, .serviceNav__navbar li:focus {
-            color: #202C39; } }
+          .service-nav__navbar li:hover, .service-nav__navbar li:focus {
+            color: #202C39; }
+        .service-nav__navbar #login-service-btn {
+          cursor: pointer; } }
 
 .navbar {
-  position: relative;
   padding: 0.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -860,29 +862,27 @@ body {
 
 .primary-navigation {
   position: fixed;
+  background-color: #f2f2f2;
+  color: rgba(66, 66, 66, 0.9);
   font-family: ff-meta-web-pro, sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
-  z-index: 1;
+  z-index: -1;
   top: 98px;
   right: 0;
   bottom: 0;
   left: 0;
+  height: 100vh;
   -webkit-transition: -webkit-transform 0.2s ease-out;
   transition: -webkit-transform 0.2s ease-out;
   -o-transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  -webkit-transform: translateY(calc(-100% - 98px));
-      -ms-transform: translateY(calc(-100% - 98px));
-          transform: translateY(calc(-100% - 98px));
-  background-color: #f2f2f2;
-  color: rgba(66, 66, 66, 0.9); }
+  -webkit-transform: translateY(calc(-100% - 40px));
+      -ms-transform: translateY(calc(-100% - 40px));
+          transform: translateY(calc(-100% - 40px)); }
   @media (min-width: 576px) {
     .primary-navigation {
-      background-color: transparent;
-      color: inherit;
-      text-shadow: none;
       -webkit-transform: translateY(0);
           -ms-transform: translateY(0);
               transform: translateY(0);
@@ -890,8 +890,7 @@ body {
       top: 0;
       display: block;
       width: 100%;
-      background-color: #f2f2f2;
-      color: rgba(66, 66, 66, 0.9); } }
+      height: auto; } }
 
 .toggle-nav {
   -webkit-transition: -webkit-transform 0.2s ease-in;
@@ -1196,6 +1195,38 @@ body {
   .login__password a {
     color: #FFE066;
     font-weight: 300; }
+  .service-nav .login {
+    width: 292px;
+    z-index: 300;
+    position: absolute;
+    top: 45px;
+    right: 16px;
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s ease-in-out;
+    -o-transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    background-color: #AF2B31;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+    @media (min-width: 768px) {
+      .service-nav .login {
+        right: 0; } }
+
+.arrow-up {
+  display: none; }
+  .service-nav .arrow-up {
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: -12px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #AF2B31; }
 
 .card {
   position: relative;

@@ -583,39 +583,54 @@ const Headroom = require('./headroom.js');
       });
     });
   });
+  const loginbtns = document.querySelectorAll('.loginbtn');
 
-  const loginbtn = document.getElementById('login');
-  if (!loginbtn) return;
-  loginbtn.addEventListener('click', e => {
-    e.preventDefault();
-    location.href = './personal.html';
+  loginbtns.forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      window.location.href = './personal.html';
+    });
+  });
+
+  // const loginbtn = document.getElementById('loginbtn');
+  // if (!loginbtn) return;
+  // loginbtn.addEventListener('click', e => {
+  //   e.preventDefault();
+  //   location.href = './personal.html';
+  // });
+
+  const loginService = document.getElementById('login-service');
+  const loginServiceBtn = document.getElementById('login-service-btn');
+
+  loginServiceBtn.addEventListener('click', e => {
+    loginService.classList.toggle('toggle');
   });
 
   /* Score system */
 
-  const scores = {
-    article: 5,
-    sececMeeting: 1,
-    oralPresentation: 3,
-    posterPresentation: 2,
-  };
+  // const scores = {
+  //   article: 5,
+  //   sececMeeting: 1,
+  //   oralPresentation: 3,
+  //   posterPresentation: 2,
+  // };
 
-  let score = 0;
+  // let score = 0;
 
-  console.log(scoreButtons);
+  // console.log(scoreButtons);
 
-  const buttonArticle = document.getElementById('js-article');
+  // const buttonArticle = document.getElementById('js-article');
 
-  const buttonMeeting = document.getElementById('js-meeting');
+  // const buttonMeeting = document.getElementById('js-meeting');
 
-  buttonArticle.addEventListener('click', () => {
-    score += 5;
-    console.log(score);
-  });
+  // buttonArticle.addEventListener('click', () => {
+  //   score += 5;
+  //   console.log(score);
+  // });
 
-  const addPoints = points => {
-    score += points;
-  };
+  // const addPoints = points => {
+  //   score += points;
+  // };
 })(Headroom);
 
 },{"./headroom.js":4,"imagesloaded":2}],4:[function(require,module,exports){
