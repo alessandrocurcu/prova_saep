@@ -21,5 +21,24 @@ block body
                 a(href="members.html") Members
             h1.hero__title Members of the European Society for Surgery of the Shoulder and the Elbow
     section
-      .container        
+      .container
+        .members#members
+          h2.members__title Search a member by name or nation
+          input.fuzzy-search.members__search(type="text", placeholder="Search")
+          .members__sort
+            button.btn.btn--hollow.sort(data-sort="nation") Sort by Nation
+            button.btn.btn--hollow.sort(data-sort="name") Sort by Surname
+          ul.list.members__list
+            li.member
+              p.name.member__name Alessandro Curcu
+              p.nation.member__nation Italy
+            li.member
+              p.name.member__name  Giorgio Poi
+              p.nation.member__nation  England  
+            li.member
+              p.name.member__name  Anna Swarowski
+              p.nation.member__nation Italy
+            li.member
+              p.name.member__name  Lorenzo Fogarolli
+              p.nation.member__nation England            
     include _footer.pug  

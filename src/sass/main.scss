@@ -57,7 +57,7 @@ section {
   }
 
   @include md {
-    padding: ($vr * 3) 0;
+    padding: ($vr * 1.5) 0;
   }
 }
 
@@ -103,3 +103,4 @@ body {
 @import '_p_ordinary-application';
 @import '_p_junior-application';
 @import '_p_personal';
+@import '_p_members';

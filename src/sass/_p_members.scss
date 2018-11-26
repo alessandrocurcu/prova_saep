@@ -1,0 +1,54 @@
+.members {
+
+  button:first-child {
+    margin-right: $gutter / 2;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $type1;
+    font-weight: 500;
+    margin-bottom: $vr / 2;
+  }
+
+  &__search {
+    margin-bottom: $vr / 2;
+  }
+
+  &__sort {
+    margin-bottom: $vr;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+
+  }
+
+  .member {
+    display: flex;
+    justify-content: space-between;
+    padding: ($vr / 6) ($gutter / 3);
+
+    &:nth-child(odd) {
+      @include theme-blue;
+    }
+
+    &:nth-child(even) {
+      @include theme-red;
+    }
+
+    p {
+      margin: 0;
+      // margin-bottom: $vr / 3;
+
+      &:first-child {
+        margin-right: $gutter;
+      }
+
+
+    }
+
+  }
+}

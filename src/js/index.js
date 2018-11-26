@@ -1,11 +1,32 @@
 const imagesLoaded = require('imagesloaded');
 
 const Headroom = require('./headroom.js');
+const list = require('list.js');
 
-(function IIFE(HEadroom) {
+(function IIFE(HEadroom, List) {
   'use strict';
 
   window.addEventListener('DOMContentLoaded', () => {
+    /* LIST */
+
+    // const options = {
+    //   valueName: ['name'],
+    // };
+    const options = {
+      valueNames: ['name', 'nation'],
+      fuzzySearch: {
+        searchClass: 'fuzzy-search',
+        location: 0,
+        distance: 100,
+        threshold: 0.4,
+        multiSearch: true,
+      },
+    };
+    const membersList = new List('members', options);
+
+    // console.log(userList.fuzzySearch);
+    // console.log(userList.fuzzySearch('Ale'));
+    /** ************ */
     const header = document.getElementById('header');
 
     const headroom2 = new Headroom(header, { offset: 250, tolerance: 5 });
@@ -137,4 +158,4 @@ const Headroom = require('./headroom.js');
   // const addPoints = points => {
   //   score += points;
   // };
-})(Headroom);
+})(Headroom, list);

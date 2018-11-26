@@ -481,7 +481,7 @@ section {
       padding: 2.25rem 0; } }
   @media (min-width: 768px) {
     section {
-      padding: 4.5rem 0; } }
+      padding: 2.25rem 0; } }
 
 body {
   position: relative;
@@ -2537,3 +2537,43 @@ body {
   @media (min-width: 992px) {
     .information__title {
       font-size: 1.953rem; } }
+
+.members button:first-child {
+  margin-right: 0.9765rem; }
+
+.members__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem; }
+
+.members__search {
+  margin-bottom: 0.75rem; }
+
+.members__sort {
+  margin-bottom: 1.5rem; }
+
+.members__list {
+  margin: 0;
+  padding: 0; }
+
+.members .member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.25rem 0.651rem; }
+  .members .member:nth-child(odd) {
+    background-color: #202C39;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  .members .member:nth-child(even) {
+    background-color: #AF2B31;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  .members .member p {
+    margin: 0; }
+    .members .member p:first-child {
+      margin-right: 1.953rem; }
