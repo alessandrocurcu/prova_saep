@@ -74,11 +74,25 @@
     border-bottom-right-radius: 3px;
     border: 1px solid $secondaryColor;
     transition: all 0.2s ease-in-out;
+    font-size: $type-2;
+    padding: 4px 4px;
 
     &:hover,
     &:focus {
       color: $secondaryColor;
       background-color: $accent;
+    }
+
+    @include sm {
+      padding: (0.64rem / 2) (1.25rem / 2);
+    }
+
+    @include md {
+      // padding: (0.64rem / 2) (1.25rem / 2);
+    }
+
+    @include lg {
+      font-size: $type-1;
     }
   }
 

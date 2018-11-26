@@ -9,26 +9,40 @@
     position: relative;
     font-weight: 300;
     margin: 0;
-    font-size: $type3;
+    font-size: $type2;
     margin-bottom: $vr;
     line-height: 1.4;
 
     &:after {
       @include title-line($primaryColor, 70px)
     }
+
+    @include md {
+      font-size: $type3;
+    }
   }
 
   &__header {
-    margin-bottom: $vr * 3;
+    margin-bottom: $vr;
 
-    .grid {
-      display: grid;
-      grid-template-columns: 10fr 2fr;
+
+
+    @include md {
+      margin-bottom: $vr * 2;
+
+      .grid {
+        display: grid;
+        grid-template-columns: 10fr 2fr;
+      }
     }
 
     p {
-      font-size: $type1;
+      font-size: $type0;
       margin: 0 0;
+
+      @include md {
+        font-size: $type1;
+      }
     }
   }
 
@@ -38,9 +52,6 @@
 }
 
 .criteria {
-  display: grid;
-  grid-template-columns: 10fr 2fr;
-  // margin-bottom: $vr * 3;
   align-items: center;
   padding: $vr $gutter;
 
@@ -49,12 +60,16 @@
     @include theme-gray;
   }
 
-  &:nth-child(even) {
+  @include sm {
+    display: grid;
+    grid-template-columns: 10fr 2fr;
 
-    // background-color: lighten($primaryColor, 50%);
   }
 
-  // grid-template-rows: auto auto;
+  @include xl {
+    margin-left: - $gutter;
+    margin-right: - $gutter;
+  }
 
 
   &__head {
@@ -73,14 +88,24 @@
     text-transform: uppercase;
     font-weight: 500;
     margin-bottom: $vr / 8;
+    line-height: 1.2;
   }
 
   &__text {
     margin: 0;
-    margin-bottom: $vr / 2;
+    margin-bottom: $vr / 4;
+    font-size: $type-1;
 
     &:not(:last-child) {
       margin-bottom: $vr / 8;
+    }
+
+    @include md {
+      font-size: $type0;
+    }
+
+    @include lg {
+      margin-bottom: $vr / 2;
     }
   }
 
@@ -116,18 +141,39 @@
   &__form {
     grid-row: 2 / 3;
 
+    @include md {}
   }
 
   &__score {
-    border-left: 1px dotted rgba(175, 43, 49, 0.8);
-    font-size: $type3;
+    font-size: $type-1;
     font-weight: 500;
     grid-row: 2 / 3;
     // grid-column: 2 / 3;
     margin: 0;
+    line-height: 1.1;
     padding-left: $gutter / 2;
     color: $primaryColor;
-    align-self: stretch;
+    align-self: center;
+    display: none;
+
+    @include sm {
+      border-left: 1px dotted rgba(175, 43, 49, 0.8);
+      display: block;
+      font-size: $type-1;
+    }
+
+    @include md {
+      align-self: stretch;
+      font-size: $type0;
+    }
+
+    @include lg {
+      font-size: $type2;
+    }
+
+    @include xl {
+      font-size: $type3;
+    }
 
 
 
