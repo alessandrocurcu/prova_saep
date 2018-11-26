@@ -154,6 +154,16 @@
       height: 100px;
     }
   }
+
+  .headroom--not-top & {
+    .logotype {
+      font-size: $type0;
+    }
+
+    &__img {
+      height: 50px;
+    }
+  }
 }
 
 .logotype {

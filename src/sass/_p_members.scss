@@ -32,11 +32,11 @@
     padding: ($vr / 6) ($gutter / 3);
 
     &:nth-child(odd) {
-      @include theme-blue;
+      @include theme-gray;
     }
 
     &:nth-child(even) {
-      @include theme-red;
+      // @include theme-red;
     }
 
     p {

@@ -44,14 +44,14 @@
   align-items: center;
   padding: $vr $gutter;
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
 
     @include theme-gray;
   }
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
 
-    background-color: lighten($primaryColor, 50%);
+    // background-color: lighten($primaryColor, 50%);
   }
 
   // grid-template-rows: auto auto;
@@ -78,6 +78,10 @@
   &__text {
     margin: 0;
     margin-bottom: $vr / 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: $vr / 8;
+    }
   }
 
   &__form {
@@ -96,15 +100,21 @@
     // grid-column: 2 / 3;
     margin: 0;
     padding-left: $gutter / 2;
+    color: $primaryColor;
+
 
     p {
       margin: 0;
+    }
+
+    p+p {
+      margin-top: $vr;
     }
   }
 }
 
 .score {
-  @include theme-blue;
+  @include theme-red;
   padding: ($vr / 2) ($gutter / 2);
   position: fixed;
   z-index: 10;
@@ -128,7 +138,7 @@
     display: flex;
 
     >.score__text {
-      color: $primaryColor;
+      color: $secondaryColor;
     }
   }
 
@@ -140,17 +150,14 @@
 
   &__text {
     margin: 0;
-    font-size: $type-1;
-    font-weight: 300;
+    font-weight: 500;
     font-size: $type2;
   }
 
 
 
   &__score {
-    // font-weight: 500;
-    // font-size: $type3;
-    // color: $primaryColor;
+
     margin-left: 8px;
   }
 
