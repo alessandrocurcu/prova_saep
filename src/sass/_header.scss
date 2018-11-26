@@ -171,6 +171,10 @@
   white-space: nowrap;
   display: none;
 
+  a {
+    display: inline-block;
+  }
+
   &__french {
     display: block;
     border-bottom: 1px solid currentColor;

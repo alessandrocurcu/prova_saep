@@ -853,6 +853,8 @@ body {
   margin: 0;
   white-space: nowrap;
   display: none; }
+  .logotype a {
+    display: inline-block; }
   .logotype__french {
     display: block;
     border-bottom: 1px solid currentColor;
