@@ -12,7 +12,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const beautify = require('gulp-cssbeautify');
 const moduleImporter = require('sass-module-importer');
-const browserify = require('gulp-browserify');
+// const browserify = require('gulp-browserify');
 
 const defaultTask = cb => {
   cb();
@@ -49,12 +49,12 @@ const prodhtml = () =>
 
 const prodjs = () =>
   src('./js/index.js')
-    .pipe(browserify())
+    // .pipe(browserify())
     .pipe(dest('./dist/js/'));
 
 const js = () =>
   src('./src/js/index.js')
-    .pipe(browserify())
+    // .pipe(browserify())
     .pipe(dest('./js/'));
 
 const prodimg = () => src('./img/*.*').pipe(dest('./dist/img/'));
