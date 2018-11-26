@@ -77,23 +77,49 @@
 
   &__text {
     margin: 0;
-    margin-bottom: $vr / 1.5;
+    margin-bottom: $vr / 2;
 
     &:not(:last-child) {
       margin-bottom: $vr / 8;
     }
   }
 
+  &__inserted-document {
+    // width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: ($vr / 3) ($gutter / 3);
+    margin: 0;
+    font-size: $type-1;
+    border-bottom: 1px dashed rgba(175, 43, 49, 0.8);
+
+    p {
+      margin: 0;
+    }
+
+    i {
+      cursor: pointer;
+      font-size: $type1;
+      color: $primaryColor;
+      transition: all 0.1s ease-in;
+
+      &:hover,
+      &:focus {
+        color: darken($primaryColor, 15%);
+        transform: scale(1.2);
+      }
+    }
+
+  }
+
   &__form {
     grid-row: 2 / 3;
-    // grid-column: 1 / 2;
 
-    // line-height: normal;
   }
 
   &__score {
     border-left: 1px dotted rgba(175, 43, 49, 0.8);
-    color: $secondaryColor;
     font-size: $type3;
     font-weight: 500;
     grid-row: 2 / 3;
@@ -101,6 +127,8 @@
     margin: 0;
     padding-left: $gutter / 2;
     color: $primaryColor;
+    align-self: stretch;
+
 
 
     p {
@@ -124,18 +152,22 @@
   // margin-bottom: $vr / 2;
   font-family: $secondaryText;
   width: 100%;
+
   // margin: $gutter;
 
   &__body {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: flex-end;
+    // justify-content: space-between;
 
 
   }
 
   &__points {
+    width: 100%;
     display: flex;
+    justify-content: flex-end;
 
     >.score__text {
       color: $secondaryColor;
@@ -144,8 +176,9 @@
 
   &__title {
     margin: 0;
-    font-weight: 300;
+    font-weight: 500;
     font-size: $type2;
+    // margin-left: auto;
   }
 
   &__text {
@@ -166,6 +199,10 @@
     text-align: center;
     margin-top: $vr / 2;
   }
+}
+
+#js-score-apply-button {
+  margin-right: auto;
 }
 
 .toggle {

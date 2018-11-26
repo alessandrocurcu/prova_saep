@@ -2191,6 +2191,12 @@ const list = require('list.js');
 
     const scoreView = document.getElementById('js-score');
 
+    // const deleteBtns = document.querySelectorAll('fa-minus-circle');
+
+    // const destroyInput = event => {
+
+    // };
+
     let oldScore = 0;
     let check = 0;
     scoreButtons.forEach((el, i, array) => {
@@ -2199,8 +2205,11 @@ const list = require('list.js');
           check = 1;
           scoreView.textContent = totScore;
           return 1;
+        } else if (totScore < 30 && check === 1) {
+          check = 0;
+          scoreView.textContent = totScore;
+          return 0;
         }
-        console.log('Non ancora');
         scoreView.textContent = totScore;
         return 0;
       };
@@ -2211,14 +2220,57 @@ const list = require('list.js');
         return oldScore;
       };
 
+      const calculateNewScoreMinus = newScore => {
+        oldScore -= Number(newScore);
+        // console.log(oldScore);
+        return oldScore;
+      };
+
+      const createInput = event => {
+        const inputValue = event.target.previousElementSibling.value;
+        const formCntr = event.target.parentElement.parentElement;
+        const nodeDiv = document.createElement('div');
+        const nodeP = document.createElement('p');
+        const nodeI = document.createElement('i');
+        nodeP.innerText = inputValue;
+        nodeDiv.classList.add('criteria__inserted-document');
+        nodeI.classList.add('fas');
+        nodeI.classList.add('fa-minus-circle');
+        nodeI.addEventListener('click', function() {
+          youWon(calculateNewScoreMinus(event.target.dataset.score));
+          this.parentElement.remove();
+          // scoreApplyButton.classList.add('toggle');
+        });
+        nodeDiv.append(nodeP);
+        nodeDiv.append(nodeI);
+        formCntr.prepend(nodeDiv);
+
+        // const nodeBtn = document.createElement('button');
+        // const nodeFormControl = document.createElement('div');
+        // nodeFormControl.classList.add('form__control');
+        // nodeBtn.classList.add('btn');
+        // nodeBtn.classList.add('btn--form');
+        // nodeBtn.setAttribute('data-score', '1');
+        // nodeFormControl.append(nodeInput);
+        // nodeFormControl.append(nodeBtn);
+      };
+
       el.addEventListener('click', e => {
         e.preventDefault();
+        const inputValue = e.target.previousElementSibling.value;
+
+        if (!inputValue || inputValue.length <= 3) return;
         // console.log(e.target.dataset.score);
         const { score } = e.target.dataset;
-        console.log(score);
+
         if (youWon(calculateNewScore(score))) {
-          scoreApplyButton.classList.toggle('toggle');
+          console.log('ma');
+          scoreApplyButton.classList.remove('toggle');
+        } else {
+          console.log('ehy');
+          scoreApplyButton.classList.add('toggle');
         }
+        createInput(e);
       });
     });
   });

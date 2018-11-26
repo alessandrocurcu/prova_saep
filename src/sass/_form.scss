@@ -34,10 +34,18 @@
       .criteria & {
         margin-bottom: $vr;
 
+        &:only-child {
+          margin-bottom: 0;
+        }
+
+        width: 50%;
+
+
         input {
           padding: (0.64rem / 2) (1.25rem / 2);
           border: 1px solid $secondaryColor;
-          width: 300px;
+          flex: 1 0 auto;
+          // width: 300px;
         }
       }
     }
@@ -66,6 +74,10 @@
 
   &__control {
     display: flex;
+
+    .criteria & {
+      margin-top: $vr/3;
+    }
   }
 
 }

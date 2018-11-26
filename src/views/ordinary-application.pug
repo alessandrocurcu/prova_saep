@@ -47,7 +47,7 @@ block body
               h3.criteria__title Published articles
               p.criteria__text Articles in which you were involved published in journals referenced in the Index Medicus
             form.form.criteria__form
-              .form__group.form__group--orizzontal
+              .form__group.form__group--vertical
                 .form__control
                   input(type="text", name="", placeholder="Published article")
                   button.btn.btn--form(data-score="5") Add article
@@ -57,7 +57,7 @@ block body
               h3.criteria__title SECEC / ICSS meetings attended
               p.criteria__text SECEC / ESSSE meetings and ICSS you attended
             form.form.criteria__form
-              .form__group.form__group--orizzontal
+              .form__group.form__group--vertical
                 .form__control
                   input(type="text", name="", placeholder="Meeting attended")
                   button.btn.btn--form(data-score="1") Add meeting
@@ -67,7 +67,7 @@ block body
               h3.criteria__title Oral presentation
               p.criteria__text Oral presentations at SECEC / ESSSE congresses or   ICSS
             form.form.criteria__form
-              .form__group.form__group--orizzontal
+              .form__group.form__group--vertical
                 .form__control 
                   input(type="text", name="", placeholder="Presentation")
                   button.btn.btn--form(data-score="3") Add presentation
@@ -77,7 +77,7 @@ block body
               h3.criteria__title Poster presentation
               p.criteria__text Poster presentations at SECEC / ESSSE congresses or ICSS
             form.form.criteria__form
-              .form__group.form__group--orizzontal
+              .form__group.form__group--vertical
                 .form__control
                   input(type="text", name="", placeholder="Presentation")
                   button.btn.btn--form(data-score="2") add presentation
@@ -87,7 +87,7 @@ block body
               h3.criteria__title Oral international presentation
               p.criteria__text Oral presentations you made or participated in at   international congresses devoted to shoulder and elbow
             form.form.criteria__form
-              .form__group.form__group--orizzontal
+              .form__group.form__group--vertical
                 .form__control  
                   input(type="text", name="", placeholder="Presentation")
                   button.btn.btn--form(data-score="2") Add presentation
@@ -97,11 +97,11 @@ block body
               h3.criteria__title Book chapter
               p.criteria__text Book chapters you participated in dealing with shoulder and elbow
             form.form.criteria__form
-              .form__group.form__group--orizzontal
+              .form__group.form__group--vertical
                 .form__control 
                   input(type="text", name="", placeholder="Chapter book written")
                   button.btn.btn--form(data-score="5") Add chapter
-            p.criteria__score + 5<span> points </span>   
+            p.criteria__score + 5<span> points </span>  
           .criteria
             .criteria__head 
               h3.criteria__title Awards
@@ -133,16 +133,17 @@ block body
               p.criteria__text Fellows selected to the Intra European travelling fellowship become ex officio Associate Members
               p.criteria__text Fellows selected to the Europe / USA  or  Europe / Japan travelling fellowship become ex officio Ordinary Member
             form.form.criteria__form
-              .form__group.form__group--orizzontal  
-                input(type="text", name="", placeholder="Fellowship attended")
-                button.btn.btn--form(data-score="12") Add fellowship
+              .form__group.form__group--vertical
+                .form__control  
+                  input(type="text", name="", placeholder="Fellowship attended")
+                  button.btn.btn--form(data-score="12") Add fellowship
             p.criteria__score + 12<span> points </span>
         .score
           .container.score__body
             .score__points
+              #js-score-apply-button.toggle
+                p.score__text You can know apply and become ad Ordinary Member of Secec
+                a.score__cta.btn.btn--cta(href="application.html") APPLY
               h3.score__title Your score:
               p.score__text <span class="score__score" id="js-score">0</span> points
-            #js-score-apply-button.toggle
-              p.score__text You can know apply and become ad Ordinary Member of Secec
-              a.score__cta.btn.btn--cta(href="application.html") APPLY
     include _footer.pug
