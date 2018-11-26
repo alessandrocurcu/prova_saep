@@ -14,14 +14,19 @@
 
   h2 {
     // font-size: 2.441rem;
-    font-size: 1.563rem;
+    font-size: $type1;
     margin-bottom: $vr / 2;
+
+    @include md {
+      font-size: $type2;
+      // margin-bottom: $vr / 2;
+    }
 
     &:after {
       content: ' ';
       display: inline-block;
       height: 2px;
-      width: 3%;
+      width: 30px;
       position: absolute;
       bottom: -2px;
       left: 0;
@@ -53,17 +58,38 @@
   p,
   ul,
   ol {
-    padding-left: 1rem;
-    font-size: 1.25rem;
-    line-height: 1.6;
+    font-size: $type0;
+    line-height: 1.4;
+    margin: 0;
+
+    @include md {
+      padding-left: $gutter;
+      font-size: $type1;
+      line-height: 1.6;
+    }
+  }
+
+  li {
+    margin-left: $gutter;
   }
 
   p+p {
-    margin-bottom: $vr * 1.5;
+
+    margin-bottom: $vr;
+
+    @include md {
+
+      margin-bottom: $vr * 1.5;
+    }
   }
 
   p+ul {
-    margin-top: $vr / 2;
+    margin-top: $vr / 4;
+
+    @include md {
+
+      margin-bottom: $vr / 2;
+    }
   }
 
   .author {
@@ -74,13 +100,20 @@
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: 9fr 3fr;
-    // margin-top: $vr * 2;
+
+    @include md {
+      display: grid;
+      grid-template-columns: 10fr 2fr;
+    }
 
     .article {
-      grid-column: 1 / 2;
-      margin-bottom: $vr * 2;
+
+      margin-bottom: $vr;
+
+      @include md {
+        grid-column: 1 / 2;
+        margin-bottom: $vr * 2;
+      }
     }
   }
 }

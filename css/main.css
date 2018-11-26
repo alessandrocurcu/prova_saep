@@ -1969,14 +1969,18 @@ body {
 
 .constitution h2,
 .history h2 {
-  font-size: 1.563rem;
+  font-size: 1.25rem;
   margin-bottom: 0.75rem; }
+  @media (min-width: 768px) {
+    .constitution h2,
+    .history h2 {
+      font-size: 1.563rem; } }
   .constitution h2:after,
   .history h2:after {
     content: ' ';
     display: inline-block;
     height: 2px;
-    width: 3%;
+    width: 30px;
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -2005,17 +2009,39 @@ body {
 .history p,
 .history ul,
 .history ol {
-  padding-left: 1rem;
-  font-size: 1.25rem;
-  line-height: 1.6; }
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0; }
+  @media (min-width: 768px) {
+    .constitution p,
+    .constitution ul,
+    .constitution ol,
+    .history p,
+    .history ul,
+    .history ol {
+      padding-left: 1.953rem;
+      font-size: 1.25rem;
+      line-height: 1.6; } }
+
+.constitution li,
+.history li {
+  margin-left: 1.953rem; }
 
 .constitution p + p,
 .history p + p {
-  margin-bottom: 2.25rem; }
+  margin-bottom: 1.5rem; }
+  @media (min-width: 768px) {
+    .constitution p + p,
+    .history p + p {
+      margin-bottom: 2.25rem; } }
 
 .constitution p + ul,
 .history p + ul {
-  margin-top: 0.75rem; }
+  margin-top: 0.375rem; }
+  @media (min-width: 768px) {
+    .constitution p + ul,
+    .history p + ul {
+      margin-bottom: 0.75rem; } }
 
 .constitution .author,
 .history .author {
@@ -2024,14 +2050,20 @@ body {
   margin-bottom: 1.5rem;
   font-size: 1rem; }
 
-.constitution__grid,
-.history__grid {
-  display: grid;
-  grid-template-columns: 9fr 3fr; }
-  .constitution__grid .article,
-  .history__grid .article {
-    grid-column: 1 / 2;
-    margin-bottom: 3rem; }
+@media (min-width: 768px) {
+  .constitution__grid,
+  .history__grid {
+    display: grid;
+    grid-template-columns: 10fr 2fr; } }
+
+.constitution__grid .article,
+.history__grid .article {
+  margin-bottom: 1.5rem; }
+  @media (min-width: 768px) {
+    .constitution__grid .article,
+    .history__grid .article {
+      grid-column: 1 / 2;
+      margin-bottom: 3rem; } }
 
 .membership-hero-image {
   background-image: url("./../img/secec_community.jpg");
