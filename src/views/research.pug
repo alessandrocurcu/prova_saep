@@ -9,14 +9,13 @@ block link
 block body
   body
     include _header.pug
-    section.bend.bend--color1
+    .hero.hero--small.bend--theme-red
       .container
-        .bend__grid
-          .bend__text
+        .hero__grid
+          .hero__text
             ul.breadcrumb
               li 
-                a(href="index.html") Home
-              li
-                a(href="#") Research
-            h1.bend__title Research
+                a(href="./index.html") Home
+              li Research
+            h1.hero__title Research
     include _footer.pug  
