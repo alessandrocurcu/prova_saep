@@ -552,7 +552,7 @@
     p {
       margin: 0;
 
-      line-height: 1.3;
+      line-height: 1.2;
     }
 
     i {
@@ -572,7 +572,10 @@
   &__title {
     padding-bottom: ($vr / 6);
     border-bottom: 1px dotted rgba(175, 43, 49, 0.8);
+
   }
+
+
 }
 
 .patronages {
