@@ -22,28 +22,26 @@ block body
       .personal-area__grid
         aside.secondary-navigation
           nav
-            ul.secondary-navigation__navbar
-              li: span Demographics
-                ul
-                  li Name & Demographics
-                  li Manage Addresses
-                  li Username & Password
-                  li Biography
-              li: span Membership
-                ul
-                  li My committees
-              li: span Communication
-                ul
-                  li Contact Information
-                  li Emergency Contact
-              li: span Communication
-                ul
-                  li Contact Information
-                  li Emergency Contact
-              li: span Communication
-                ul
-                  li Contact Information
-                  li Emergency Contact             
-        main.informations
-          .information
-            h2.information__title Demographics   
+            ul.secondary-navigation__navbar#tabMenu
+              li.secondary-navigation__item(data-tab="1"): span General Info
+              li.secondary-navigation__item(data-tab="2"): span Addresses
+              li.secondary-navigation__item(data-tab="3"): span Contacts
+              li.secondary-navigation__item(data-tab="4"): span Hospitals
+              li.secondary-navigation__item(data-tab="5"): span Documents             
+        main.informations#tabMain
+          .information(data-tab="1")
+            h2.information__title General Info
+            p Prova1
+          .information.toggle(data-tab="2")
+            h2.information__title Addresses
+            p Prova 2
+          .information.toggle(data-tab="3")
+            h2.information__title Contacts
+            p Prova 2
+          .information.toggle(data-tab="4")
+            h2.information__title Hospitals
+            p Prova 2
+          .information.toggle(data-tab="5")
+            h2.information__title Documents
+            p Prova 2
+    include _footer.pug                 

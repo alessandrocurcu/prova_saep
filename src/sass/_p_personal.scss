@@ -18,21 +18,27 @@
   @include theme-blue;
 
   @include sm {
-    // @include container;
     @include no-theme;
     border-right: 1px solid rgba(32, 44, 57, 0.2);
   }
 
+  nav {
+    // overflow: hidden;
+
+  }
+
   &__navbar {
+    // display: inline-block;
+    width: 100vw;
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     overflow: auto;
 
-    // align-items: center;
-    // justify-content: space-between;
+
     @include sm {
+      width: 100%;
       flex-direction: column;
       overflow: unset;
     }
@@ -40,6 +46,7 @@
     li {
       flex: 1 1 0;
       display: flex;
+
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -92,6 +99,8 @@
   @include sm {
     padding: 0;
   }
+
+
 }
 
 .information {
@@ -111,4 +120,8 @@
       font-size: $type3;
     }
   }
+
+  // &.toggle {
+  //   display: none;
+  // }
 }

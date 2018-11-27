@@ -94,10 +94,6 @@
     &:after {
       @include title-line($accent, 80px);
     }
-
-    @include sm {
-      margin-top: - $vr;
-    }
   }
 
   &__text {

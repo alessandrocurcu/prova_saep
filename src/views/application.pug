@@ -9,7 +9,7 @@ block link
 block body
   body
     include _header.pug
-    .hero.bend--theme-blue
+    .hero.hero--small.bend--theme-blue
       .container
         .hero__grid
           .hero__text
@@ -19,80 +19,102 @@ block body
               li
                 a(href="application.html") Application Form
             h1.hero__title Application Form
-    section.junior
-      .container      
-        form.form.application-form
-          h2 Personal
-          .form__group
-            label(for="firstname") Firstname
-            input(type="text", name="firstname", id="firstname")
-          .form__group
-            label(for="surname") Surname
-            input(type="text", name="surname", id="surname")
-          .form__group  
-            label(for="email") Email
-            input(type="email", name="email", id="email")
-          .form__group   
-            label(for="email") Title
-            input(type="email", name="email", id="email")
-          .form__group   
-            label(for="email") Gender
-            input(type="email", name="email", id="email")
-          .form__group   
-            label(for="email") Date Of Birth(MM/DD/YYYY)
-            input(type="email", name="email", id="email")
-          .form__group   
-            label(for="email") Nationality
-            input(type="email", name="email", id="email")
-          .form__group   
-            label(for="email") In which country are you applying
-            input(type="email", name="email", id="email")
-          .form__group   
-            label(for="firstname") Address 1	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Zip Code	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") City	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Country	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Phone	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Mobile	
-            input(type="text", name="firstname")
-          h2 Hospital
-          .form__group 
-            label(for="firstname") Hospital/Company name
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Department
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Clinical Position	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Address 1	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Zip Code	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") City	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Country	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Phone	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Fax	
-            input(type="text", name="firstname")
-          .form__group   
-            label(for="firstname") Email	
-            input(type="text", name="firstname")
+    .bend--theme-red
+      .container
+        .sub-hero
+          p.sub-hero__text Becoming a member of our association will bring <a class="sub-hero__link" href="#">noumeros benefits and perks</a>.        
+    section.member-application
+      .container
+        nav.member-application__stepper
+          ul#tabMenu
+            li.member-application__step(data-tab="1")
+              p.step__title General info
+            li.member-application__step(data-tab="2")
+              p.step__title Addresses
+            li.member-application__step(data-tab="3")
+              p.step__title Contacts
+            li.member-application__step(data-tab="4")
+              p.step__title Hospitals
+            li.member-application__step(data-tab="5")
+              p.step__title Documents       
+        form.form.member-application__form#tabMain
+          .member-application__form-tab(data-tab="1")
+            h2.member-application__title General Info
+            .form__group
+              label(for="firstname") Firstname
+              input(type="text", name="firstname", id="firstname")
+            .form__group
+              label(for="surname") Surname
+              input(type="text", name="surname", id="surname")
+            .form__group   
+              label(for="email") Date Of Birth(MM/DD/YYYY)
+              input(type="email", name="email", id="email") 
+            .form__group   
+              label(for="email") Title
+              input(type="email", name="email", id="email")   
+            .form__group   
+              label(for="email") Gender
+              input(type="email", name="email", id="email")
+          .member-application__form-tab(data-tab="2").toggle
+            h2.member-application__title Addresses
+            .form__group   
+              label(for="email") Nationality
+              input(type="email", name="email", id="email")
+            .form__group   
+              label(for="firstname") Address 1	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Zip Code	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") City	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Country	
+              input(type="text", name="firstname")  
+          .member-application__form-tab(data-tab="3").toggle
+            h2.member-application__title Contacts
+            .form__group  
+              label(for="email") Email
+              input(type="email", name="email", id="email")
+            .form__group   
+              label(for="firstname") Phone	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Mobile	
+              input(type="text", name="firstname")
+          .member-application__form-tab(data-tab="4").toggle
+            h2.member-application__title Hospitals
+            .form__group 
+              label(for="firstname") Hospital/Company name
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Department
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Clinical Position	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Address 1	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Zip Code	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") City	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Country	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Phone	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Fax	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Email	
+              input(type="text", name="firstname") 
+          .member-application__form-tab(data-tab="5").toggle
+            h2.member-application__title Documents      
+    include _footer.pug        

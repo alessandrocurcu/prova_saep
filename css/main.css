@@ -1522,9 +1522,6 @@ body {
       bottom: -6px;
       left: 0;
       background-color: #FFE066; }
-    @media (min-width: 576px) {
-      .membership__title {
-        margin-top: -1.5rem; } }
   .membership__text {
     width: 100%;
     font-size: 1rem;
@@ -2022,6 +2019,13 @@ body {
       padding-left: 1.953rem;
       font-size: 1.25rem;
       line-height: 1.6; } }
+  .constitution p:last-child,
+  .constitution ul:last-child,
+  .constitution ol:last-child,
+  .history p:last-child,
+  .history ul:last-child,
+  .history ol:last-child {
+    margin-bottom: 0; }
 
 .constitution li,
 .history li {
@@ -2064,6 +2068,12 @@ body {
     .history__grid .article {
       grid-column: 1 / 2;
       margin-bottom: 3rem; } }
+  .constitution__grid .article:only-child,
+  .history__grid .article:only-child {
+    margin: 0; }
+  .constitution__grid .article .article,
+  .history__grid .article .article {
+    margin-bottom: 0; }
 
 .membership-hero-image {
   background-image: url("./../img/secec_community.jpg");
@@ -2560,20 +2570,33 @@ body {
 .toggle {
   display: none; }
 
-.junior h2 {
+.member-application__stepper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.member-application__step {
+  margin: 0;
+  cursor: pointer; }
+  .member-application__step:not(:last-child) {
+    margin-right: 1.953rem; }
+
+.member-application__title {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   position: relative;
   font-weight: 200; }
-  .junior h2:after {
+  .member-application__title:after {
     content: ' ';
     display: inline-block;
     height: 2px;
-    width: 100px;
+    width: 80px;
     position: absolute;
-    bottom: -0.33333rem;
+    bottom: -6px;
     left: 0;
-    border-radius: 50px;
     background-color: #AF2B31; }
 
 .personal-area {
@@ -2611,6 +2634,7 @@ body {
       text-shadow: none;
       border-right: 1px solid rgba(32, 44, 57, 0.2); } }
   .secondary-navigation__navbar {
+    width: 100vw;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -2620,6 +2644,7 @@ body {
     overflow: auto; }
     @media (min-width: 576px) {
       .secondary-navigation__navbar {
+        width: 100%;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;

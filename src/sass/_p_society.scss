@@ -67,6 +67,10 @@
       font-size: $type1;
       line-height: 1.6;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   li {
@@ -78,9 +82,12 @@
     margin-bottom: $vr;
 
     @include md {
-
       margin-bottom: $vr * 1.5;
     }
+
+
+
+
   }
 
   p+ul {
@@ -113,6 +120,14 @@
       @include md {
         grid-column: 1 / 2;
         margin-bottom: $vr * 2;
+      }
+
+      &:only-child {
+        margin: 0;
+      }
+
+      .article {
+        margin-bottom: 0;
       }
     }
   }

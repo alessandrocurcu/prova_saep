@@ -1,0 +1,31 @@
+.member-application {
+
+  &__stepper {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+    }
+  }
+
+  &__step {
+    margin: 0;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: $gutter;
+    }
+  }
+
+  &__title {
+    margin-top: $vr;
+    margin-bottom: $vr;
+    position: relative;
+    font-weight: 200;
+
+    &:after {
+      @include title-line($primaryColor, 80px)
+    }
+  }
+}

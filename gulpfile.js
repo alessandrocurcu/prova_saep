@@ -54,8 +54,8 @@ const prodjs = () =>
 
 const js = () =>
   src('./src/js/index.js')
-    // .pipe(browserify())
-    .pipe(dest('./js/'));
+    .pipe(dest('./js/'))
+    .pipe(browserSync.stream());
 
 const prodimg = () => src('./img/*.*').pipe(dest('./dist/img/'));
 

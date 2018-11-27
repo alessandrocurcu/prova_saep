@@ -1,9 +1,8 @@
-const imagesLoaded = require('imagesloaded');
+// const imagesLoaded = require('imagesloaded');
+// const Headroom = require('./headroom.js');
+// const list = require('list.js');
 
-const Headroom = require('./headroom.js');
-const list = require('list.js');
-
-(function IIFE(HEadroom, List) {
+(function IIFE() {
   'use strict';
 
   window.addEventListener('DOMContentLoaded', () => {
@@ -22,7 +21,7 @@ const list = require('list.js');
         multiSearch: true,
       },
     };
-    const membersList = new List('members', options);
+    // const membersList = new List('members', options);
 
     // console.log(userList.fuzzySearch);
     // console.log(userList.fuzzySearch('Ale'));
@@ -210,4 +209,22 @@ const list = require('list.js');
   // const addPoints = points => {
   //   score += points;
   // };
-})(Headroom, list);
+
+  /** *** Tab */
+
+  const tabMenu = document.getElementById('tabMenu');
+  const tabMain = document.getElementById('tabMain');
+  if (!tabMain) return;
+  const tabMainItems = Array.from(tabMain.children);
+  const tabMenuItems = Array.from(tabMenu.children);
+  tabMenuItems.forEach(el => {
+    el.addEventListener('click', e => {
+      tabMainItems.forEach(ele => {
+        ele.classList.add('toggle');
+        if (e.currentTarget.dataset.tab === ele.dataset.tab) {
+          ele.classList.toggle('toggle');
+        }
+      });
+    });
+  });
+})();
