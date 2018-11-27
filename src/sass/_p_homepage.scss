@@ -401,9 +401,7 @@
       @include title-line($accent, 80px);
     }
 
-    @include sm {
-      margin-top: - $vr;
-    }
+
   }
 }
 
@@ -517,9 +515,7 @@
       @include title-line($primaryColor, 80px);
     }
 
-    @include sm {
-      margin-top: - $vr;
-    }
+
   }
 
   &__description {

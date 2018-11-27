@@ -48,7 +48,7 @@ const prodhtml = () =>
     .pipe(dest('./dist'));
 
 const prodjs = () =>
-  src('./js/index.js')
+  src('./js/*.js')
     // .pipe(browserify())
     .pipe(dest('./dist/js/'));
 

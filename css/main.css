@@ -1758,9 +1758,6 @@ body {
       bottom: -6px;
       left: 0;
       background-color: #FFE066; }
-    @media (min-width: 576px) {
-      .news-section__title {
-        margin-top: -1.5rem; } }
 
 .news__grid {
   display: grid;
@@ -1857,9 +1854,6 @@ body {
     bottom: -6px;
     left: 0;
     background-color: #AF2B31; }
-  @media (min-width: 576px) {
-    .patronages-section__title {
-      margin-top: -1.5rem; } }
 
 .patronages-section__description {
   width: 100%;
