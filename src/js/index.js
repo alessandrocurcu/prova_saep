@@ -179,10 +179,11 @@
 
   const loginService = document.getElementById('login-service');
   const loginServiceBtn = document.getElementById('login-service-btn');
-
-  loginServiceBtn.addEventListener('click', e => {
-    loginService.classList.toggle('toggle');
-  });
+  if (loginServiceBtn) {
+    loginServiceBtn.addEventListener('click', e => {
+      loginService.classList.toggle('toggle');
+    });
+  }
 
   /* Score system */
 
