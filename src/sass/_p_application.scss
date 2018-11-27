@@ -1,5 +1,7 @@
 .member-application {
 
+
+
   &__stepper {
     ul {
       margin: 0;
@@ -9,12 +11,23 @@
     }
   }
 
-  &__step {
+  .step {
     margin: 0;
     cursor: pointer;
+    font-family: $secondaryText;
+    opacity: 0.5;
 
     &:not(:last-child) {
       margin-right: $gutter;
+    }
+
+    &__title {
+      margin: 0;
+    }
+
+    &--is-selected {
+      opacity: 1;
+      border-bottom: 1px dashed $secondaryColor;
     }
   }
 
@@ -22,10 +35,52 @@
     margin-top: $vr;
     margin-bottom: $vr;
     position: relative;
-    font-weight: 200;
+    font-weight: 300;
+    font-size: $type3;
 
     &:after {
       @include title-line($primaryColor, 80px)
     }
   }
+
+  &__form {
+
+
+    @include md {
+      width: 80%;
+
+    }
+
+    @include lg {
+      width: 50%;
+
+    }
+  }
+
+  &__stepper-controls {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $vr * 2;
+
+    @include md {
+      width: 80%;
+
+    }
+
+    @include lg {
+      width: 50%;
+
+    }
+  }
+}
+
+[contenteditable="true"] {
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid gray;
+  margin-top: $vr / 4 !important;
+  font-style: italic;
+  opacity: 0.6;
+
 }

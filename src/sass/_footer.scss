@@ -5,6 +5,7 @@
 
   @include sm {
     padding: ($vr * 2) 0;
+    padding-bottom: $vr / 2;
 
   }
 
@@ -100,7 +101,22 @@
     }
   }
 
+  &__sub-footer {
+    margin-top: $vr / 2;
+
+    @include sm {
+      margin-top: 0;
+    }
+  }
+
   .saep {
+    margin: 0;
     font-size: $type-2;
+    opacity: 0.8;
+
+    a {
+      // color: $primaryColor;
+
+    }
   }
 }

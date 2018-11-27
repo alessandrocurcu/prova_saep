@@ -30,18 +30,54 @@ block body
               li.secondary-navigation__item(data-tab="5"): span Documents             
         main.informations#tabMain
           .information(data-tab="1")
-            h2.information__title General Info
-            p Prova1
+            .information__header
+              h2.information__title General Info
+              p Edit <i class="fas fa-edit"></i>
+              p.toggle Salva <i class="fas fa-edit"></i>
+            ul.information__body
+              li.information__item
+                p.information__type First Name
+                p.information__type-value Alessandro Curcu
+              li.information__item  
+                p.information__type Surname
+                p.information__type-value Curcu
+              li.information__item  
+                p.information__type Date of Birth
+                p.information__type-value 02/09/1985   
           .information.toggle(data-tab="2")
-            h2.information__title Addresses
-            p Prova 2
+            .information__header
+              h2.information__title Addresses
+              p#edit Edit <i class="fas fa-edit"></i>
+              p#save.toggle Salva <i class="fas fa-edit"></i>
+            ul.information__body
+              li.information__item
+                p.information__type Nationality
+                p.information__type-value Italian
+              li.information__item  
+                p.information__type Address 1
+                p.information__type-value via del Capitel n.42
+              li.information__item  
+                p.information__type Zip Code
+                p.information__type-value 38100
+              li.information__item  
+                p.information__type City
+                p.information__type-value Trento
+              li.information__item  
+                p.information__type Country
+                p.information__type-value Italy     
           .information.toggle(data-tab="3")
-            h2.information__title Contacts
-            p Prova 2
+            .information__header
+              h2.information__title Contacts
+              p Edit <i class="fas fa-edit"></i>
+            ul.information__body    
           .information.toggle(data-tab="4")
-            h2.information__title Hospitals
-            p Prova 2
+            .information__header
+              h2.information__title Hospitals
+              p Edit <i class="fas fa-edit"></i>
+            ul.information__body  
           .information.toggle(data-tab="5")
-            h2.information__title Documents
-            p Prova 2
+            .information__header
+              h2.information__title Documents
+              p Edit <i class="fas fa-edit"></i>
+            ul.information__body  
     include _footer.pug                 

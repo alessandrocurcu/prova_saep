@@ -186,30 +186,6 @@
 
   /* Score system */
 
-  // const scores = {
-  //   article: 5,
-  //   sececMeeting: 1,
-  //   oralPresentation: 3,
-  //   posterPresentation: 2,
-  // };
-
-  // let score = 0;
-
-  // console.log(scoreButtons);
-
-  // const buttonArticle = document.getElementById('js-article');
-
-  // const buttonMeeting = document.getElementById('js-meeting');
-
-  // buttonArticle.addEventListener('click', () => {
-  //   score += 5;
-  //   console.log(score);
-  // });
-
-  // const addPoints = points => {
-  //   score += points;
-  // };
-
   /** *** Tab */
 
   const tabMenu = document.getElementById('tabMenu');
@@ -217,8 +193,40 @@
   if (!tabMain) return;
   const tabMainItems = Array.from(tabMain.children);
   const tabMenuItems = Array.from(tabMenu.children);
+  const edit = document.getElementById('edit');
+  const save = document.getElementById('save');
+  const informationTypeValue = document.querySelectorAll(
+    '.information__type-value'
+  );
+
+  if (save) {
+    save.addEventListener('click', e => {
+      save.classList.toggle('toggle');
+      edit.classList.toggle('toggle');
+      informationTypeValue.forEach(el => {
+        el.removeAttribute('contenteditable');
+      });
+    });
+  }
+
+  if (edit) {
+    edit.addEventListener('click', e => {
+      save.classList.toggle('toggle');
+      edit.classList.toggle('toggle');
+      informationTypeValue.forEach(el => {
+        el.setAttribute('contenteditable', 'true');
+      });
+    });
+  }
+
   tabMenuItems.forEach(el => {
     el.addEventListener('click', e => {
+      tabMenuItems.forEach(elem => {
+        elem.classList.remove('step--is-selected');
+      });
+      if (e.currentTarget.classList.contains('step')) {
+        e.currentTarget.classList.add('step--is-selected');
+      }
       tabMainItems.forEach(ele => {
         ele.classList.add('toggle');
         if (e.currentTarget.dataset.tab === ele.dataset.tab) {

@@ -22,20 +22,20 @@ block body
     .bend--theme-red
       .container
         .sub-hero
-          p.sub-hero__text Becoming a member of our association will bring <a class="sub-hero__link" href="#">noumeros benefits and perks</a>.        
+          p.sub-hero__text Becoming a member of our association will bring <a class="sub-hero__link" href="#">noumerous benefits and perks</a>.        
     section.member-application
       .container
         nav.member-application__stepper
           ul#tabMenu
-            li.member-application__step(data-tab="1")
+            li.step.step--is-selected(data-tab="1")
               p.step__title General info
-            li.member-application__step(data-tab="2")
+            li.step(data-tab="2")
               p.step__title Addresses
-            li.member-application__step(data-tab="3")
+            li.step(data-tab="3")
               p.step__title Contacts
-            li.member-application__step(data-tab="4")
+            li.step(data-tab="4")
               p.step__title Hospitals
-            li.member-application__step(data-tab="5")
+            li.step(data-tab="5")
               p.step__title Documents       
         form.form.member-application__form#tabMain
           .member-application__form-tab(data-tab="1")
@@ -116,5 +116,20 @@ block body
               label(for="firstname") Email	
               input(type="text", name="firstname") 
           .member-application__form-tab(data-tab="5").toggle
-            h2.member-application__title Documents      
+            h2.member-application__title Documents
+            .form__group   
+              label(for="firstname") CV	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Foto	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Motivational Letter	
+              input(type="text", name="firstname")
+            .form__group   
+              label(for="firstname") Sponsor Letter	
+              input(type="text", name="firstname")      
+        .member-application__stepper-controls
+          button.btn.btn--neutral(value="Previous") Previous
+          button.btn.btn--secondary(value="Next") Next
     include _footer.pug        

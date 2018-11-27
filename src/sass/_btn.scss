@@ -27,6 +27,18 @@
 
   &:active {}
 
+  &--primary {
+    @include theme-red;
+  }
+
+  &--secondary {
+    @include theme-blue;
+  }
+
+  &--neutral {
+    @include theme-gray;
+  }
+
   &--cta {
 
     background-color: transparent;
