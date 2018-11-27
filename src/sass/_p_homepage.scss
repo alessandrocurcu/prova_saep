@@ -27,6 +27,11 @@
     align-items: center;
     margin-bottom: $vr;
 
+    &:only-child {
+      // text-align: center;
+      margin: ($vr * 2) 0;
+    }
+
     p {
       margin: 0;
     }

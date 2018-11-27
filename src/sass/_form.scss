@@ -12,10 +12,11 @@
     line-height: normal;
     // min-height: 3rem; //Opera fix
     padding: 5px;
+    color: $secondaryColor;
 
     &:focus {
       outline: none;
-      color: black;
+
     }
   }
 

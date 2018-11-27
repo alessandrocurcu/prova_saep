@@ -657,12 +657,12 @@ body {
   font-size: 0.8rem;
   text-decoration: none;
   line-height: normal;
-  padding: 5px; }
+  padding: 5px;
+  color: #202C39; }
   .form input[type="text"]:focus,
   .form input[type="password"]:focus,
   .form input[type="checkbox"]:focus {
-    outline: none;
-    color: black; }
+    outline: none; }
 
 .form__group {
   display: -webkit-box;
@@ -1203,7 +1203,8 @@ body {
     font-style: italic;
     color: #FFE066; }
 
-.login {
+.login,
+.magazine {
   position: relative;
   font-family: ff-meta-web-pro, sans-serif;
   background-color: #202C39;
@@ -1213,22 +1214,27 @@ body {
   font-weight: 400;
   margin: 0 auto; }
   @media (min-width: 576px) {
-    .login {
+    .login,
+    .magazine {
       width: 60%; } }
   @media (min-width: 768px) {
-    .login {
+    .login,
+    .magazine {
       width: 100%;
       display: block;
       padding: 0.75rem 1.953rem 1.5rem 1.953rem;
       -webkit-box-shadow: 0px 0px 26px -1px rgba(0, 0, 0, 0.6);
               box-shadow: 0px 0px 26px -1px rgba(0, 0, 0, 0.6); } }
   @media (min-width: 992px) {
-    .login {
+    .login,
+    .magazine {
       top: -3rem; } }
   @media (min-width: 1200px) {
-    .login {
+    .login,
+    .magazine {
       top: -4.5rem; } }
-  .login__title {
+  .login__title,
+  .magazine__title {
     text-align: center;
     font-weight: 300;
     margin: 0;
@@ -1236,21 +1242,34 @@ body {
     line-height: 1.25;
     margin-bottom: 1rem; }
     @media (min-width: 768px) {
-      .login__title {
+      .login__title,
+      .magazine__title {
         font-size: 1rem; } }
-  .login__form {
+  .login__form,
+  .magazine__form {
     font-size: 0.8rem; }
-  .login__password label {
+  .login__password label,
+  .magazine__password label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-  .login__password a {
+  .login__password a,
+  .magazine__password a {
     color: #FFE066;
     font-weight: 300; }
-  .service-nav .login {
+  .login__img,
+  .magazine__img {
+    margin: 0 auto;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px dashed #AF2B31; }
+    .login__img + button,
+    .magazine__img + button {
+      margin-top: 0.75rem; }
+  .service-nav .login, .service-nav
+  .magazine {
     width: 292px;
     z-index: 300;
     position: absolute;
@@ -1267,7 +1286,8 @@ body {
     color: rgba(255, 255, 255, 0.9);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
     @media (min-width: 768px) {
-      .service-nav .login {
+      .service-nav .login, .service-nav
+      .magazine {
         right: 0; } }
 
 .arrow-up {
@@ -1492,6 +1512,8 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 1.5rem; }
+    .introduction__text:only-child {
+      margin: 3rem 0; }
     .introduction__text p {
       margin: 0; }
     @media (min-width: 576px) {

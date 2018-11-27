@@ -4,11 +4,11 @@ section.login
   form.form.login__form
     .form__group.form__group--vertical
       label(for="username") Username
-      input(type="text", name="username")
+      input(type="text", name="username", tabindex="1")
     .form__group.form__group--vertical.login__password  
       label(for="password") Password<a href="#">Forgot password?</a>
-      input(type="password", name="password")
+      input(type="password", name="password", tabindex="2")
     .form__group.form__group--orizzontal  
       input(type="checkbox", name="ricordami")
       label(for="ricordami") Remember me
-    input.loginbtn.btn(type="submit", value="Accedi")
+    input.loginbtn.btn(type="submit", value="Accedi", tabindex="3")

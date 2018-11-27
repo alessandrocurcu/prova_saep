@@ -21,7 +21,7 @@
         multiSearch: true,
       },
     };
-    // const membersList = new List('members', options);
+    const membersList = new List('members', options);
 
     // console.log(userList.fuzzySearch);
     // console.log(userList.fuzzySearch('Ale'));
