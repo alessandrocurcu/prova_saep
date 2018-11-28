@@ -3,7 +3,7 @@
   position: relative;
 
   font-family: ff-meta-web-pro, sans-serif;
-  @include theme-blue;
+  @include theme-secondary-dark;
   padding: ($vr/2) $gutter $vr $gutter;
   font-weight: 400;
   margin: 0 auto;

@@ -35,6 +35,8 @@
     color: rgba(255, 255, 255, 0.9);
   }
 
+
+
   &--color3 {
     background-color: darken($primaryColor, 20%);
     color: white;
@@ -43,7 +45,7 @@
   &--bkg-image-dark {
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(32, 44, 57, 0.9);
+    background-color: rgba(32, 44, 57, 0.8);
     background-blend-mode: multiply;
     color: white;
   }

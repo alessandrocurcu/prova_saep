@@ -9,25 +9,44 @@ block link
 block body
   body
     include _header.pug
-    section.hero.hero--no-text.homepage-hero-image
-    section.introduction
+    section.hero.bend--bkg-image-dark.homepage-hero-image
       .container
-        .introduction__grid
-          .introduction__text
-            p Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.
+        .hero__text
+          //- h1.hero__title Welcome to Secec / ESSE
+          .main-congress
+            p.main-congress__title 28th SECEC/ESSSE Annual Congress
+            .main-congress__info
+              p.main-congress__location <i class="fas fa-map-marker-alt"></i> Poznań — Poland
+              p.main-congress__date <i class="fas fa-calendar-alt"></i>19-22 September 2020
+            //- p.sub-hero__text Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.
+    //- .bend.bend--theme-red
+    //-   .container
+    //-     .sub-hero
+    //-       h1.sub-hero__title Wellcome in SECEC / ESSSE
+    //-       p.sub-hero__text--small Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.  
+    //- section.introduction
+    //-   .container
+    //-     .introduction__grid
+    //-       .introduction__text
+    //-         p Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.
           //- include _rivista.pug 
-          include _login.pug
+          //- include _login.pug
     section.membership
       .container
-        h2.membership__title Become a member of our society
-        p.membership__text Our members can access a weathy numbers of top quality research and training video, also you will be able to obtain access to the largest network of professionals in Europe.You will granted access to our fellowhip and improve your knowledge and you ranks among your peers.
+        .membership__grid-intro
+          .col-1
+            h2.membership__title Become a member of our society
+            p.membership__text Our association provide for <a href="#">scientific cooperation</a> and <a href="#">continuing training</a> of European orthopaedic surgeons specialized in surgery of the shoulder and elbow in order to contribute to the development of the physiological, pathological and therapeutic study of those joints.
+            p.membership__text Our members can access a weathy numbers of top quality research and training video, also you will be able to obtain access to the largest network of professionals in Europe. You will granted access to our fellowship and improve your knowledge and you ranks among your peers.
+          .col-2
+            include _login.pug
         .membership__grid
           .card
             h4.card__title E-learning
             p.card__description Access SECEC educational podcasts and meet the experts
             button.btn.btn--void Discover 
           .card
-            h4.card__title Fellowhip
+            h4.card__title Fellowship
             p.card__description Apply for fellowship all over the world 
             button.btn.btn--void Discover  
           .card
@@ -45,7 +64,7 @@ block body
     section.congresses.congress-image
       .container
         .main-congress
-          h2.main-congress__title 28th SECEC/ESSSE Annual Congress
+          h2.main-congress__title 29th SECEC/ESSSE Annual Congress
           .main-congress__info
             p.main-congress__location <i class="fas fa-map-marker-alt"></i> Geneve (Switzerland)
             p.main-congress__date <i class="fas fa-calendar-alt"></i>19-22 September 2018

@@ -81,7 +81,8 @@
 
 .sub-hero {
   display: flex;
-  align-items: center;
+  // align-items: center;
+  flex-direction: column;
   padding: ($vr) 0;
 
   @include sm {
@@ -92,10 +93,24 @@
     padding: ($vr * 1.5) 0;
   }
 
+  &__title {
+    position: relative;
+    margin: 0;
+    line-height: 1.20;
+    font-weight: 500;
+    font-size: $type5;
+
+
+    &:after {
+      @include title-line(white, 120px);
+    }
+  }
+
   &__text {
     margin: 0;
     font-size: $type0;
     line-height: 1.4;
+
 
     @include sm {
       font-size: $type1;
@@ -103,6 +118,14 @@
 
     @include md {
       font-size: $type2;
+    }
+
+    &--small {
+      @include md {
+        font-size: $type2;
+        margin-top: $vr;
+        margin-bottom: 0;
+      }
     }
   }
 

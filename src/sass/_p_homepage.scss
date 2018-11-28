@@ -1,7 +1,9 @@
 .homepage-hero-image {
   background-image: url('./../img/ossaBlu.jpg');
+  background-image: url('./../img/secec_congress_01.jpg');
   background-repeat: no-repeat;
-  background-position: 12% 12%;
+  // background-position: 12% 12%;
+  background-position: 50% 50%;
   background-size: cover;
 }
 
@@ -87,6 +89,15 @@
   position: relative;
   @include theme-blue;
 
+  &__grid-intro {
+    display: grid;
+    grid-template-columns: 8fr 1fr 3fr;
+
+    .col-2 {
+      grid-column: 3 / 4;
+    }
+  }
+
   &__title {
     position: relative;
     margin-top: 0;
@@ -109,8 +120,17 @@
     @include sm {
 
       width: 100%;
-      font-size: $type1;
-      margin-bottom: $vr * 2;
+      font-size: $type0;
+      margin-bottom: $vr;
+
+      &:first-of-type {
+        font-size: $type1;
+      }
+
+      &:last-of-type {
+        font-size: $type1;
+        margin-bottom: $vr * 1.5;
+      }
     }
 
   }
@@ -176,6 +196,11 @@
   // min-width: 300px;
   text-align: center;
 
+  .hero__text & {
+    background-color: $primaryColorOpaque;
+    background-color: transparent;
+    padding: 0;
+  }
 
 
 
@@ -199,6 +224,8 @@
     justify-content: center;
     line-height: 1.2;
 
+
+
     &:after {
       content: ' ';
       display: block;
@@ -206,7 +233,7 @@
       position: absolute;
       width: 100%;
       bottom: - (1rem / 1.5);
-      background-color: currentColor;
+      background-color: $accent;
       opacity: 0.8;
       border-radius: 50px;
 
@@ -223,6 +250,11 @@
     @include lg {
       font-size: $type4;
       margin-bottom: $vr;
+
+      .hero__text & {
+        font-size: $type4;
+        margin-top: 0;
+      }
     }
   }
 
@@ -240,6 +272,11 @@
 
     @include lg {
       margin-bottom: $vr;
+
+      .hero__text & {
+        font-size: $type0;
+        margin-bottom: 0;
+      }
     }
 
     p {
