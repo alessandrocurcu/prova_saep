@@ -3,7 +3,8 @@
 
   input[type="text"],
   input[type="password"],
-  input[type="checkbox"] {
+  input[type="checkbox"],
+  select {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -17,6 +18,20 @@
     &:focus {
       outline: none;
 
+    }
+  }
+
+  &__element {
+    &--very-short {
+      width: 15%
+    }
+
+    &--short {
+      width: 25%
+    }
+
+    &--medium {
+      width: 35%;
     }
   }
 
@@ -34,6 +49,8 @@
         font-weight: 300;
       }
     }
+
+
 
     &--vertical {
 
@@ -104,6 +121,26 @@
     .criteria & {
       // margin-top: $vr/3;
     }
+
   }
+
+  &__validation-message {
+    font-family: $secondaryText;
+    font-size: $type-1;
+    margin: 2px 0;
+    line-height: 1.4;
+
+
+
+    &--info {
+      opacity: 0.7;
+    }
+  }
+
+  &__validation-message+&__validation-message {
+    margin-top: $vr;
+  }
+
+
 
 }

@@ -32,104 +32,89 @@ block body
             li.step(data-tab="2")
               p.step__title Addresses
             li.step(data-tab="3")
-              p.step__title Contacts
-            li.step(data-tab="4")
-              p.step__title Hospitals
-            li.step(data-tab="5")
               p.step__title Documents       
         form.form.member-application__form#tabMain
           .member-application__form-tab(data-tab="1")
             h2.member-application__title General Info
-            .form__group
-              label(for="firstname") Firstname
-              input(type="text", name="firstname", id="firstname")
-            .form__group
-              label(for="surname") Surname
-              input(type="text", name="surname", id="surname")
-            .form__group   
-              label(for="email") Date Of Birth(MM/DD/YYYY)
-              input(type="email", name="email", id="email") 
-            .form__group   
-              label(for="email") Title
-              input(type="email", name="email", id="email")   
-            .form__group   
-              label(for="email") Gender
-              input(type="email", name="email", id="email")
+            .member-application__form-grid
+              .col-1
+                .form__group   
+                  label(for="title") Title
+                  select.form__element--very-short(name="title", id="title")
+                    option(value="Mr") Mr
+                    option(value="Mrs") Mrs
+                    option(value="Miss") Miss
+                .form__group
+                  label(for="firstname") First name
+                  input(type="text", name="firstname", id="firstname")
+                .form__group
+                  label(for="lastname") Last name
+                  input(type="text", name="lastname", id="lastname")
+                .form__group  
+                  label(for="email") Email
+                  input(type="email", name="email", id="email")  
+                .form__group   
+                  label(for="birthday") Date Of Birth <span class="form__validation-message form__validation-message--info">(MM/DD/YYYY)</span>
+                  input.form__element--short(type="text", name="birthday", id="birthday")
+                .form__group   
+                  label(for="nationality") Nationality
+                  input.form__element--short(type="text", name="nationality", id="nationality")
+                .form__group   
+                  label(for="phone") Phone	
+                  input.form__element--short(type="text", name="phone")     
+              .col-2
+                .form__group
+                  label(for="firstname") Photo profile
+                  .personal-photo
+                    <i class="fas fa-file-upload"></i>
+                    //- img(src="./img/ale.png")
+                  button.btn.btn--hollow Upload a photo
+                  p.form__validation-message.form__validation-message--info  Preferable format: 250x250
+                  //- 	
+                  //- input(type="text", name="firstname")               
           .member-application__form-tab(data-tab="2").toggle
             h2.member-application__title Addresses
-            .form__group   
-              label(for="email") Nationality
-              input(type="email", name="email", id="email")
-            .form__group   
-              label(for="firstname") Address 1	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Zip Code	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") City	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Country	
-              input(type="text", name="firstname")  
+            .member-application__form-grid
+              .col-1
+                .form__group   
+                  label(for="address") Address	
+                  input(type="text", name="address")
+                .form__group   
+                  label(for="city") City	
+                  input.form__element--medium(type="text", name="city")
+                .form__group   
+                  label(for="firstname") Zip Code	
+                  input.form__element--short(type="text", name="firstname")
+                .form__group   
+                  label(for="country") Country	
+                  input.form__element--medium(type="text", name="country")
           .member-application__form-tab(data-tab="3").toggle
-            h2.member-application__title Contacts
-            .form__group  
-              label(for="email") Email
-              input(type="email", name="email", id="email")
-            .form__group   
-              label(for="firstname") Phone	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Mobile	
-              input(type="text", name="firstname")
-          .member-application__form-tab(data-tab="4").toggle
-            h2.member-application__title Hospitals
-            .form__group 
-              label(for="firstname") Hospital/Company name
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Department
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Clinical Position	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Address 1	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Zip Code	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") City	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Country	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Phone	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Fax	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Email	
-              input(type="text", name="firstname") 
-          .member-application__form-tab(data-tab="5").toggle
             h2.member-application__title Documents
-            .form__group   
-              label(for="firstname") CV	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Foto	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Motivational Letter	
-              input(type="text", name="firstname")
-            .form__group   
-              label(for="firstname") Sponsor Letter	
-              input(type="text", name="firstname")      
+            .member-application__form-grid
+              .col-1
+                .form__group   
+                  label(for="cv") CV
+                  .form__control
+                      input(type="text", name="cv")
+                      button.btn.btn--hollow Add doc	
+                .form__group   
+                  label(for="motivational") Motivational Letter
+                  .form__control
+                      input(type="text", name="motivational")
+                      button.btn.btn--hollow Add doc
+                .form__group   
+                    label(for="sponsor") Sponsor Letter
+                    .form__control
+                      input(type="text", name="sponsor")
+                      button.btn.btn--hollow Add doc
+              .col-2
+                p.form__validation-message.form__validation-message--info Be sure to insert this information on the CV: University attended (TO DEFINE)
+                p.form__validation-message.form__validation-message--info For the sposor letter be sure to contact your sponsor (TO DEFINE)
+                p.form__validation-message.form__validation-message--info The documents needs to be in a PDF format (<a href="#">Need help?</a>)
         .member-application__stepper-controls
-          button.btn.btn--neutral(value="Previous") Previous
-          button.btn.btn--secondary(value="Next") Next
+            .member-application__form-grid
+              .col-1
+                button.btn.btn--neutral(value="Previous") Previous
+              .col-2
+                button.btn.btn--primary(value="Next") Next    
     include _footer.pug        

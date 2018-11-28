@@ -66,11 +66,11 @@
 
   .membership & {
     &:nth-child(even) {
-      background-color: $rosso;
+      background-color: $primaryColor;
     }
 
     &:nth-child(odd):not(:last-child) {
-      background-color: darken($rosso, 20%);
+      background-color: darken($primaryColor, 20%);
     }
   }
 
@@ -87,12 +87,12 @@
   }
 
   &--cta {
-    background-color: $giallo;
-    color: $blu1;
+    background-color: $accent;
+    color: $secondaryColor;
 
     button {
-      background-color: $blu1;
-      color: $giallo;
+      background-color: $secondaryColor;
+      color: $accent;
       font-weight: 600;
       padding: 9px !important;
       text-align: center !important;
@@ -109,7 +109,7 @@
 
       &:hover,
       &:focus {
-        background-color: darken($blu1, 10%);
+        background-color: darken($secondaryColor, 10%);
       }
     }
   }

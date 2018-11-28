@@ -1,7 +1,4 @@
 .member-application {
-
-
-
   &__stepper {
     ul {
       margin: 0;
@@ -27,7 +24,7 @@
 
     &--is-selected {
       opacity: 1;
-      border-bottom: 1px dashed $secondaryColor;
+      border-bottom: 1px dashed $primaryColorOpaque;
     }
   }
 
@@ -45,32 +42,71 @@
 
   &__form {
 
+    margin-bottom: $vr;
+    // border-bottom: 1px dashed $primaryColorOpaque;
 
     @include md {
-      width: 80%;
+      // width: 80%;
 
     }
 
     @include lg {
-      width: 50%;
+      // width: 50%;
+
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: 6fr 2fr 2fr 2fr;
+
+      .col-2 {
+        grid-column: 3 / 4;
+
+        .member-application__stepper-controls & {
+
+          // justify-self: end;
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__grid {}
+
+  &__stepper-controls {
+
+    // display: flex;
+    // justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: 6fr 2fr 2fr 2fr;
+    margin-bottom: $vr * 2;
+
+    @include md {
+      // width: 80%;
+
+    }
+
+    @include lg {
+      // width: 50%;
 
     }
   }
 
-  &__stepper-controls {
-
+  .personal-photo {
+    // margin-top: $vr * 2 ;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: $vr * 2;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border: 1px dashed $text;
+    margin-bottom: $vr / 2;
+    background-color: $neutralGray;
 
-    @include md {
-      width: 80%;
-
-    }
-
-    @include lg {
-      width: 50%;
-
+    i {
+      font-size: $type5;
+      color: inherit;
     }
   }
 }

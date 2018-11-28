@@ -10,7 +10,7 @@
   // }
 
   &--color1 {
-    background-color: $fascia1;
+    background-color: $primaryColor;
     color: white;
   }
 
@@ -36,7 +36,7 @@
   }
 
   &--color3 {
-    background-color: darken($rosso, 20%);
+    background-color: darken($primaryColor, 20%);
     color: white;
   }
 

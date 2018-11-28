@@ -589,7 +589,7 @@ body {
   .login .btn {
     background-color: transparent;
     width: 100%;
-    color: #202C39;
+    color: #FFE066;
     color: white;
     border: 1px solid currentColor;
     font-weight: 600;
@@ -615,6 +615,8 @@ body {
     .btn--hollow:hover, .btn--hollow:focus {
       background-color: #424242;
       color: white; }
+    .member-application__form .form__control .btn--hollow {
+      margin-left: 0.9765rem; }
   .btn--red {
     background-color: #AF2B31;
     color: white;
@@ -649,7 +651,8 @@ body {
 
 .form input[type="text"],
 .form input[type="password"],
-.form input[type="checkbox"] {
+.form input[type="checkbox"],
+.form select {
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
@@ -661,8 +664,18 @@ body {
   color: #202C39; }
   .form input[type="text"]:focus,
   .form input[type="password"]:focus,
-  .form input[type="checkbox"]:focus {
+  .form input[type="checkbox"]:focus,
+  .form select:focus {
     outline: none; }
+
+.form__element--very-short {
+  width: 15%; }
+
+.form__element--short {
+  width: 25%; }
+
+.form__element--medium {
+  width: 35%; }
 
 .form__group {
   display: -webkit-box;
@@ -722,6 +735,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.form__validation-message {
+  font-family: ff-meta-web-pro, sans-serif;
+  font-size: 0.8rem;
+  margin: 2px 0;
+  line-height: 1.4; }
+  .form__validation-message--info {
+    opacity: 0.7; }
+
+.form__validation-message + .form__validation-message {
+  margin-top: 1.5rem; }
 
 .bend--color1 {
   background-color: #AF2B31;
@@ -2631,7 +2655,7 @@ body {
     margin: 0; }
   .member-application .step--is-selected {
     opacity: 1;
-    border-bottom: 1px dashed #202C39; }
+    border-bottom: 1px dashed rgba(175, 43, 49, 0.8); }
 
 .member-application__title {
   margin-top: 1.5rem;
@@ -2649,28 +2673,36 @@ body {
     left: 0;
     background-color: #AF2B31; }
 
-@media (min-width: 768px) {
-  .member-application__form {
-    width: 80%; } }
-
-@media (min-width: 992px) {
-  .member-application__form {
-    width: 50%; } }
+.member-application__form {
+  margin-bottom: 1.5rem; }
+  .member-application__form-grid {
+    display: grid;
+    grid-template-columns: 6fr 2fr 2fr 2fr; }
+    .member-application__form-grid .col-2 {
+      grid-column: 3 / 4; }
+      .member-application__stepper-controls .member-application__form-grid .col-2 button {
+        width: 100%; }
 
 .member-application__stepper-controls {
+  margin-bottom: 3rem; }
+
+.member-application .personal-photo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 3rem; }
-  @media (min-width: 768px) {
-    .member-application__stepper-controls {
-      width: 80%; } }
-  @media (min-width: 992px) {
-    .member-application__stepper-controls {
-      width: 50%; } }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 200px;
+  border: 1px dashed #424242;
+  margin-bottom: 0.75rem;
+  background-color: #f2f2f2; }
+  .member-application .personal-photo i {
+    font-size: 3.052rem;
+    color: inherit; }
 
 [contenteditable="true"] {
   background-color: #fff;

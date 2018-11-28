@@ -2,34 +2,29 @@
 
 
 
-$rosa: #F47274;
-$rosso: #AF2B31;
-$giallo: #FFE066;
-$grigio0: #50514F;
-$grigio1: #747474;
-$grigio2: #9C9496;
-$grigio3: #E3E3E2;
-$blu1: #202C39;
-$blu2: #283845;
-$kaki: #B8B08D;
-$rossoSecec: #ED1C24;
+// $rosa: #F47274;
+// $grigio0: #50514F;
+// $grigio1: #747474;
+// $grigio2: #9C9496;
+// $blu2: #283845;
+// $kaki: #B8B08D;
+// $rossoSecec: #ED1C24;
+// $rossoTemplate: #FF0000;
+// $grigioTemplate: #F5F5F5;
+// $grigioText1: #888;
+// $grigioText2: #777;
+// $grigioText3: #333;
+$yellow: #FFE066;
+$gray: #E3E3E2;
+$red: #AF2B31;
+$blue: #202C39;
+$text: #424242;
 
-$rossoTemplate: #FF0000;
-$grigioTemplate: #F5F5F5;
-$grigioText1: #888;
-$grigioText2: #777;
-$grigioText3: #333;
-
-$primaryColor: $rosso;
-$secondaryColor: $blu1;
-$neutralGray: lighten($grigio3, 6%);
-$accent: $giallo;
-
-$fascia1: $rosso;
-$fascia2: $grigio3;
-$fascia3: $blu1;
-$accento: $blu1;
-$accento2: $giallo;
+$primaryColor: $red;
+$primaryColorOpaque: rgba(175, 43, 49, 0.8);
+$secondaryColor: $blue;
+$accent: $yellow;
+$neutralGray: lighten($gray, 6%);
 
 $vr: 1.5rem;
 $gutter: 1.953rem;
