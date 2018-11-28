@@ -86,6 +86,12 @@ p {
   // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
 }
 
+@mixin theme-accent {
+  background-color: $accent;
+  color: $secondaryColor;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+}
+
 @mixin no-theme {
   background-color: transparent;
   color: inherit;

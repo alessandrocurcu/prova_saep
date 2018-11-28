@@ -222,11 +222,19 @@
 
   tabMenuItems.forEach(el => {
     el.addEventListener('click', e => {
+      console.log(el);
       tabMenuItems.forEach(elem => {
         elem.classList.remove('step--is-selected');
+        elem.classList.remove('secondary-navigation__item--is-selected');
       });
       if (e.currentTarget.classList.contains('step')) {
         e.currentTarget.classList.add('step--is-selected');
+      }
+
+      if (e.currentTarget.classList.contains('secondary-navigation__item')) {
+        e.currentTarget.classList.add(
+          'secondary-navigation__item--is-selected'
+        );
       }
       tabMainItems.forEach(ele => {
         ele.classList.add('toggle');

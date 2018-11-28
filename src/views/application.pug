@@ -41,9 +41,8 @@ block body
                 .form__group   
                   label(for="title") Title
                   select.form__element--very-short(name="title", id="title")
-                    option(value="Mr") Mr
-                    option(value="Mrs") Mrs
-                    option(value="Miss") Miss
+                    option(value="Doc") Doc
+                    option(value="Professor") Professor
                 .form__group
                   label(for="firstname") First name
                   input(type="text", name="firstname", id="firstname")
@@ -76,18 +75,34 @@ block body
             h2.member-application__title Addresses
             .member-application__form-grid
               .col-1
-                .form__group   
-                  label(for="address") Address	
-                  input(type="text", name="address")
-                .form__group   
-                  label(for="city") City	
-                  input.form__element--medium(type="text", name="city")
-                .form__group   
-                  label(for="firstname") Zip Code	
-                  input.form__element--short(type="text", name="firstname")
-                .form__group   
-                  label(for="country") Country	
-                  input.form__element--medium(type="text", name="country")
+                .member-application__address
+                  h3.member-application__subtitle Main address
+                  .form__group   
+                    label(for="address") Address	
+                    input(type="text", name="address")
+                  .form__group   
+                    label(for="city") City	
+                    input.form__element--medium(type="text", name="city")
+                  .form__group   
+                    label(for="firstname") Zip Code	
+                    input.form__element--short(type="text", name="firstname")
+                  .form__group   
+                    label(for="country") Country	
+                    input.form__element--medium(type="text", name="country")
+                .member-application__address
+                  h3.member-application__subtitle Second address
+                  .form__group   
+                    label(for="address") Address	
+                    input(type="text", name="address")
+                  .form__group   
+                    label(for="city") City	
+                    input.form__element--medium(type="text", name="city")
+                  .form__group   
+                    label(for="firstname") Zip Code	
+                    input.form__element--short(type="text", name="firstname")
+                  .form__group   
+                    label(for="country") Country	
+                    input.form__element--medium(type="text", name="country")    
           .member-application__form-tab(data-tab="3").toggle
             h2.member-application__title Documents
             .member-application__form-grid

@@ -17,73 +17,125 @@ block body
               li 
                 a(href="./index.html") Home
               li Personal Area
-            h1.hero__title Benvenuto Alessandro
+            h1.hero__title Welcome Alessandro
+    .hero-toast
+      .container
+        p Your subscription is about to end: if you still want to enjoy Secec's membership benefits please renew your subscription. 
+        <a class="btn">Renew my subscription</a>
     section.personal-area      
       .personal-area__grid
         aside.secondary-navigation
           nav
             ul.secondary-navigation__navbar#tabMenu
-              li.secondary-navigation__item(data-tab="1"): span General Info
+              li.secondary-navigation__item.secondary-navigation__item--is-selected(data-tab="1"): span General Info
               li.secondary-navigation__item(data-tab="2"): span Addresses
               li.secondary-navigation__item(data-tab="3"): span Documents
+              li.secondary-navigation__item(data-tab="4"): span Subscription & Billing
         main.informations#tabMain
           .information(data-tab="1")
             .information__header
               h2.information__title General Info
               p Edit <i class="fas fa-edit"></i>
               p.toggle Salva <i class="fas fa-edit"></i>
-            ul.information__body
-              li.information__item  
-                p.information__type Title
-                p.information__type-value Mr. 
-              li.information__item
-                p.information__type First Name
-                p.information__type-value Alessandro Curcu
-              li.information__item  
-                p.information__type Last Name
-                p.information__type-value Curcu
-              li.information__item  
-                p.information__type Email
-                p.information__type-value alexqrq@gmail.com 
-              li.information__item  
-                p.information__type Date of Birth
-                p.information__type-value 02/09/1985
-              li.information__item  
-                p.information__type Nationality
-                p.information__type-value Italy
-              li.information__item  
-                p.information__type Phone
-                p.information__type-value 354 367354    
+            ul.information__body-grid
+              .col-1
+                li.information__item  
+                  p.information__type Title
+                  p.information__type-value Mr. 
+                li.information__item
+                  p.information__type First Name
+                  p.information__type-value Alessandro Curcu
+                li.information__item  
+                  p.information__type Last Name
+                  p.information__type-value Curcu
+                li.information__item  
+                  p.information__type Email
+                  p.information__type-value alexqrq@gmail.com
+              .col-2    
+                li.information__item  
+                  p.information__type Date of Birth
+                  p.information__type-value 02/09/1985
+                li.information__item  
+                  p.information__type Nationality
+                  p.information__type-value Italy
+                li.information__item  
+                  p.information__type Phone
+                  p.information__type-value 354 367354
+              .col-3
+                .information__item 
+                  p.information__type Photo profile
+                  img.information__img(src="./img/ale.png")
+                  button.btn.btn--hollow Change photo        
           .information.toggle(data-tab="2")
             .information__header
               h2.information__title Addresses
               p#edit Edit <i class="fas fa-edit"></i>
               p#save.toggle Salva <i class="fas fa-edit"></i>
-            ul.information__body
-              li.information__item  
-                p.information__type Address
-                p.information__type-value via del Capitel n.42
-              li.information__item  
-                p.information__type City
-                p.information__type-value Trento
-              li.information__item  
-                p.information__type Zip Code
-                p.information__type-value 38100
-              li.information__item  
-                p.information__type Country
-                p.information__type-value Italy       
+            ul.information__body-grid
+              .col-1
+                li.information__item  
+                  p.information__type Address
+                  p.information__type-value via del Capitel n.42
+                li.information__item  
+                  p.information__type City
+                  p.information__type-value Trento
+                li.information__item  
+                  p.information__type Zip Code
+                  p.information__type-value 38100
+                li.information__item  
+                  p.information__type Country
+                  p.information__type-value Italy
           .information.toggle(data-tab="3")
             .information__header
               h2.information__title Documents
               p Edit <i class="fas fa-edit"></i>  
-            ul.information__body
-              li.information__item  
-                p.information__type Cv
-                p.information__type-value curriculum.pdf
-              li.information__item  
-                p.information__type Motivational Letter
-                p.information__type-value mot.pdf
-              li.information__item  
-                p.information__type Sponsor Letter
-                p.information__type-value sponsorlet1.pdf     
+            ul.information__body-grid
+              .col-1
+                li.information__item  
+                  p.information__type Cv
+                  p.information__type-value curriculum.pdf
+                li.information__item  
+                  p.information__type Motivational Letter
+                  p.information__type-value mot.pdf
+                li.information__item  
+                  p.information__type Sponsor Letter
+                  p.information__type-value sponsorlet1.pdf
+          .information.toggle(data-tab="4")
+            .information__header
+              h2.information__title Subcription & Billing
+              p Edit <i class="fas fa-edit"></i>
+            ul.information__body-grid
+              .col-1
+                li.information__item  
+                  p.information__type Status
+                  p.information__type-value Ordinary Member
+                li.information__item  
+                  p.information__type Member since
+                  p.information__type-value 10/08/2014
+                //- li.information__item  
+                //-   p.information__type Renew subscription  
+              .col-2.col-2--subscription
+                li.information__item  
+                  p.information__type Status Subscription
+                  ul
+                    li.information__item--warning
+                      p.information__type 2018
+                      p.information__type-value expire
+                      p.information__type-value 02/01/2019
+                    li
+                      p.information__type 2017
+                      p.information__type-value paid
+                      p.information__type-value 02/01/2018
+                    li
+                      p.information__type 2016
+                      p.information__type-value paid
+                      p.information__type-value 02/01/2017
+                    li
+                      p.information__type 2015
+                      p.information__type-value paid
+                      p.information__type-value 02/01/2016
+                    li
+                      p.information__type 2014
+                      p.information__type-value paid
+                      p.information__type-value 02/01/2016      
     include _footer.pug                 
