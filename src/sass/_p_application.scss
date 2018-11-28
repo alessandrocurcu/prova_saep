@@ -8,6 +8,14 @@
     }
   }
 
+  &__address {
+
+    &:not(:last-child) {
+
+      margin-bottom: $vr * 2;
+    }
+  }
+
   .step {
     margin: 0;
     cursor: pointer;
@@ -45,6 +53,8 @@
     margin-bottom: $vr / 3;
     font-weight: 500;
     font-size: $type2;
+
+
   }
 
   &__form {
