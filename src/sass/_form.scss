@@ -22,17 +22,27 @@
   }
 
   &__element {
-    &--very-short {
-      width: 15%
+
+    @include sm {
+      &--very-short {
+        width: 25%
+      }
+
+      &--short {
+        width: 25%
+      }
+
+      &--medium {
+        width: 35%;
+      }
     }
 
-    &--short {
-      width: 25%
+    @include md {
+      &--very-short {
+        width: 18%
+      }
     }
 
-    &--medium {
-      width: 35%;
-    }
   }
 
   &__group {

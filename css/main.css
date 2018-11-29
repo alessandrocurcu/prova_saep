@@ -671,14 +671,17 @@ body {
   .form select:focus {
     outline: none; }
 
-.form__element--very-short {
-  width: 15%; }
+@media (min-width: 576px) {
+  .form__element--very-short {
+    width: 25%; }
+  .form__element--short {
+    width: 25%; }
+  .form__element--medium {
+    width: 35%; } }
 
-.form__element--short {
-  width: 25%; }
-
-.form__element--medium {
-  width: 35%; }
+@media (min-width: 768px) {
+  .form__element--very-short {
+    width: 18%; } }
 
 .form__group {
   display: -webkit-box;
@@ -1680,11 +1683,12 @@ body {
   background-color: #202C39;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-  .membership__grid-intro {
-    display: grid;
-    grid-template-columns: 8fr 1fr 3fr; }
-    .membership__grid-intro .col-2 {
-      grid-column: 3 / 4; }
+  @media (min-width: 768px) {
+    .membership__grid-intro {
+      display: grid;
+      grid-template-columns: 8fr 1fr 3fr; }
+      .membership__grid-intro .col-2 {
+        grid-column: 3 / 4; } }
   .membership__title {
     position: relative;
     margin-top: 0;
@@ -1870,7 +1874,7 @@ body {
       grid-row-gap: 0; } }
 
 .others-congresses {
-  padding-top: 1.5rem;
+  padding-top: 0.75rem;
   padding-bottom: 0; }
   .others-congresses__congress {
     padding: 0.75rem 16px;
@@ -2348,7 +2352,7 @@ body {
     @media (min-width: 576px) {
       .membership-rules__grid .col-2 .membership-rules__cta {
         margin-top: 1rem;
-        margin-bottom: 1.5rem; } }
+        margin-bottom: 3rem; } }
 
 .membership-rules h3 {
   line-height: 1.4;
@@ -2393,7 +2397,7 @@ body {
       width: 60%;
       margin-left: auto;
       margin-right: auto; } }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .membership-types__grid {
       width: 100%;
       grid-template-columns: repeat(3, 4fr);
@@ -2810,13 +2814,26 @@ body {
 
 .member-application__form {
   margin-bottom: 1.5rem; }
-  .member-application__form-grid {
-    display: grid;
-    grid-template-columns: 6fr 2fr 2fr 2fr; }
-    .member-application__form-grid .col-2 {
-      grid-column: 3 / 4; }
-      .member-application__stepper-controls .member-application__form-grid .col-2 button {
-        width: 100%; }
+  @media (min-width: 576px) {
+    .member-application__form-grid {
+      display: grid;
+      grid-template-columns: 8fr 2fr; } }
+  @media (min-width: 992px) {
+    .member-application__form-grid {
+      grid-template-columns: 6fr 2fr 2fr 2fr; } }
+  .member-application__form-grid .col-2 {
+    grid-column: 3 / 4; }
+    .member-application__stepper-controls .member-application__form-grid .col-2 button {
+      width: 100%;
+      margin-top: 0.75rem; }
+      @media (min-width: 576px) {
+        .member-application__stepper-controls .member-application__form-grid .col-2 button {
+          margin-top: 0; } }
+  .member-application__stepper-controls .member-application__form-grid .col-1 button {
+    width: 100%; }
+    @media (min-width: 576px) {
+      .member-application__stepper-controls .member-application__form-grid .col-1 button {
+        width: 30%; } }
 
 .member-application__stepper-controls {
   margin-bottom: 3rem; }
@@ -2985,9 +3002,16 @@ body {
 
 .information__body-grid {
   list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 3fr 3fr 2fr; }
+  padding: 0; }
+  @media (min-width: 576px) {
+    .information__body-grid {
+      display: grid;
+      grid-template-columns: 3fr 3fr 2fr; } }
+  .information__body-grid .col-2 {
+    margin-top: 1.5rem; }
+    @media (min-width: 576px) {
+      .information__body-grid .col-2 {
+        margin-top: 0; } }
   .information__body-grid .col-2--subscription {
     grid-column: 2 / 4; }
     .information__body-grid .col-2--subscription > li {
@@ -3031,8 +3055,22 @@ body {
   font-weight: 300; }
 
 .information__img {
-  margin-top: 0.375rem;
-  border-radius: 5px; }
+  margin: 1.5rem auto 0 auto;
+  border-radius: 5px;
+  width: 50%; }
+  @media (min-width: 576px) {
+    .information__img {
+      margin-top: 0.375rem;
+      width: 100%; } }
+  .information__img + .btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; }
+    @media (min-width: 576px) {
+      .information__img + .btn {
+        display: inline-block;
+        width: 100%; } }
 
 .information__title {
   margin: 0;

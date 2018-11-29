@@ -113,7 +113,7 @@
 
         @include sm {
           margin-top: $vr / 1.5;
-          margin-bottom: $vr;
+          margin-bottom: $vr * 2;
         }
       }
     }
@@ -172,7 +172,7 @@
       margin-right: auto;
     }
 
-    @include md {
+    @include lg {
       width: 100%;
       grid-template-columns: repeat(3, 4fr);
       grid-column-gap: ($gutter / 2);

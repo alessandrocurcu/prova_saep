@@ -73,8 +73,19 @@
     }
 
     &-grid {
-      display: grid;
-      grid-template-columns: 6fr 2fr 2fr 2fr;
+
+
+      @include sm {
+        display: grid;
+        grid-template-columns: 8fr 2fr;
+
+      }
+
+      @include lg {
+        // display: grid;
+        grid-template-columns: 6fr 2fr 2fr 2fr;
+
+      }
 
       .col-2 {
         grid-column: 3 / 4;
@@ -84,6 +95,25 @@
           // justify-self: end;
           button {
             width: 100%;
+            margin-top: $vr / 2;
+
+            @include sm {
+              margin-top: 0;
+              // width: 100%;
+            }
+          }
+        }
+      }
+
+      .col-1 {
+        .member-application__stepper-controls & {
+
+          button {
+            width: 100%;
+
+            @include sm {
+              width: 30%;
+            }
           }
         }
       }
