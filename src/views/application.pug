@@ -18,19 +18,28 @@ block body
                 a(href="index.html") Home
               li
                 a(href="application.html") Application Form
-            h1.hero__title Application Form
-    .bend--theme-red
+            h1.hero__title Application form: join SECEC / ESSSE membership advantages
+    //- .hero-toast
+    //-   .container
+    //-     p Before you apply <a href="#">be sure to have all the requirements</a>    
+    //- .bend--theme-red
+    //-   .container
+    //-     .sub-hero
+    //-       p.sub-hero__text Before you apply be sure to have all the requirements
+    .hero-toast
       .container
-        .sub-hero
-          p.sub-hero__text Becoming a member of our association will bring <a class="sub-hero__link" href="#">noumerous benefits and perks</a>.        
+        p You are now applying to become ad Associate Member: <a href="#">be sure to have all the requirements</a> before you apply             
     section.member-application
+      //- .container
+      //-   .member-application__intro
+      //-     p SECEC aims to enhance scientific cooperation and educational training on shoulder and elbow surgery providing its members with events, activities and resources to improve professional growth and scientific knowledge exchange.
       .container
         nav.member-application__stepper
           ul#tabMenu
             li.step.step--is-selected(data-tab="1")
-              p.step__title General info
+              p.step__title General info <i class="fas fa-arrow-right"></i>
             li.step(data-tab="2")
-              p.step__title Addresses
+              p.step__title Addresses <i class="fas fa-arrow-right"></i>
             li.step(data-tab="3")
               p.step__title Documents       
         form.form.member-application__form#tabMain
@@ -134,5 +143,5 @@ block body
               .col-1
                 button.btn.btn--neutral(value="Previous") Previous
               .col-2
-                button.btn.btn--primary(value="Next") Next    
+                button.btn.btn--primary(value="Next") Next     
     include _footer.pug        

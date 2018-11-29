@@ -1270,6 +1270,10 @@ body {
     @media (min-width: 576px) {
       .hero-toast p {
         font-size: 1rem; } }
+  .hero-toast a {
+    color: #AF2B31; }
+    .hero-toast a:hover, .hero-toast a:focus {
+      color: #862126; }
   .hero-toast .btn {
     display: block;
     text-align: center;
@@ -1424,7 +1428,7 @@ body {
     margin-top: 0;
     margin-bottom: 0.5rem;
     font-weight: 300;
-    line-height: 1.3; }
+    line-height: 1.1; }
     .card--cta .card__title {
       font-weight: 500;
       line-height: 1.2; }
@@ -1436,7 +1440,8 @@ body {
     @media (min-width: 992px) {
       .card__description {
         line-height: 1.3;
-        font-size: 0.8rem; } }
+        font-size: 0.8rem;
+        margin-bottom: 0; } }
     @media (min-width: 1100px) {
       .card__description {
         font-size: 1rem; } }
@@ -1571,32 +1576,25 @@ body {
     opacity: 0.8; }
 
 .under-construction {
-  font-family: ff-meta-web-pro, sans-serif; }
-  @media (min-width: 576px) {
-    .under-construction__grid {
-      display: grid;
-      grid-template-columns: 7fr 5fr; } }
+  font-family: ff-meta-web-pro, sans-serif;
+  text-align: center; }
   .under-construction__title {
     font-size: 1.563rem;
     font-weight: 300;
     margin-top: 0;
     line-height: 1;
-    margin-bottom: 0.75rem;
-    text-align: center; }
+    margin-bottom: 0.75rem; }
     @media (min-width: 576px) {
       .under-construction__title {
-        font-size: 3.052rem;
-        text-align: left; } }
+        font-size: 3.052rem; } }
   .under-construction__text {
     margin: 0;
-    text-align: center;
     margin-bottom: 1.5rem; }
     .under-construction__text a {
-      color: #FFE066; }
+      color: #AF2B31; }
     @media (min-width: 576px) {
       .under-construction__text {
-        text-align: left;
-        margin-bottom: 0; } }
+        margin-bottom: 3rem; } }
   .under-construction__illustration {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1607,7 +1605,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    color: #FFE066;
+    color: #AF2B31;
     font-size: 3.052rem; }
     @media (min-width: 576px) {
       .under-construction__illustration {
@@ -1876,6 +1874,9 @@ body {
 .others-congresses {
   padding-top: 0.75rem;
   padding-bottom: 0; }
+  @media (min-width: 576px) {
+    .others-congresses {
+      padding-top: 1.5rem; } }
   .others-congresses__congress {
     padding: 0.75rem 16px;
     background-color: #AF2B31;
@@ -2150,6 +2151,10 @@ body {
     .president-message__cta:hover, .president-message__cta:focus {
       color: #FFE066; }
 
+.history-hero-image {
+  background-image: url("./../img/secec_congress_02.jpg");
+  background-position: 10% 10%; }
+
 .constitution h2,
 .constitution h3,
 .constitution h4,
@@ -2305,7 +2310,7 @@ body {
       grid-template-columns: 7fr 1fr 4fr; } }
   .membership-rules__grid .col-1 p {
     margin: 0; }
-  .membership-rules__grid .col-1 p:nth-child(3) {
+  .membership-rules__grid .col-1 p:last-of-type {
     font-style: italic; }
   .membership-rules__grid .col-1 > ul {
     list-style: none;
@@ -2777,6 +2782,9 @@ body {
 .member-application__address:not(:last-child) {
   margin-bottom: 3rem; }
 
+.member-application__intro {
+  margin: 0; }
+
 .member-application .step {
   margin: 0;
   cursor: pointer;
@@ -2786,6 +2794,8 @@ body {
     margin-right: 1.953rem; }
   .member-application .step__title {
     margin: 0; }
+    .member-application .step__title i {
+      margin-left: 1.953rem; }
   .member-application .step--is-selected {
     opacity: 1;
     border-bottom: 1px dashed rgba(175, 43, 49, 0.8); }
@@ -2941,8 +2951,7 @@ body {
     @media (min-width: 576px) {
       .secondary-navigation__item {
         font-size: 0.8rem;
-        padding: 0.75rem 0.9765rem;
-        padding-bottom: 0.25rem;
+        padding: 0.75rem 0 0.25rem 0.9765rem;
         margin-right: 1.302rem;
         padding-left: 0;
         -webkit-box-pack: start;

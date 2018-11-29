@@ -16,6 +16,10 @@
     }
   }
 
+  &__intro {
+    margin: 0;
+  }
+
   .step {
     margin: 0;
     cursor: pointer;
@@ -28,6 +32,10 @@
 
     &__title {
       margin: 0;
+
+      i {
+        margin-left: $gutter;
+      }
     }
 
     &--is-selected {
@@ -46,6 +54,8 @@
     &:after {
       @include title-line($primaryColor, 80px)
     }
+
+
   }
 
   &__subtitle {

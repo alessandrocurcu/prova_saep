@@ -1,12 +1,13 @@
 .under-construction {
   font-family: $secondaryText;
+  text-align: center;
 
   &__grid {
 
 
     @include sm {
-      display: grid;
-      grid-template-columns: 7fr 5fr;
+      // display: grid;
+      // grid-template-columns: 7fr 5fr;
     }
   }
 
@@ -16,26 +17,22 @@
     margin-top: 0;
     line-height: 1;
     margin-bottom: $vr / 2;
-    text-align: center;
 
     @include sm {
       font-size: $type5;
-      text-align: left;
     }
   }
 
   &__text {
     margin: 0;
-    text-align: center;
     margin-bottom: $vr;
 
     a {
-      color: $accent;
+      color: $primaryColor;
     }
 
     @include sm {
-      text-align: left;
-      margin-bottom: 0;
+      margin-bottom: $vr * 2;
     }
   }
 
@@ -43,7 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $accent;
+    color: $primaryColor;
     font-size: $type5;
 
     @include sm {

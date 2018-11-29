@@ -170,6 +170,15 @@
     }
   }
 
+  a {
+    color: $primaryColor;
+
+    &:hover,
+    &:focus {
+      color: darken($primaryColor, 10%);
+    }
+  }
+
   .btn {
     display: block;
     text-align: center;

@@ -82,6 +82,20 @@
     grid-template-columns: repeat(6, 2fr);
     grid-gap: 0;
   }
+
+  // &--application {
+  //   @include sm {
+  //     display: grid;
+  //     grid-template-columns: 2fr 2fr;
+  //     grid-gap: ($vr / 3);
+  //     // grid-auto-rows: minmax($vr * 8, auto);
+  //   }
+
+  //   @include xl {
+  //     grid-template-columns: repeat(4, 2fr);
+  //     grid-gap: 0;
+  //   }
+  // }
 }
 
 .membership {
@@ -138,7 +152,7 @@
 
   }
 
-  .card {}
+
 
   .card:not(:last-child) button {
     color: $accent;
@@ -177,6 +191,8 @@
       text-align: center;
       grid-column: 6 / 7;
     }
+
+
   }
 }
 
@@ -362,6 +378,10 @@
   // background-color: $fascia3;
   padding-top: $vr / 2;
   padding-bottom: 0;
+
+  @include sm {
+    padding-top: $vr;
+  }
 
   &__congress {
     padding: ($vr/2) 16px;
