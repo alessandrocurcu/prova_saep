@@ -73,14 +73,13 @@
 .membership__grid {
   @include sm {
     display: grid;
-
     grid-template-columns: 2fr 2fr;
     grid-gap: ($vr / 3);
-    grid-auto-rows: minmax($vr * 8, auto);
+    // grid-auto-rows: minmax($vr * 8, auto);
   }
 
-  @include lg {
-    grid-template-columns: repeat(5, 2fr);
+  @include xl {
+    grid-template-columns: repeat(6, 2fr);
     grid-gap: 0;
   }
 }
@@ -135,10 +134,12 @@
 
   }
 
+  .card {}
+
   .card:not(:last-child) button {
     color: $accent;
 
-    @include lg {
+    @include xl {
       transition: all 0.2s ease-in-out;
       transform: translateY(20px);
       opacity: 0;
@@ -152,6 +153,7 @@
       &:hover,
       &:focus {
         @include box_shadow(4);
+        // z-index: 1;
 
         button {
           opacity: 1;
@@ -164,12 +166,12 @@
   .card:last-child {
     @include sm {
       text-align: center;
-      grid-column: 1 / 3;
+      grid-column: 2 / 3;
     }
 
-    @include lg {
+    @include xl {
       text-align: center;
-      grid-column: 5 / 6;
+      grid-column: 6 / 7;
     }
   }
 }
@@ -200,6 +202,7 @@
     background-color: $primaryColorOpaque;
     background-color: transparent;
     padding: 0;
+    box-shadow: none;
   }
 
 
@@ -326,6 +329,11 @@
 
     // font-size: 1.25rem;
     @include md {
+
+      .hero__text & {
+        margin-bottom: 0;
+      }
+
       a {
         font-size: $type0;
       }

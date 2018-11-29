@@ -1,0 +1,53 @@
+.under-construction {
+  font-family: $secondaryText;
+
+  &__grid {
+
+
+    @include sm {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+    }
+  }
+
+  &__title {
+    font-size: $type2;
+    font-weight: 300;
+    margin-top: 0;
+    line-height: 1;
+    margin-bottom: $vr / 2;
+    text-align: center;
+
+    @include sm {
+      font-size: $type5;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    text-align: center;
+    margin-bottom: $vr;
+
+    a {
+      color: $accent;
+    }
+
+    @include sm {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  &__illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $accent;
+    font-size: $type5;
+
+    @include sm {
+      font-size: 15rem;
+    }
+  }
+}

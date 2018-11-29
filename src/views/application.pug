@@ -89,7 +89,10 @@ block body
                   .form__group   
                     label(for="country") Country	
                     input.form__element--medium(type="text", name="country")
-                .member-application__address
+                  .form__group.form__group--orizzontal
+                    input(type="checkbox", name="", checked)#second-address-btn  
+                    label(for="country") Do you want your mail and JSES magazine issue to be sent at this address?
+                .member-application__address.toggle#second-address
                   h3.member-application__subtitle Second address
                   .form__group   
                     label(for="address") Address	

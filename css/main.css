@@ -1241,9 +1241,11 @@ body {
         font-size: 1.563rem; } }
     @media (min-width: 768px) {
       .sub-hero__text--small {
-        font-size: 1.563rem;
-        margin-top: 1.5rem;
-        margin-bottom: 0; } }
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 1.4;
+        width: 80%;
+        margin: 0 auto; } }
   .sub-hero__link {
     font-style: italic;
     color: #FFE066; }
@@ -1404,7 +1406,7 @@ body {
   cursor: pointer; }
   @media (min-width: 768px) {
     .card {
-      padding: 0.75rem 1.953rem 1.5rem 1.953rem; } }
+      padding: 0.75rem 0.9765rem 1.5rem 0.9765rem; } }
   .card:hover {
     -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
@@ -1417,11 +1419,11 @@ body {
   .card__title {
     font-size: 1.563rem;
     margin-top: 0;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     font-weight: 300;
-    line-height: 1.25; }
+    line-height: 1.3; }
     .card--cta .card__title {
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1.2; }
   .card__description {
     font-size: 1rem;
@@ -1430,7 +1432,7 @@ body {
     line-height: 1.3; }
     @media (min-width: 992px) {
       .card__description {
-        line-height: 1.4;
+        line-height: 1.3;
         font-size: 0.8rem; } }
     @media (min-width: 1100px) {
       .card__description {
@@ -1441,9 +1443,9 @@ body {
       font-weight: 300;
       font-style: italic;
       opacity: 0.8; }
-  .membership .card:nth-child(even) {
+  .membership .card:nth-child(odd) {
     background-color: #AF2B31; }
-  .membership .card:nth-child(odd):not(:last-child) {
+  .membership .card:nth-child(even):not(:last-child) {
     background-color: #5d171a; }
   .patronages-section .card {
     background-color: #f2f2f2;
@@ -1565,6 +1567,49 @@ body {
     font-size: 0.64rem;
     opacity: 0.8; }
 
+.under-construction {
+  font-family: ff-meta-web-pro, sans-serif; }
+  @media (min-width: 576px) {
+    .under-construction__grid {
+      display: grid;
+      grid-template-columns: 7fr 5fr; } }
+  .under-construction__title {
+    font-size: 1.563rem;
+    font-weight: 300;
+    margin-top: 0;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    text-align: center; }
+    @media (min-width: 576px) {
+      .under-construction__title {
+        font-size: 3.052rem;
+        text-align: left; } }
+  .under-construction__text {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 1.5rem; }
+    .under-construction__text a {
+      color: #FFE066; }
+    @media (min-width: 576px) {
+      .under-construction__text {
+        text-align: left;
+        margin-bottom: 0; } }
+  .under-construction__illustration {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #FFE066;
+    font-size: 3.052rem; }
+    @media (min-width: 576px) {
+      .under-construction__illustration {
+        font-size: 15rem; } }
+
 .homepage-hero-image {
   background-image: url("./../img/ossaBlu.jpg");
   background-image: url("./../img/secec_congress_01.jpg");
@@ -1623,12 +1668,11 @@ body {
   .membership__grid {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    grid-gap: 0.5rem;
-    grid-auto-rows: minmax(12rem, auto); } }
+    grid-gap: 0.5rem; } }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .membership__grid {
-    grid-template-columns: repeat(5, 2fr);
+    grid-template-columns: repeat(6, 2fr);
     grid-gap: 0; } }
 
 .membership {
@@ -1673,7 +1717,7 @@ body {
           margin-bottom: 2.25rem; } }
   .membership .card:not(:last-child) button {
     color: #FFE066; }
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       .membership .card:not(:last-child) button {
         -webkit-transition: all 0.2s ease-in-out;
         -o-transition: all 0.2s ease-in-out;
@@ -1694,11 +1738,11 @@ body {
   @media (min-width: 576px) {
     .membership .card:last-child {
       text-align: center;
-      grid-column: 1 / 3; } }
-  @media (min-width: 992px) {
+      grid-column: 2 / 3; } }
+  @media (min-width: 1200px) {
     .membership .card:last-child {
       text-align: center;
-      grid-column: 5 / 6; } }
+      grid-column: 6 / 7; } }
 
 .congress-image {
   background-image: url("./../img/geneve.jpg");
@@ -1720,7 +1764,9 @@ body {
   .hero__text .main-congress {
     background-color: rgba(175, 43, 49, 0.8);
     background-color: transparent;
-    padding: 0; }
+    padding: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
   @media (min-width: 768px) {
     .main-congress {
       padding: 0.75rem 1.953rem; } }
@@ -1808,6 +1854,8 @@ body {
     margin: 0;
     margin-bottom: 0.75rem; }
     @media (min-width: 768px) {
+      .hero__text .main-congress__CTA {
+        margin-bottom: 0; }
       .main-congress__CTA a {
         font-size: 1rem; } }
 

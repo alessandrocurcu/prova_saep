@@ -122,9 +122,13 @@
 
     &--small {
       @include md {
-        font-size: $type2;
-        margin-top: $vr;
-        margin-bottom: 0;
+        text-align: center;
+        font-size: $type1;
+        // margin-top: 0;
+        // margin-bottom: 0;
+        line-height: 1.4;
+        width: 80%;
+        margin: 0 auto;
       }
     }
   }

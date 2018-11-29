@@ -6,6 +6,16 @@
   'use strict';
 
   window.addEventListener('DOMContentLoaded', () => {
+    console.log('ciao');
+    const secondAddressBtn = document.getElementById('second-address-btn');
+
+    const secondAddress = document.getElementById('second-address');
+
+    if (secondAddressBtn) {
+      secondAddressBtn.addEventListener('change', e => {
+        secondAddress.classList.toggle('toggle');
+      });
+    }
     /* LIST */
 
     // const options = {
